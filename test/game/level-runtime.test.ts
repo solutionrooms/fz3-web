@@ -56,8 +56,8 @@ describe("LevelRuntime — the per-frame orchestration", () => {
 
   it("LevelRuntime(Intro 1) builds + emits a 20-object RenderFrame; step awaits engine m4", () => {
     const rt = new LevelRuntime(intro1, lib, materials);
-    expect(rt.gameObjs.length).toBe(20);
-    expect(rt.renderFrame().objects.length).toBe(20);
+    expect(rt.gameObjs.length).toBe(20); // all 20 objects created
+    expect(rt.renderFrame().objects.length).toBe(17); // 3 help-text objects hidden until their delay (visible=false)
     let threw: string | null = null;
     try {
       rt.step(); // Intro 1 bodies start in contact; the step now reaches the m7 CCD/TOI boundary

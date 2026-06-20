@@ -47,6 +47,8 @@ export class GameObj {
   body: b2Body | null = null; // set by linkBodies (for the per-frame WakeUp)
   initParams = "";
   initFunctionVarString = "";
+  switchName = "";
+  textMessage = "";
 
   /** GameObj.Update (GameObj_Base.as:782): wake the body, run the behavior, optional Y-depth sort. */
   update(): void {
@@ -98,7 +100,7 @@ export function buildGameObjects(level: Level, lib: PhysObjs): GameObj[] {
     go.isPhysObj = physics;
     go.zpos = physics ? graphic.zoffset : graphic.zoffset + zsortoffset;
     if (physics) go.bodyIndex = physicsBodyIndex++;
-    // go.initParams (the obj's params string) plumbs through when behaviors actually consume it — TODO
+    go.initParams = inst.objParameters.toString(); // AddGameObjectAt: go.initParams = objParameters.ToString()
     applyInitFunction(go, def.initFunctionName); // go[physobj.initFunctionName]() — no-op if unported
     out.push(go);
     zsortoffset += 0.01;
