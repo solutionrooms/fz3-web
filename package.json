@@ -14,7 +14,9 @@
     "predev": "npm run assets",
     "dev": "vite",
     "prebuild:web": "npm run assets",
-    "build:web": "vite build"
+    "build:web": "vite build",
+    "render:typecheck": "tsc -p tsconfig.render.json",
+    "render:compare": "node tools/render-compare.mjs"
   },
   "dependencies": {
     "openfl": "^9.5.2"

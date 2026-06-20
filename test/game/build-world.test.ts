@@ -59,17 +59,21 @@ describe("build-world: real level data → live Box2D engine", () => {
     expect(y1).toBeGreaterThan(y0); // fell downward (+Y)
   });
 
-  it("DOCUMENTS the m4 gate: Intro 1 bodies start in contact, so stepping needs the solver", () => {
+  // STRUCTURAL smoke gate only — NOT a correctness claim. The engine is feature-complete (m0–m7), so
+  // Intro 1 now steps end-to-end without throwing or producing NaN. Whether the resulting trajectories
+  // are *bit-faithful* is a separate question that ONLY the Intro-1 [ORIG] golden can answer (see the
+  // patched-game trace harness). This test guards the structural plumbing, nothing more.
+  it("Intro 1 steps end-to-end on the feature-complete engine (no throw, no NaN)", () => {
     const w = intro1World();
-    let threw: string | null = null;
-    try {
-      w.world.Step(1 / 60, 5);
-    } catch (e) {
-      threw = (e as Error).message;
+    expect(() => {
+      for (let frame = 0; frame < 120; frame++) {
+        w.world.Step(1 / 60, 5); // real cadence: two 1/60 steps per render frame
+        w.world.Step(1 / 60, 5);
+      }
+    }).not.toThrow();
+    for (const b of w.bodies) {
+      const p = b.GetPosition();
+      expect(Number.isFinite(p.x) && Number.isFinite(p.y) && Number.isFinite(b.GetAngle())).toBe(true);
     }
-    // The step now advances through the solver (m4–m6) and currently reaches the m7 CCD/TOI boundary
-    // (b2World.SolveTOI). When m7 lands it stops throwing and Intro 1 simulates fully. Any remaining
-    // throw must be a documented "not yet ported" milestone boundary, never a real error.
-    if (threw != null) expect(threw).toMatch(/not yet ported/i);
   });
 });
