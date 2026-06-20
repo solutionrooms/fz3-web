@@ -1,0 +1,233 @@
+{
+  "objects": [
+    {
+      "dobj": "grass2",
+      "frame": 0,
+      "xpos": 283,
+      "ypos": 296,
+      "dir": 0,
+      "scale": 1,
+      "xflip": false,
+      "zpos": 103,
+      "alpha": 1
+    },
+    {
+      "dobj": "grass2",
+      "frame": 0,
+      "xpos": 30,
+      "ypos": 296,
+      "dir": 0,
+      "scale": 1,
+      "xflip": false,
+      "zpos": 103.01,
+      "alpha": 1
+    },
+    {
+      "dobj": "grass2",
+      "frame": 0,
+      "xpos": 670,
+      "ypos": 285,
+      "dir": 0,
+      "scale": 1,
+      "xflip": false,
+      "zpos": 103.02,
+      "alpha": 1
+    },
+    {
+      "dobj": "oaktree1",
+      "frame": 0,
+      "xpos": 60,
+      "ypos": 301,
+      "dir": 0,
+      "scale": 1,
+      "xflip": false,
+      "zpos": 103.03,
+      "alpha": 1
+    },
+    {
+      "dobj": "oaktree2",
+      "frame": 0,
+      "xpos": 670,
+      "ypos": 286,
+      "dir": 0,
+      "scale": 1,
+      "xflip": false,
+      "zpos": 103.04,
+      "alpha": 1
+    },
+    {
+      "dobj": "circus_sign",
+      "frame": 0,
+      "xpos": 232,
+      "ypos": 296,
+      "dir": 0,
+      "scale": 1,
+      "xflip": false,
+      "zpos": 103.05,
+      "alpha": 1
+    },
+    {
+      "dobj": "grass3",
+      "frame": 0,
+      "xpos": 60,
+      "ypos": 301,
+      "dir": 0,
+      "scale": 1,
+      "xflip": false,
+      "zpos": 103.06,
+      "alpha": 1
+    },
+    {
+      "dobj": "grass2",
+      "frame": 0,
+      "xpos": 453,
+      "ypos": 286,
+      "dir": 0,
+      "scale": 1,
+      "xflip": false,
+      "zpos": 103.07,
+      "alpha": 1
+    },
+    {
+      "dobj": "grass2",
+      "frame": 0,
+      "xpos": 467,
+      "ypos": 284,
+      "dir": 0,
+      "scale": 1,
+      "xflip": false,
+      "zpos": 103.08,
+      "alpha": 1
+    },
+    {
+      "dobj": "grass1",
+      "frame": 0,
+      "xpos": 683,
+      "ypos": 285,
+      "dir": 0,
+      "scale": 1,
+      "xflip": false,
+      "zpos": 100.09,
+      "alpha": 1
+    },
+    {
+      "dobj": "bazBottom",
+      "frame": 0,
+      "xpos": 126,
+      "ypos": 307,
+      "dir": 0,
+      "scale": 1,
+      "xflip": false,
+      "zpos": 10,
+      "alpha": 1
+    },
+    {
+      "dobj": "Zombie",
+      "frame": 0,
+      "xpos": 344,
+      "ypos": 296,
+      "dir": 0,
+      "scale": 1,
+      "xflip": false,
+      "zpos": 40,
+      "alpha": 1
+    },
+    {
+      "dobj": "Zombie",
+      "frame": 0,
+      "xpos": 425,
+      "ypos": 287,
+      "dir": 0,
+      "scale": 1,
+      "xflip": false,
+      "zpos": 40,
+      "alpha": 1
+    },
+    {
+      "dobj": "Zombie",
+      "frame": 0,
+      "xpos": 492,
+      "ypos": 283,
+      "dir": 0,
+      "scale": 1,
+      "xflip": false,
+      "zpos": 40,
+      "alpha": 1
+    },
+    {
+      "dobj": "Zombie",
+      "frame": 0,
+      "xpos": 597,
+      "ypos": 267,
+      "dir": 0,
+      "scale": 1,
+      "xflip": false,
+      "zpos": 40,
+      "alpha": 1
+    },
+    {
+      "dobj": "decal2",
+      "frame": 0,
+      "xpos": 178,
+      "ypos": 307,
+      "dir": 0,
+      "scale": 1,
+      "xflip": false,
+      "zpos": -999.85,
+      "alpha": 1
+    },
+    {
+      "dobj": "decal3",
+      "frame": 0,
+      "xpos": 421,
+      "ypos": 335,
+      "dir": 0,
+      "scale": 1,
+      "xflip": false,
+      "zpos": -999.84,
+      "alpha": 1
+    },
+    {
+      "dobj": "Text_Marker",
+      "frame": 0,
+      "xpos": 240,
+      "ypos": 52,
+      "dir": 0,
+      "scale": 1,
+      "xflip": false,
+      "zpos": -4999.83,
+      "alpha": 1
+    },
+    {
+      "dobj": "Text_Marker",
+      "frame": 0,
+      "xpos": 240,
+      "ypos": 82,
+      "dir": 0,
+      "scale": 1,
+      "xflip": false,
+      "zpos": -4999.82,
+      "alpha": 1
+    },
+    {
+      "dobj": "Text_Marker",
+      "frame": 0,
+      "xpos": 240,
+      "ypos": 102,
+      "dir": 0,
+      "scale": 1,
+      "xflip": false,
+      "zpos": -4999.81,
+      "alpha": 1
+    }
+  ],
+  "camera": {
+    "x": 0,
+    "y": 0,
+    "scale": 1
+  },
+  "stage": {
+    "width": 700,
+    "height": 500
+  }
+}

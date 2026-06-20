@@ -1,16 +1,19 @@
 /**
- * Render-layer web entry (DEV harness). Boots the OpenFL stage, loads the FZ3
- * AssetLibrary, and renders a demo RenderFrame built from real level data — proving the
- * contract→OpenFL display path end-to-end. The real app will receive RenderFrames from
- * the game loop instead of the demo builder; nothing here advances the simulation.
+ * Render-layer web entry. Boots the OpenFL stage, loads the FZ3 AssetLibrary, and draws
+ * the authoritative `RenderFrame` produced by the game layer
+ * (`src/game/game-objects.ts` → `data/render-frames/*.json`). The renderer only reads the
+ * snapshot and draws — it never advances the simulation. Once the engine can step (m4) and
+ * the game wires `syncFromWorld`, the producer emits live frames and this consumes them
+ * unchanged (positions are already authoritative; MovieClip animation frames arrive with
+ * the GameObj behavior port).
  */
 import { bootRenderStage } from "./stage";
 import { SceneRenderer } from "./scene-renderer";
-import { buildDemoFrame } from "./demo/build-demo-frame";
-import levels from "../../data/levels.json";
-import physobjs from "../../data/physobjs.json";
+import type { RenderFrame } from "../../contracts/render-state";
+import intro1 from "../../data/render-frames/intro1.json";
 
 const LIBRARY_URL = "assets/fz3/library.json";
+const FRAME = intro1 as unknown as RenderFrame;
 
 interface SpikeWindow extends Window {
   __renderReady?: boolean;
@@ -19,26 +22,18 @@ interface SpikeWindow extends Window {
 declare const window: SpikeWindow;
 
 async function main(): Promise<void> {
-  const mount = document.getElementById("stage") ?? document.body;
+  const mount = (document.getElementById("stage") ?? document.body) as HTMLElement;
 
-  const levelIndex = Number(new URLSearchParams(location.search).get("level") ?? "0");
-  const level = (levels as any[])[levelIndex];
+  const stage = await bootRenderStage({ parent: mount, libraryUrl: LIBRARY_URL, background: 0x6db3e8 });
+  const scene = new SceneRenderer(stage.library, stage.root as never);
+  scene.render(FRAME);
 
-  const { frame, stats } = buildDemoFrame(level as any, physobjs as any);
-  console.log(
-    `[render] demo level ${levelIndex} "${level?.name}": ` +
-    `${stats.instances} instances → ${stats.emitted} draw objects` +
-    (stats.missingPhysObj.length ? `; missing physobj: ${stats.missingPhysObj.join(",")}` : "") +
-    (stats.noGraphics.length ? `; no-graphics: ${stats.noGraphics.join(",")}` : ""),
-  );
-
-  const stage = await bootRenderStage({ parent: mount as HTMLElement, libraryUrl: LIBRARY_URL, background: 0x6db3e8 });
-  const scene = new SceneRenderer(stage.library, stage.root as any);
-  scene.render(frame);
-
-  window.__renderStats = { ...stats, missingSymbols: scene.missingSymbols };
+  window.__renderStats = { objects: FRAME.objects.length, missingSymbols: scene.missingSymbols };
   window.__renderReady = true;
-  console.log(`[render] rendered. missing symbols: ${scene.missingSymbols.join(",") || "none"}`);
+  console.log(
+    `[render] consumed authoritative RenderFrame: ${FRAME.objects.length} objects; ` +
+    `missing symbols: ${scene.missingSymbols.join(",") || "none"}`,
+  );
 }
 
 main().catch((e) => {
