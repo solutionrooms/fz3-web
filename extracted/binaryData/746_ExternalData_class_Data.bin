@@ -1,0 +1,1245 @@
+<data>
+	
+<constants>
+	<constant name="test" value="0"/>
+</constants>	
+	
+<gameconstants>
+</gameconstants>
+
+
+
+<!-- *******************
+	Collision.
+	1 = backgrounds
+	2 = player
+	4 = missile
+	8 = zombie/human etc.
+	
+	
+******************** -->
+
+	<physobj name="dance1" inlibrary="true" libclass="platform" hasphysics="true" initfunction="InitDance1" >
+		<graphic clip = "baz_Dance" frame = "1" pos = "0,0" rot="0" zoffset="50"/>					
+	</physobj>
+	<physobj name="dance2" inlibrary="true" libclass="platform" hasphysics="true" initfunction="InitDance" >
+		<graphic clip = "mrNuke_Dance" frame = "1" pos = "0,0" rot="0" zoffset="50"/>					
+	</physobj>
+	<physobj name="dance3" inlibrary="true" libclass="platform" hasphysics="true" initfunction="InitDance" >
+		<graphic clip = "major_Dance" frame = "1" pos = "0,0" rot="0" zoffset="50"/>					
+	</physobj>
+	<physobj name="dance4" inlibrary="true" libclass="platform" hasphysics="true" initfunction="InitDance" >
+		<graphic clip = "lionTamer_Dance" frame = "1" pos = "0,0" rot="0" zoffset="50"/>					
+	</physobj>
+	<physobj name="dance5" inlibrary="true" libclass="platform" hasphysics="true" initfunction="InitDance" >
+		<graphic clip = "humanCannonBall_Dance" frame = "1" pos = "0,0" rot="0" zoffset="50"/>					
+	</physobj>
+	<physobj name="dance6" inlibrary="true" libclass="platform" hasphysics="true" initfunction="InitDance" >
+		<graphic clip = "custardpie_Dance" frame = "1" pos = "0,0" rot="0" zoffset="50"/>					
+	</physobj>
+	<physobj name="dance7" inlibrary="true" libclass="platform" hasphysics="true" initfunction="InitDance" >
+		<graphic clip = "flameEater_Dance" frame = "1" pos = "0,0" rot="0" zoffset="50"/>					
+	</physobj>
+
+	
+	<physobj name="hook_fixed" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitStickyPad" >
+		<body name="fix" pos="0,0" fixed="true" sensor="true">
+			<graphic clip = "hook" frame = "1" pos = "0,0" rot="0" zoffset="100" />					
+			<shape type="circle" pos="0,0" name="" col="1,15" radius="8" material="average" />
+		</body>
+	</physobj>
+
+	<physobj name="hook_loose" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitStickyPad" >
+		<body name="fix" pos="0,0" fixed="false" sensor="true">
+			<graphic clip = "hook" frame = "1" pos = "0,0" rot="0" zoffset="100" />					
+			<shape type="circle" pos="0,0" name="" col="1,15" radius="8" material="average" />
+		</body>
+	</physobj>
+	
+	<physobj name="initial_player_marker" inlibrary="true" libclass="platform" hasphysics="false" initfunction="InitInitialPlayerMarker" >
+			<graphic clip = "InitialPlayerMarker" frame = "1" pos = "0,0" rot="0" zoffset="50"/>					
+	</physobj>
+
+	<physobj name="hinge" inlibrary="true" libclass="platform" hasphysics="false" initfunction="" >
+			<graphic clip = "hinge" frame = "1" pos = "0,0" rot="0" zoffset="-100"/>					
+	</physobj>
+	
+	<physobj name="tiedup1" inlibrary="true" libclass="platform" hasphysics="true" initfunction="InitTiedUp1" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "lionTamerTied" frame = "1" pos = "0,0" rot="0" zoffset="50"/>					
+			<shape type="poly" name="" col="4,15" vertices="-10,-60,10,-60, 10,0,-10,0" material="average"/>
+		</body>
+	</physobj>
+	<physobj name="tiedup2" inlibrary="true" libclass="platform" hasphysics="true" initfunction="InitTiedUp2" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "humanCannonBallTied" frame = "1" pos = "0,0" rot="0" zoffset="50"/>					
+			<shape type="poly" name="" col="4,15" vertices="-10,-60,10,-60, 10,0,-10,0" material="average"/>
+		</body>
+	</physobj>
+	<physobj name="tiedup3" inlibrary="true" libclass="platform" hasphysics="true" initfunction="InitTiedUp3" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "flameEaterTied" frame = "1" pos = "0,0" rot="0" zoffset="50"/>					
+			<shape type="poly" name="" col="4,15" vertices="-10,-60,10,-60, 10,0,-10,0" material="average"/>
+		</body>
+	</physobj>
+	<physobj name="tiedup4" inlibrary="true" libclass="platform" hasphysics="true" initfunction="InitTiedUp4" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "majorTied" frame = "1" pos = "0,0" rot="0" zoffset="50"/>					
+			<shape type="poly" name="" col="4,15" vertices="-10,-60,10,-60, 10,0,-10,0" material="average"/>
+		</body>
+	</physobj>
+	<physobj name="tiedup5" inlibrary="true" libclass="platform" hasphysics="true" initfunction="InitTiedUp5" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "mrNukeTied" frame = "1" pos = "0,0" rot="0" zoffset="50"/>					
+			<shape type="poly" name="" col="4,15" vertices="-10,-60,10,-60, 10,0,-10,0" material="average"/>
+		</body>
+	</physobj>
+	<physobj name="tiedup6" inlibrary="true" libclass="platform" hasphysics="true" initfunction="InitTiedUp6" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "custardpieTied" frame = "1" pos = "0,0" rot="0" zoffset="50"/>					
+			<shape type="poly" name="" col="4,15" vertices="-10,-60,10,-60, 10,0,-10,0" material="average"/>
+		</body>
+	</physobj>
+
+	<physobj name="clown_car_1" inlibrary="true" libclass="platform" hasphysics="true" initfunction="InitClownCar" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "car1" frame = "1" pos = "0,0" rot="0" zoffset="100"/>					
+			<shape type="poly" name="" col="2,15" vertices="-62,-3, -33,-32, 27,-31, 64,-2, 68,20, -63,19" material="car"/>
+		</body>
+	</physobj>
+
+	<physobj name="zombooka_player_missile" inlibrary="true" libclass="platform" hasphysics="true" initfunction="InitPlayer_BarryZooka" >
+		<parameter name="player_ammo" default="0" />
+		<body name="fix" pos="0,0" fixed="true" sensor="false">
+			<graphic clip = "bazBottom" frame = "1" pos = "0,0" rot="0" zoffset="10"/>					
+			<shape type="poly" name="" col="2,15" vertices="-5,-30,5,-30,5,0,-5,0" material="average"/>
+		</body>
+	</physobj>
+
+	<physobj name="zombooka_player_missile_movable" inlibrary="true" libclass="platform" hasphysics="true" initfunction="InitPlayer_BarryZooka" >
+		<parameter name="player_ammo" default="0" />
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "bazBottom" frame = "1" pos = "0,0" rot="0" zoffset="10"/>					
+			<shape type="poly" name="" col="2,15" vertices="-5,-30,5,-30,5,0,-5,0" material="average"/>
+		</body>
+	</physobj>
+	
+	<physobj name="zombooka_player_custard" inlibrary="true" libclass="platform" hasphysics="true" initfunction="InitPlayer_CustardPie" >
+		<parameter name="player_ammo" default="0" />
+		<body name="fix" pos="0,0" fixed="true" sensor="false">
+			<graphic clip = "custardpieBottom" frame = "1" pos = "0,0" rot="0" zoffset="10"/>					
+			<shape type="poly" name="" col="2,15" vertices="-5,-30,5,-30,5,0,-5,0" material="average"/>
+		</body>
+	</physobj>
+
+	<physobj name="zombooka_player_cannonball" inlibrary="true" libclass="platform" hasphysics="true" initfunction="InitPlayer_HumanCannonball" >
+		<parameter name="player_ammo" default="0" />
+		<body name="fix" pos="0,0" fixed="true" sensor="false">
+			<graphic clip = "humanCannonBallBottom" frame = "1" pos = "0,0" rot="0" zoffset="10"/>					
+			<shape type="poly" name="" col="2,15" vertices="-5,-30,5,-30,5,0,-5,0" material="average"/>
+		</body>
+	</physobj>
+
+	<physobj name="zombooka_player_cannonball_movable" inlibrary="true" libclass="platform" hasphysics="true" initfunction="InitPlayer_HumanCannonball" >
+		<parameter name="player_ammo" default="0" />
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "humanCannonBallBottom" frame = "1" pos = "0,0" rot="0" zoffset="10"/>					
+			<shape type="poly" name="" col="2,15" vertices="-5,-30,5,-30,5,0,-5,0" material="average"/>
+		</body>
+	</physobj>
+	
+	<physobj name="zombooka_player_nuke" inlibrary="true" libclass="platform" hasphysics="true" initfunction="InitPlayer_MrNuke" >
+		<parameter name="player_ammo" default="0" />
+		<body name="fix" pos="0,0" fixed="true" sensor="false">
+			<graphic clip = "mrNukeBottom" frame = "1" pos = "0,0" rot="0" zoffset="10"/>					
+			<shape type="poly" name="" col="2,15" vertices="-5,-30,5,-30,5,0,-5,0" material="average"/>
+		</body>
+	</physobj>
+
+	<physobj name="zombooka_player_flame" inlibrary="true" libclass="platform" hasphysics="true" initfunction="InitPlayer_FlameEater" >
+		<parameter name="player_ammo" default="0" />
+		<body name="fix" pos="0,0" fixed="true" sensor="false">
+			<graphic clip = "flameEaterBottom" frame = "1" pos = "0,0" rot="0" zoffset="10"/>					
+			<shape type="poly" name="" col="2,15" vertices="-5,-30,5,-30,5,0,-5,0" material="average"/>
+		</body>
+	</physobj>
+
+	<physobj name="zombooka_player_airstrike" inlibrary="true" libclass="platform" hasphysics="true" initfunction="InitPlayer_ElephantStrike" >
+		<parameter name="player_ammo" default="0" />
+		<body name="fix" pos="0,0" fixed="true" sensor="false">
+			<graphic clip = "lionTamerBottom" frame = "1" pos = "0,0" rot="0" zoffset="10"/>					
+			<shape type="poly" name="" col="2,15" vertices="-5,-30,5,-30,5,0,-5,0" material="average"/>
+		</body>
+	</physobj>
+	
+	<physobj name="zombooka_player_railgun" inlibrary="true" libclass="platform" hasphysics="true" initfunction="InitPlayer_Major" >
+		<parameter name="player_ammo" default="0" />
+		<body name="fix" pos="0,0" fixed="true" sensor="false">
+			<graphic clip = "majorBottom" frame = "1" pos = "0,0" rot="0" zoffset="10"/>					
+			<shape type="poly" name="" col="2,15" vertices="-5,-30,5,-30,5,0,-5,0" material="average"/>
+		</body>
+	</physobj>
+	
+	<physobj name="missile_normal" inlibrary="false" libclass="normal" hasphysics="true" initfunction="InitMissileNormal" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "Missile" frame = "1" pos = "0,0" rot="0" zoffset="100" />					
+			<shape type="circle" pos="0,0" name="" col="4,13" radius="4" material="missile" />
+		</body>
+	</physobj>
+
+	<physobj name="missile_flame" inlibrary="false" libclass="normal" hasphysics="true" initfunction="InitMissileFlame" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "Missile" frame = "2" pos = "0,0" rot="0" zoffset="100" />					
+			<shape type="circle" pos="0,0" name="" col="4,13" radius="4" material="missile" />
+		</body>
+	</physobj>
+
+	<physobj name="missile_airstrike" inlibrary="false" libclass="normal" hasphysics="true" initfunction="InitMissileAirStrike" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "Missile" frame = "3" pos = "0,0" rot="0" zoffset="100" />					
+			<shape type="circle" pos="0,0" name="" col="4,13" radius="4" material="missile" />
+		</body>
+	</physobj>
+	
+	<physobj name="missile_cannonball" inlibrary="false" libclass="normal" hasphysics="true" initfunction="InitMissileCannonball" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "Missile" frame = "4" pos = "0,0" rot="0" zoffset="100" />					
+			<shape type="circle" pos="0,0" name="" col="4,13" radius="8" material="missile_heavy" />
+		</body>
+	</physobj>
+	
+	<physobj name="missile_railgun" inlibrary="false" libclass="normal" hasphysics="true" initfunction="InitMissileRailGun" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "Missile" frame = "5" pos = "0,0" rot="0" zoffset="100" />					
+			<shape type="circle" pos="0,0" name="" col="4,13" radius="4" material="missile_railgun" />
+		</body>
+	</physobj>
+
+	<physobj name="missile_sticky" inlibrary="false" libclass="normal" hasphysics="true" initfunction="InitMissileSticky" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "Missile" frame = "6" pos = "0,0" rot="0" zoffset="100" />					
+			<shape type="circle" pos="0,0" name="" col="4,13" radius="4" material="missile" />
+		</body>
+	</physobj>
+
+	<physobj name="missile_explosive" inlibrary="false" libclass="normal" hasphysics="true" initfunction="InitMissileExplosive" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "Missile" frame = "7" pos = "0,0" rot="0" zoffset="100" />					
+			<shape type="circle" pos="0,0" name="" col="4,13" radius="4" material="nuke" />
+		</body>
+	</physobj>
+	
+
+	
+	
+
+	
+	
+	<physobj name="missile_airstrike_object" inlibrary="false" libclass="normal" hasphysics="true" initfunction="InitMissileAirStrikeObject" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "elephant" frame = "1" pos = "0,0" rot="0" zoffset="100" />					
+			<shape type="circle" pos="0,0" name="" col="4,9" radius="30" material="average" />
+		</body>
+	</physobj>
+	
+	<physobj name="cannon_base" inlibrary="true" libclass="normal" hasphysics="false" initfunction="" >
+			<graphic clip = "cannon_base" frame = "1" pos = "0,0" rot="0" zoffset="-101" />					
+	</physobj>
+
+	<physobj name="cannon_fixed" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitCannon" >
+		<body name="fix" pos="0,0" fixed="true" sensor="true">
+			<graphic clip = "cannon_top" frame = "1" pos = "0,0" rot="0" zoffset="-100" />					
+			<shape type="circle" pos="0,0" name="" col="1,15" radius="40" material="average" />
+		</body>
+	</physobj>
+	
+	<physobj name="cannon_fixed_big" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitCannon" >
+		<body name="fix" pos="0,0" fixed="true" sensor="true">
+			<graphic clip = "cannon_top_big" frame = "1" pos = "0,0" rot="0" zoffset="-100" />					
+			<shape type="circle" pos="0,-26" name="" col="1,15" radius="35" material="average" />
+		</body>
+	</physobj>
+
+	<physobj name="cannon_loose" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitCannon" >
+		<body name="fix" pos="0,0" fixed="false" sensor="true">
+			<graphic clip = "cannon_top" frame = "1" pos = "0,0" rot="0" zoffset="-100" />					
+			<shape type="circle" pos="0,0" name="" col="1,15" radius="15" material="average" />
+		</body>
+	</physobj>
+	
+	<physobj name="heavy_ball" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitHeavyBall" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "Ball" frame = "1" pos = "0,0" rot="0" zoffset="100" />					
+			<shape type="circle" pos="0,0" name="" col="4,15" radius="24" material="dense" />
+		</body>
+	</physobj>
+
+	<physobj name="wheel_of_death" inlibrary="true" libclass="normal" hasphysics="true" initfunction="" >
+		<body name="fix" pos="0,0" fixed="false" sensor="true">
+			<graphic clip = "wheelofDeath" frame = "1" pos = "0,0" rot="0" zoffset="100" />					
+			<shape type="circle" pos="0,0" name="" col="4,13" radius="93" material="light" />
+		</body>
+	</physobj>
+	
+	<physobj name="wheel_of_death_bg" inlibrary="true" libclass="normal" hasphysics="false" initfunction="" >
+		<graphic clip = "wheelofdeathbackground" frame = "1" pos = "0,0" rot="0" zoffset="200" />					
+	</physobj>
+
+	
+	<physobj name="anvil" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitAnvil" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "Anvil" frame = "1" pos = "0,0" rot="0" zoffset="100" />					
+			<shape type="poly" name="" col="4,15" vertices="0,-2, 60,-4, 50,25,25,25, 19,13" material="dense" />
+		</body>
+	</physobj>
+
+	<physobj name="chainsaw" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitChainsaw" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "chainsaw" frame = "1" pos = "0,0" rot="0" zoffset="100" />					
+			<shape type="poly" name="" col="4,15" vertices="-8,-19, 8,-19, 5,34, -5,34" material="average" />
+		</body>
+	</physobj>
+
+	<physobj name="saw" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitSaw" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "saw" frame = "1" pos = "0,0" rot="0" zoffset="100" />					
+			<shape type="poly" name="" col="4,15" vertices="-35,-11, 33,-4, 33,7, -35,7" material="average" />
+		</body>
+	</physobj>
+	
+	<physobj name="saw_xflip" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitSaw" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "saw_xflip" frame = "1" pos = "0,0" rot="0" zoffset="100" />					
+			<shape type="poly" name="" col="4,15" vertices="-33,-4, 35,-11, 35,7, -32,7" material="average" />
+		</body>
+	</physobj>
+
+	<physobj name="fortune_machine" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitPhysObj_Breakable_FortuneMachine" >
+		<body name="fix" pos="0,0" fixed="true" sensor="false">
+			<graphic clip = "fortuneMachine" frame = "1" pos = "0,0" rot="0" zoffset="200" />					
+			<shape type="poly" name="" col="4,13" vertices="-25,-90, 25,-90, 25,0, -25,0" material="average" />
+		</body>
+	</physobj>
+	
+	<physobj name="cork" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitCork" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "cork_ingame" frame = "1" pos = "0,0" rot="0" zoffset="50" />					
+			<shape type="poly" name="" col="4,5" vertices="-30,-8, 30,-8, 20,10, -26,6" material="average" />
+		</body>
+	</physobj>
+	
+	<physobj name="trampoline" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitTrampoline" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "trampoline" frame = "1" pos = "0,0" rot="0" zoffset="100" />					
+			<shape type="poly" name="" col="4,13" vertices="-44,-6, 44,-6, 44,6, -44,6" material="bouncy" />
+			<shape type="poly" name="" col="4,13" vertices="-44,6, 44,6, 44,23, -44,23" material="average" />
+		</body>
+	</physobj>
+	
+	<physobj name="spawner" inlibrary="true" libclass="normal" hasphysics="false" initfunction="InitSpawner" >
+		<parameter name="spawner_initialdelay" default="0" />
+		<parameter name="spawner_frequency" default="3" />
+		<parameter name="spawner_spawnobject" default="zombie1" />
+		<parameter name="spawner_totalamount" default="10" />
+		<graphic clip = "Spawner" frame = "1" pos = "0,0" rot="0" zoffset="100"/>					
+	</physobj>
+
+	<physobj name="spawner_lastlevel" inlibrary="true" libclass="normal" hasphysics="false" initfunction="InitSpawnerLastLevel" >
+		<parameter name="spawner_initialdelay" default="0" />
+		<parameter name="spawner_frequency" default="3" />
+		<parameter name="spawner_spawnobject" default="zombie_faller" />
+		<parameter name="spawner_totalamount" default="10" />
+		<graphic clip = "Spawner" frame = "1" pos = "0,0" rot="0" zoffset="100"/>					
+	</physobj>
+	
+	
+	<physobj name="zombie_stop_walk_marker" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitZombieStopWalkMarker" >
+		<body name="fix" pos="0,0" fixed="true" sensor="true">
+		<graphic clip = "ZombieStopWalkMarker" frame = "1" pos = "0,0" rot="0" zoffset="1000"/>					
+			<shape type="poly" name="" col="8,15" vertices="0,0, 30,0, 30,30, 0,30" material="average" />
+		</body>
+	</physobj>
+
+	<physobj name="zombie_turn_around_marker" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitZombieTurnAroundMarker" >
+		<body name="fix" pos="0,0" fixed="true" sensor="true">
+		<graphic clip = "ZombieTurnAroundMarker" frame = "1" pos = "0,0" rot="0" zoffset="1000"/>					
+			<shape type="poly" name="" col="8,15" vertices="0,0, 30,0, 30,30, 0,30" material="average" />
+		</body>
+	</physobj>
+
+	<physobj name="zombie_turn_around_sign" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitZombieTurnSign_Left" >
+		<body name="fix" pos="0,0" fixed="true" sensor="true">
+		<graphic clip = "sign_turn_left" frame = "1" pos = "0,0" rot="0" zoffset="1000"/>					
+			<shape type="poly" name="" col="8,15" vertices="-27,-48, 22,-48, 22,0, -27,0" material="average" />
+		</body>
+	</physobj>
+
+	<physobj name="zombie_turn_around_sign1" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitZombieTurnSign_Right" >
+		<body name="fix" pos="0,0" fixed="true" sensor="true">
+		<graphic clip = "sign_turn_right" frame = "1" pos = "0,0" rot="0" zoffset="1000"/>					
+			<shape type="poly" name="" col="8,15" vertices="-27,-48, 22,-48, 22,0, -27,0" material="average" />
+		</body>
+	</physobj>
+	
+	<physobj name="human1" inlibrary="true" libclass="zombie" hasphysics="true" initfunction="InitHuman" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "Civilian" frame = "1" pos = "0,0" rot="0" zoffset="50"/>					
+			<shape type="poly" name="body" col="8,15" vertices="-4,-41, 8,-41, 6,2, -3,2" material="average" />
+			<shape type="poly" name="head" col="8,15" vertices="-8,-60, 10,-60, 8,-41, -4,-41" material="average" />
+		</body>
+	</physobj>
+
+	<physobj name="human_walk_left" inlibrary="true" libclass="zombie" hasphysics="true" initfunction="InitHuman_WalkLeft" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "Civilian" frame = "1" pos = "0,0" rot="0" zoffset="50"/>					
+			<shape type="poly" name="body" col="8,15" vertices="-5,-41, 9,-39, 9,-7, -4,-7" material="average" />
+			<shape type="poly" name="body" col="8,0" vertices="-4,-7,  9,-7, 9,0, -4,0" material="nonexistant" />
+			<shape type="poly" name="head" col="8,15" vertices="-8,-55, 6,-55, 6,-42, -4,-40" material="average" />
+			<shape type="circle" name="wheel" pos="0,-5" col="8,15" radius="6" material="smooth" />
+		</body>
+	</physobj>
+	
+	<physobj name="human_walk_right" inlibrary="true" libclass="zombie" hasphysics="true" initfunction="InitHuman_WalkRight" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "Civilian" frame = "1" pos = "0,0" rot="0" zoffset="50"/>					
+			<shape type="poly" name="body" col="8,15" vertices="-5,-41, 9,-39, 9,-7, -4,-7" material="average" />
+			<shape type="poly" name="body" col="8,0" vertices="-4,-7,  9,-7, 9,0, -4,0" material="nonexistant" />
+			<shape type="poly" name="head" col="8,15" vertices="-8,-55, 6,-55, 6,-42, -4,-40" material="average" />
+			<shape type="circle" name="wheel" pos="0,-5" col="8,15" radius="6" material="smooth" />
+		</body>
+	</physobj>
+
+	
+	<physobj name="zombie_faller" inlibrary="true" libclass="zombie" hasphysics="true" initfunction="InitZombieFaller" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "Zombie" frame = "1" pos = "0,0" rot="0" zoffset="40"/>					
+			<shape type="poly" name="body" col="0,0" vertices="-4,-41, 8,-41, 6,2, -3,2" material="average" />
+			<shape type="poly" name="head" col="0,0" vertices="-8,-60, 10,-60, 8,-41, -4,-41" material="average" />
+		</body>
+	</physobj>
+	
+	<physobj name="zombie1" inlibrary="true" libclass="zombie" hasphysics="true" initfunction="InitZombie_Generic" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "Zombie" frame = "1" pos = "0,0" rot="0" zoffset="40"/>					
+			<shape type="poly" name="body" col="8,15" vertices="-4,-41, 8,-41, 6,2, -3,2" material="average" />
+			<shape type="poly" name="head" col="8,15" vertices="-8,-60, 10,-60, 8,-41, -4,-41" material="average" />
+		</body>
+	</physobj>
+
+	<physobj name="zombie_clown" inlibrary="true" libclass="zombie" hasphysics="true" initfunction="InitZombie_Clown" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "Zombie" frame = "1" pos = "0,0" rot="0" zoffset="40"/>					
+			<shape type="poly" name="body" col="8,15" vertices="-4,-41, 8,-41, 6,2, -3,2" material="average" />
+			<shape type="poly" name="head" col="8,15" vertices="-8,-60, 10,-60, 8,-41, -4,-41" material="average" />
+		</body>
+	</physobj>
+
+	<physobj name="zombie_ringmaster" inlibrary="true" libclass="zombie" hasphysics="true" initfunction="InitZombie_RingMaster" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "Zombie" frame = "1" pos = "0,0" rot="0" zoffset="40"/>					
+			<shape type="poly" name="body" col="8,15" vertices="-4,-41, 8,-41, 6,2, -3,2" material="average" />
+			<shape type="poly" name="head" col="8,15" vertices="-8,-60, 10,-60, 8,-41, -4,-41" material="average" />
+		</body>
+	</physobj>
+	
+	<physobj name="zombie_strongman" inlibrary="true" libclass="zombie" hasphysics="true" initfunction="InitZombie_StrongMan" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "Zombie" frame = "1" pos = "0,0" rot="0" zoffset="40"/>					
+			<shape type="poly" name="body" col="8,15" vertices="-4,-41, 8,-41, 6,2, -3,2" material="average" />
+			<shape type="poly" name="head" col="8,15" vertices="-8,-60, 10,-60, 8,-41, -4,-41" material="average" />
+		</body>
+	</physobj>
+
+	<physobj name="zombie_beardedlady" inlibrary="true" libclass="zombie" hasphysics="true" initfunction="InitZombie_BeardedLady" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "Zombie" frame = "1" pos = "0,0" rot="0" zoffset="40"/>					
+			<shape type="poly" name="body" col="8,15" vertices="-4,-41, 8,-41, 6,2, -3,2" material="average" />
+			<shape type="poly" name="head" col="8,15" vertices="-8,-60, 10,-60, 8,-41, -4,-41" material="average" />
+		</body>
+	</physobj>
+
+	<physobj name="zombie_electrocuted" inlibrary="true" libclass="zombie" hasphysics="true" initfunction="InitZombie_Electrocuted" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "Zombie" frame = "1" pos = "0,0" rot="0" zoffset="40"/>					
+			<shape type="poly" name="body" col="8,15" vertices="-4,-41, 8,-41, 6,2, -3,2" material="average" />
+			<shape type="poly" name="head" col="8,15" vertices="-8,-60, 10,-60, 8,-41, -4,-41" material="average" />
+		</body>
+	</physobj>
+	
+	<physobj name="zombie_walk_left" inlibrary="true" libclass="zombie" hasphysics="true" initfunction="InitZombieWalkLeft" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "Zombie" frame = "1" pos = "0,0" rot="0" zoffset="40"/>					
+			<shape type="poly" name="body" col="8,15" vertices="-5,-41, 9,-39, 9,-7, -4,-7" material="average" />
+			<shape type="poly" name="body" col="8,0" vertices="-4,-7,  9,-7, 9,0, -4,0" material="nonexistant" />
+			<shape type="poly" name="head" col="8,15" vertices="-8,-55, 6,-55, 6,-42, -4,-40" material="average" />
+			<shape type="circle" name="wheel" pos="0,-5" col="8,15" radius="6" material="smooth" />
+		</body>
+	</physobj>
+
+	<physobj name="zombie_walk_right" inlibrary="true" libclass="zombie" hasphysics="true" initfunction="InitZombieWalkRight" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "Zombie" frame = "1" pos = "0,0" rot="0" zoffset="40"/>					
+			<shape type="poly" name="body" col="8,15" vertices="-5,-41, 9,-39, 9,-7, -4,-7" material="average" />
+			<shape type="poly" name="body" col="8,0" vertices="-4,-7,  9,-7, 9,0, -4,0" material="nonexistant" />
+			<shape type="poly" name="head" col="8,15" vertices="-8,-55, 6,-55, 6,-42, -4,-40" material="average" />
+			<shape type="circle" name="wheel" pos="0,-5" col="8,15" radius="6" material="smooth" />
+		</body>
+	</physobj>
+
+	<physobj name="zombie_climb_out_left" inlibrary="true" libclass="zombie" hasphysics="true" initfunction="InitZombieClimbOutWalkLeft" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "Zombie" frame = "170" pos = "0,0" rot="0" zoffset="40"/>					
+			<shape type="poly" name="body" col="8,15" vertices="-5,-41, 9,-39, 9,-7, -4,-7" material="average" />
+			<shape type="poly" name="body" col="8,0" vertices="-4,-7,  9,-7, 9,0, -4,0" material="nonexistant" />
+			<shape type="poly" name="head" col="8,15" vertices="-8,-55, 6,-55, 6,-42, -4,-40" material="average" />
+			<shape type="circle" name="wheel" pos="0,-5" col="8,15" radius="6" material="smooth" />
+		</body>
+	</physobj>
+
+	<physobj name="zombie_climb_out_right" inlibrary="true" libclass="zombie" hasphysics="true" initfunction="InitZombieClimbOutWalkRight" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "Zombie" frame = "170" pos = "0,0" rot="0" zoffset="40"/>					
+			<shape type="poly" name="body" col="8,15" vertices="-5,-41, 9,-39, 9,-7, -4,-7" material="average" />
+			<shape type="poly" name="body" col="8,0" vertices="-4,-7,  9,-7, 9,0, -4,0" material="nonexistant" />
+			<shape type="poly" name="head" col="8,15" vertices="-8,-55, 6,-55, 6,-42, -4,-40" material="average" />
+			<shape type="circle" name="wheel" pos="0,-5" col="8,15" radius="6" material="smooth" />
+		</body>
+	</physobj>
+	
+	<physobj name="zombie_climb_out_unicycle_left" inlibrary="true" libclass="zombie" hasphysics="true" initfunction="InitZombieClimbOutUnicycleLeft" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "Zombie" frame = "170" pos = "0,0" rot="0" zoffset="40"/>					
+			<shape type="poly" name="body" col="8,0" vertices="-4,-41, 8,-41, 6,2, -3,2" material="nonexistant" />
+			<shape type="poly" name="head" col="8,0" vertices="-8,-60, 10,-60, 8,-41, -4,-41" material="nonexistant" />
+			<shape type="poly" name="body" col="8,15" vertices="-4,-51, 8,-51, 6,-8, -3,-5" material="average" />
+			<shape type="poly" name="head" col="8,15" vertices="-8,-70, 10,-70, 8,-51, -4,-51" material="average" />
+			<shape type="circle" name="wheel" pos="0,-5" col="8,15" radius="6" material="smooth" />
+		</body>
+	</physobj>
+
+	<physobj name="zombie_climb_out_unicycle_right" inlibrary="true" libclass="zombie" hasphysics="true" initfunction="InitZombieClimbOutUnicycleRight" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "Zombie" frame = "170" pos = "0,0" rot="0" zoffset="40"/>					
+			<shape type="poly" name="body" col="8,0" vertices="-4,-41, 8,-41, 6,2, -3,2" material="nonexistant" />
+			<shape type="poly" name="head" col="8,0" vertices="-8,-60, 10,-60, 8,-41, -4,-41" material="nonexistant" />
+			<shape type="poly" name="body" col="8,15" vertices="-4,-51, 8,-51, 6,-8, -3,-5" material="average" />
+			<shape type="poly" name="head" col="8,15" vertices="-8,-70, 10,-70, 8,-51, -4,-51" material="average" />
+			<shape type="circle" name="wheel" pos="0,-5" col="8,15" radius="6" material="smooth" />
+		</body>
+	</physobj>
+
+	
+	<physobj name="zombie_unicycle_left" inlibrary="true" libclass="zombie" hasphysics="true" initfunction="InitZombieUnicycleLeft" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "Zombie" frame = "125" pos = "0,0" rot="0" zoffset="40"/>					
+			<shape type="poly" name="body" col="8,0" vertices="-4,-41, 8,-41, 6,2, -3,2" material="nonexistant" />
+			<shape type="poly" name="head" col="8,0" vertices="-8,-60, 10,-60, 8,-41, -4,-41" material="nonexistant" />
+			<shape type="poly" name="body" col="8,15" vertices="-4,-51, 8,-51, 6,-8, -3,-5" material="average" />
+			<shape type="poly" name="head" col="8,15" vertices="-8,-70, 10,-70, 8,-51, -4,-51" material="average" />
+			<shape type="circle" name="wheel" pos="0,-5" col="8,15" radius="6" material="smooth" />
+		</body>
+	</physobj>
+
+	<physobj name="zombie_unicycle_right" inlibrary="true" libclass="zombie" hasphysics="true" initfunction="InitZombieUnicycleRight" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "Zombie" frame = "125" pos = "0,0" rot="0" zoffset="40"/>					
+			<shape type="poly" name="body" col="8,0" vertices="-4,-41, 8,-41, 6,2, -3,2" material="nonexistant" />
+			<shape type="poly" name="head" col="8,0" vertices="-8,-60, 10,-60, 8,-41, -4,-41" material="nonexistant" />
+			<shape type="poly" name="body" col="8,15" vertices="-4,-51, 8,-51, 6,-8, -3,-5" material="average" />
+			<shape type="poly" name="head" col="8,15" vertices="-8,-70, 10,-70, 8,-51, -4,-51" material="average" />
+			<shape type="circle" name="wheel" pos="0,-5" col="8,15" radius="6" material="smooth" />
+		</body>
+	</physobj>
+
+	<physobj name="switch_once" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitSwitch_Once" >
+		<body name="fix" pos="0,0" fixed="true" sensor="false">
+			<graphic clip = "switch_Once" frame = "1" pos = "0,0" rot="0" zoffset="1000"/>					
+			<shape type="poly" name="" col="1,15" vertices="0,0, 25,0, 25,20, 0,20" material="average"/>
+		</body>
+	</physobj>
+
+	<physobj name="switch_2way" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitSwitch_2Way" >
+		<body name="fix" pos="0,0" fixed="true" sensor="false">
+			<graphic clip = "switch_twoWay" frame = "1" pos = "0,0" rot="0" zoffset="1000"/>					
+			<shape type="poly" name="" col="1,15" vertices="0,0, 25,0, 25,20, 0,20" material="average"/>
+		</body>
+	</physobj>
+	
+	<physobj name="switch_StopGo" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitSwitch_2Way" >
+		<body name="fix" pos="0,0" fixed="true" sensor="false">
+			<graphic clip = "switch_StopGo" frame = "1" pos = "0,0" rot="0" zoffset="1000"/>					
+			<shape type="poly" name="" col="1,15" vertices="0,0, 25,0, 25,20, 0,20" material="average"/>
+		</body>
+	</physobj>
+
+	<physobj name="switch_timer" inlibrary="false" libclass="normal" hasphysics="true" initfunction="InitSwitch_Timer" >
+		<parameter name="switch_time" default="1.5" />
+		<body name="fix" pos="0,0" fixed="true" sensor="false">
+			<graphic clip = "switch_Timer" frame = "1" pos = "0,0" rot="0" zoffset="1000"/>					
+			<shape type="poly" name="" col="1,15" vertices="0,0, 25,0, 25,20, 0,20" material="average"/>
+		</body>
+	</physobj>
+	
+	<physobj name="switch_limpet" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitSwitch_Limpet" >
+		<body name="fix" pos="0,0" fixed="true" sensor="false">
+			<graphic clip = "Switch_Limpet" frame = "1" pos = "0,0" rot="0" zoffset="100"/>					
+			<shape type="poly" name="" col="1,15" vertices="0,0, 25,0, 25,20, 0,20" material="average"/>
+		</body>
+	</physobj>
+
+	<physobj name="switched_platform_2way_0" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitSwitch_2Way" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "switched_platform_2way_0" frame = "1" pos = "0,0" rot="0" zoffset="100"/>					
+			<shape type="poly" name="" col="1,15" vertices="0,0, 54,0, 54,15, 0,15" material="average"/>
+		</body>
+	</physobj>
+	
+	<physobj name="switched_platform_0" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitSwitch_Once" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "switched_platform_0" frame = "1" pos = "0,0" rot="0" zoffset="100"/>					
+			<shape type="poly" name="" col="1,15" vertices="0,0, 54,0, 54,15, 0,15" material="average"/>
+		</body>
+	</physobj>
+	
+	<physobj name="switched_platform_1" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitSwitch_Once" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "switched_platform_1" frame = "1" pos = "0,0" rot="0" zoffset="100"/>					
+			<shape type="poly" name="" col="1,15" vertices="0,0, 93,0, 93,15, 0,15" material="average"/>
+		</body>
+	</physobj>
+
+	<physobj name="switched_platform_2" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitSwitch_Once" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "switched_platform_2" frame = "1" pos = "0,0" rot="0" zoffset="100"/>					
+			<shape type="poly" name="" col="1,15" vertices="0,0, 168,0,168,15, 0,15" material="average"/>
+		</body>
+	</physobj>
+	
+	<physobj name="zombie_walk_left_stilts" inlibrary="true" libclass="zombie" hasphysics="true" initfunction="InitZombieWalkLeftStilts" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "ZombieStilts" frame = "1" pos = "0,0" rot="0" zoffset="40"/>					
+			<shape type="poly" name="body" col="8,15" vertices="-6,-62, 6,-62, 6,2, -6,2" material="average" />
+			<shape type="poly" name="head" col="8,15" vertices="-8,-83, 10,-83, 8,-62, -4,-62" material="average" />
+		</body>
+	</physobj>
+	
+	
+	<physobj name="zombie_walk_right_stilts" inlibrary="true" libclass="zombie" hasphysics="true" initfunction="InitZombieWalkRightStilts" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "ZombieStilts" frame = "1" pos = "0,0" rot="0" zoffset="40"/>					
+			<shape type="poly" name="body" col="8,15" vertices="-6,-62, 6,-62, 6,2, -6,2" material="average" />
+			<shape type="poly" name="head" col="8,15" vertices="-8,-83, 10,-83, 8,-62, -4,-62" material="average" />
+		</body>
+	</physobj>
+	
+	<physobj name="zombie_stilts" inlibrary="true" libclass="zombie" hasphysics="true" initfunction="InitZombie_Clown_Stilts" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "ZombieStilts" frame = "1" pos = "0,0" rot="0" zoffset="40"/>					
+			<shape type="poly" name="body" col="8,15" vertices="-6,-62, 6,-62, 6,2, -6,2" material="average" />
+			<shape type="poly" name="head" col="8,15" vertices="-8,-83, 10,-83, 8,-62, -4,-62" material="average" />
+		</body>
+	</physobj>
+	
+
+	<physobj name="wheel_50" inlibrary="true" libclass="all" hasphysics="true" initfunction="" >
+		<zombooka greatkill="false" hitdamage="0" superhitdamage="0" />
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "Wheel_50" frame = "1" pos = "0,0" rot="100" />
+			<shape type="circle" pos="0,0" name="" col="1,15" radius="25" material="average" />
+		</body>
+	</physobj>
+	
+		<physobj name="wheel_35" inlibrary="true" libclass="all" hasphysics="true" initfunction="" >
+		<zombooka greatkill="false" hitdamage="0" superhitdamage="0" />
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "Wheel_35" frame = "1" pos = "0,0" rot="100" />
+			<shape type="circle" pos="0,0" name="" col="1,15" radius="15" material="average" />
+		</body>
+	</physobj>
+	
+	<physobj name="wheel_clown" inlibrary="true" libclass="all" hasphysics="true" initfunction="InitDeadlyWheel" >
+		<zombooka greatkill="false" hitdamage="0" superhitdamage="0" />
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "clownwheel" frame = "1" pos = "0,0" rot="100" />
+			<shape type="circle" pos="0,0" name="" col="1,15" radius="20" material="clown_wheel" />
+		</body>
+	</physobj>
+	
+	<physobj name="wire" inlibrary="true" libclass="normal" hasphysics="true" initfunction="" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "wire" frame = "1" pos = "0,0" rot="0" zoffset="100"/>					
+			<shape type="poly" name="head" col="8,15" vertices="0,0, 5,0, 5,40,0,40" material="average" />
+		</body>
+	</physobj>
+
+	<physobj name="wire_end" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitWireEnd" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "wire_end" frame = "1" pos = "0,0" rot="0" zoffset="100"/>					
+			<shape type="poly" name="head" col="8,15" vertices="0,0, 5,0, 5,40,0,40" material="average" />
+		</body>
+	</physobj>
+	
+	
+	<physobj name="explosiveBarrel" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitExplosiveBarrel" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "ExplosiveBarrel" frame = "1" pos = "0,0" rot="0" zoffset="100"/>					
+			<shape type="poly" name="" col="1,15" vertices="-11,-13, 11,-13, 11,13, -11,13" material="average"/>
+		</body>
+	</physobj>
+
+	
+	<physobj name="flame1" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitFlame" >
+		<body name="fix" pos="0,0" fixed="true" sensor="true">
+			<graphic clip = "Flame1" frame = "1" pos = "0,0" rot="0" zoffset="-100"/>					
+			<shape type="poly" name="" col="1,15" vertices="-9,-40,9,-40, 9,0,-9,0" material="average"/>
+		</body>
+	</physobj>
+
+	<physobj name="trapeze_wire_120" inlibrary="true" libclass="normal" hasphysics="true" initfunction="" >
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "TrapezeWire120" frame = "1" pos = "0,0" rot="0" zoffset="100"/>					
+			<shape type="poly" name="" col="1,15" vertices="-3,0,3,0, 3,120,-3,120" material="average"/>
+		</body>
+	</physobj>
+	
+	
+	
+	<physobj name="cutting_disk_large" inlibrary="true" libclass="all" hasphysics="true" initfunction="InitCuttingDisk" >
+		<zombooka greatkill="true" hitdamage="0.05" superhitdamage="0" />
+		<parameter name="disk_velocity" default="20" />
+		<parameter name="disk_type" default="constant" />
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "cutting_disk" frame = "1" pos = "0,0" rot="0" zoffset="100" />
+			<shape type="circle" pos="0,0" name="" col="1,15" radius="24" material="average" />
+		</body>
+	</physobj>
+		
+	<physobj name="cutting_disk_medium" inlibrary="true" libclass="all" hasphysics="true" initfunction="InitCuttingDisk" >
+		<zombooka greatkill="true" hitdamage="0.05" superhitdamage="0" />
+		<parameter name="disk_velocity" default="20" />
+		<parameter name="disk_type" default="constant" />
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "cutting_disk2" frame = "1" pos = "0,0" rot="0"  zoffset="100" />
+			<shape type="circle" pos="0,0" name="" col="1,15" radius="20" material="average" />
+		</body>
+	</physobj>
+	
+	<physobj name="cutting_disk_small" inlibrary="true" libclass="all" hasphysics="true" initfunction="InitCuttingDisk" >
+		<zombooka greatkill="true" hitdamage="0.05" superhitdamage="0" />
+		<parameter name="disk_velocity" default="20" />
+		<parameter name="disk_type" default="constant" />
+		<body name="fix" pos="0,0" fixed="false" sensor="false">
+			<graphic clip = "cutting_disk3" frame = "1" pos = "0,0" rot="0"  zoffset="100" />
+			<shape type="circle" pos="0,0" name="" col="1,15" radius="16" material="average" />
+		</body>
+	</physobj>
+	
+	
+	
+	
+	
+	
+	
+	<physobj name="path_object" inlibrary="true" libclass="platform" hasphysics="true" initfunction="InitPhysObj_Path_Virtual" >
+		<zombooka greatkill="false" hitdamage="0" superhitdamage="0" />
+		<parameter name="path_line" default="" />
+		<parameter name="path_speed" default="30" />
+		<parameter name="path_loop" default="true" />
+		<parameter name="path_switch" default="" />
+		<parameter name="path_spline" default="false" />
+		<parameter name="path_endreset" default="false" />
+		<parameter name="path_startpos" default="0" />
+		<parameter name="path_2way" default="false" />
+		<parameter name="path_rotatetopath" default="false" />
+		<parameter name="path_startmoving" default="false" />
+		<body name="fix" pos="0,0" fixed="true" sensor="true">
+			<graphic clip = "obj_platform_holder_1x4" frame = "1" pos = "0,0" rot="0" zoffset="1000" />					
+			<shape type="poly" name="" col="1,15" vertices="-34,-6, 34,-6, 34,6, -34,6" material="average"/>
+		</body>
+	</physobj>
+
+	
+		
+		
+		
+
+		<physobj name="magnet" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitMagnet" >
+				<body name="fix" pos="0,0" fixed="false" sensor="true">
+					<graphic clip = "magnet" frame = "1" pos = "0,0" rot="0" zoffset="1000"/>					
+					<shape type="circle" pos="0,0" name="" col="1,15" radius="50" material="average" />
+				</body>
+		</physobj>
+		
+		
+		
+		<physobj name="chain" inlibrary="true" libclass="normal" hasphysics="true" initfunction="" >
+				<body name="fix" pos="0,0" fixed="false" sensor="false">
+					<graphic clip = "rope" frame = "1" pos = "0,0" rot="0" zoffset="90"/>					
+					<shape type="poly" name="" col="1,15" vertices="0,0, 6,0, 6,30, 0,30" material="average"/>
+				</body>
+		</physobj>
+		
+		<physobj name="rope" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitPhysObj_Breakable_Rope" >
+				<body name="fix" pos="0,0" fixed="false" sensor="false">
+					<graphic clip = "rope" frame = "1" pos = "0,0" rot="0" zoffset="90"/>					
+					<shape type="poly" name="" col="1,15" vertices="0,0, 6,0, 6,30, 0,30" material="average"/>
+				</body>
+		</physobj>
+
+		<physobj name="piano" inlibrary="true" libclass="all" hasphysics="true" initfunction="InitPhysObj_Breakable_Piano" >
+			<body name="fix" pos="0,0" fixed="false" sensor="false">
+				<graphic clip = "piano" frame = "1" pos = "0,0" rot="0" zoffset="100" />
+					<shape type="poly" name="" col="1,15" vertices="-38,-38, 38,-38, 38,19, -38,19" material="wood"/>
+			</body>
+		</physobj>
+		
+		
+		<physobj name="woodenCrate0" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitPhysObj_Breakable_woodenCrate0" >
+				<body name="fix" pos="0,0" fixed="false" sensor="false">
+					<graphic clip = "woodenCrate0" frame = "1" pos = "0,0" rot="0" zoffset="100"/>					
+					<shape type="poly" name="" col="1,15" vertices="0,0, 26,0, 26,22, 0,22" material="wood"/>
+				</body>
+		</physobj>
+		<physobj name="woodenCrate1" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitPhysObj_Breakable_woodenCrate1" >
+				<body name="fix" pos="0,0" fixed="false" sensor="false">
+					<graphic clip = "woodenCrate1" frame = "1" pos = "0,0" rot="0" zoffset="100"/>					
+					<shape type="poly" name="" col="1,15" vertices="0,0, 46,0, 46,38, 0,38" material="wood"/>
+				</body>
+		</physobj>
+		<physobj name="woodenPin" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitPhysObj_Breakable_woodenPin" >
+				<body name="fix" pos="0,0" fixed="true" sensor="false">
+					<graphic clip = "woodenPin" frame = "1" pos = "0,0" rot="0" zoffset="100"/>					
+					<shape type="circle" pos="0,0" name="" col="1,15" radius="11" material="wood" />
+				</body>
+		</physobj>
+		
+
+		<physobj name="metalPost0" inlibrary="true" libclass="normal" hasphysics="true" initfunction="" >
+				<body name="fix" pos="0,0" fixed="false" sensor="false">
+					<graphic clip = "metalPost0" frame = "1" pos = "0,0" rot="0" zoffset="100"/>					
+					<shape type="poly" name="" col="1,15" vertices="0,0, 8,0, 8,39, 0,39" material="average"/>
+				</body>
+		</physobj>
+		<physobj name="metalPost1" inlibrary="true" libclass="normal" hasphysics="true" initfunction="" >
+				<body name="fix" pos="0,0" fixed="false" sensor="false">
+					<graphic clip = "metalPost1" frame = "1" pos = "0,0" rot="0" zoffset="100"/>					
+					<shape type="poly" name="" col="1,15" vertices="0,0, 8,0, 8,63, 0,63" material="average"/>
+				</body>
+		</physobj>
+		<physobj name="metalPost2" inlibrary="true" libclass="normal" hasphysics="true" initfunction="" >
+				<body name="fix" pos="0,0" fixed="false" sensor="false">
+					<graphic clip = "metalPost2" frame = "1" pos = "0,0" rot="0" zoffset="100"/>					
+					<shape type="poly" name="" col="1,15" vertices="0,0, 8,0, 8,127, 0,127" material="average"/>
+				</body>
+		</physobj>
+		
+		<physobj name="metalPost3" inlibrary="true" libclass="normal" hasphysics="true" initfunction="" >
+				<body name="fix" pos="0,0" fixed="false" sensor="false">
+					<graphic clip = "metalPost3" frame = "1" pos = "0,0" rot="0" zoffset="100"/>					
+					<shape type="poly" name="" col="1,15" vertices="0,0, 8,0, 8,208, 0,208" material="average"/>
+				</body>
+		</physobj>
+
+		<physobj name="metalPost0Fixed" inlibrary="true" libclass="normal" hasphysics="true" initfunction="" >
+				<body name="fix" pos="0,0" fixed="true" sensor="false">
+					<graphic clip = "metalPost0_fixed" frame = "1" pos = "0,0" rot="0" zoffset="100"/>					
+					<shape type="poly" name="" col="1,15" vertices="0,0, 8,0, 8,39, 0,39" material="average"/>
+				</body>
+		</physobj>
+		<physobj name="metalPost1Fixed" inlibrary="true" libclass="normal" hasphysics="true" initfunction="" >
+				<body name="fix" pos="0,0" fixed="true" sensor="false">
+					<graphic clip = "metalPost1_fixed" frame = "1" pos = "0,0" rot="0" zoffset="100"/>					
+					<shape type="poly" name="" col="1,15" vertices="0,0, 8,0, 8,63, 0,63" material="average"/>
+				</body>
+		</physobj>
+		<physobj name="metalPost2Fixed" inlibrary="true" libclass="normal" hasphysics="true" initfunction="" >
+				<body name="fix" pos="0,0" fixed="true" sensor="false">
+					<graphic clip = "metalPost2_fixed" frame = "1" pos = "0,0" rot="0" zoffset="100"/>					
+					<shape type="poly" name="" col="1,15" vertices="0,0, 8,0, 8,127, 0,127" material="average"/>
+				</body>
+		</physobj>
+		
+		<physobj name="glassPost0" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitPhysObj_Breakable_glassPost0" >
+				<body name="fix" pos="0,0" fixed="false" sensor="false">
+					<graphic clip = "glassPost0" frame = "1" pos = "0,0" rot="0" zoffset="100"/>					
+					<shape type="poly" name="" col="1,15" vertices="0,0, 8,0, 8,39, 0,39" material="average"/>
+				</body>
+		</physobj>
+		<physobj name="glassPost1" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitPhysObj_Breakable_glassPost1" >
+				<body name="fix" pos="0,0" fixed="false" sensor="false">
+					<graphic clip = "glassPost1" frame = "1" pos = "0,0" rot="0" zoffset="100"/>					
+					<shape type="poly" name="" col="1,15" vertices="0,0, 8,0, 8,63, 0,63" material="average"/>
+				</body>
+		</physobj>
+		<physobj name="glassPost2" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitPhysObj_Breakable_glassPost2" >
+				<body name="fix" pos="0,0" fixed="false" sensor="false">
+					<graphic clip = "glassPost2" frame = "1" pos = "0,0" rot="0" zoffset="100"/>					
+					<shape type="poly" name="" col="1,15" vertices="0,0, 8,0, 8,127, 0,127" material="average"/>
+				</body>
+		</physobj>
+		
+		<physobj name="glassPost0Fixed" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitPhysObj_Breakable_glassPost0" >
+				<body name="fix" pos="0,0" fixed="true" sensor="false">
+					<graphic clip = "glassPost0_fixed" frame = "1" pos = "0,0" rot="0" zoffset="100"/>					
+					<shape type="poly" name="" col="1,15" vertices="0,0, 8,0, 8,39, 0,39" material="average"/>
+				</body>
+		</physobj>
+		<physobj name="glassPost1Fixed" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitPhysObj_Breakable_glassPost1" >
+				<body name="fix" pos="0,0" fixed="true" sensor="false">
+					<graphic clip = "glassPost1_fixed" frame = "1" pos = "0,0" rot="0" zoffset="100"/>					
+					<shape type="poly" name="" col="1,15" vertices="0,0, 8,0, 8,63, 0,63" material="average"/>
+				</body>
+		</physobj>
+		<physobj name="glassPost2Fixed" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitPhysObj_Breakable_glassPost2" >
+				<body name="fix" pos="0,0" fixed="true" sensor="false">
+					<graphic clip = "glassPost2_fixed" frame = "1" pos = "0,0" rot="0" zoffset="100"/>					
+					<shape type="poly" name="" col="1,15" vertices="0,0, 8,0, 8,127, 0,127" material="average"/>
+				</body>
+		</physobj>
+
+		
+		<physobj name="woodenPost0Fixed" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitPhysObj_Breakable_woodenPost0" >
+				<body name="fix" pos="0,0" fixed="true" sensor="false">
+					<graphic clip = "woodenPost0_fixed" frame = "1" pos = "0,0" rot="0" zoffset="100"/>					
+					<shape type="poly" name="" col="1,15" vertices="0,0, 8,0, 8,39, 0,39" material="wood"/>
+				</body>
+		</physobj>
+		<physobj name="woodenPost1Fixed" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitPhysObj_Breakable_woodenPost1" >
+				<body name="fix" pos="0,0" fixed="true" sensor="false">
+					<graphic clip = "woodenPost1_fixed" frame = "1" pos = "0,0" rot="0" zoffset="100"/>					
+					<shape type="poly" name="" col="1,15" vertices="0,0, 8,0, 8,63, 0,63" material="wood"/>
+				</body>
+		</physobj>
+		<physobj name="woodenPost2Fixed" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitPhysObj_Breakable_woodenPost2" >
+				<body name="fix" pos="0,0" fixed="true" sensor="false">
+					<graphic clip = "woodenPost2_fixed" frame = "1" pos = "0,0" rot="0" zoffset="100"/>					
+					<shape type="poly" name="" col="1,15" vertices="0,0, 8,0, 8,127, 0,127" material="wood"/>
+				</body>
+		</physobj>
+		
+		<physobj name="woodenPost0" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitPhysObj_Breakable_woodenPost0" >
+				<body name="fix" pos="0,0" fixed="false" sensor="false">
+					<graphic clip = "woodenPost0" frame = "1" pos = "0,0" rot="0" zoffset="100"/>					
+					<shape type="poly" name="" col="1,15" vertices="0,0, 8,0, 8,39, 0,39" material="wood"/>
+				</body>
+		</physobj>
+		<physobj name="woodenPost1" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitPhysObj_Breakable_woodenPost1" >
+				<body name="fix" pos="0,0" fixed="false" sensor="false">
+					<graphic clip = "woodenPost1" frame = "1" pos = "0,0" rot="0" zoffset="100"/>					
+					<shape type="poly" name="" col="1,15" vertices="0,0, 8,0, 8,63, 0,63" material="wood"/>
+				</body>
+		</physobj>
+		<physobj name="woodenPost2" inlibrary="true" libclass="normal" hasphysics="true" initfunction="InitPhysObj_Breakable_woodenPost2" >
+				<body name="fix" pos="0,0" fixed="false" sensor="false">
+					<graphic clip = "woodenPost2" frame = "1" pos = "0,0" rot="0" zoffset="100"/>					
+					<shape type="poly" name="" col="1,15" vertices="0,0, 8,0, 8,127, 0,127" material="wood"/>
+				</body>
+		</physobj>
+
+		
+		
+		<physobj name="wind" inlibrary="true" libclass="scenery" hasphysics="true" initfunction="InitWind">
+			<body name="fix" pos="0,0" fixed="true" sensor="true">
+				<graphic clip = "windblock" frame = "1" pos = "0,0" rot="0" zoffset="2000" />					
+				<shape type="poly" name="" col="1,15" vertices="-20,-20, 20,-20, 20,20, -20,20" material="average"/>
+			</body>
+		</physobj>
+		
+
+		
+		<physobj name="bush" hasphysics="false" inlibrary="true"> 
+			<graphic zoffset="103" rot="0" pos="0,0" frame="1" clip="bush"/> 
+		</physobj>
+		
+		<physobj name="bush2" hasphysics="false" inlibrary="true"> 
+			<graphic zoffset="103" rot="0" pos="0,0" frame="1" clip="bush2"/> 
+		</physobj>
+		
+		<physobj name="bush3" hasphysics="false" inlibrary="true"> 
+			<graphic zoffset="103" rot="0" pos="0,0" frame="1" clip="bush3"/> 
+		</physobj>
+		
+		<physobj name="grass1" hasphysics="false" inlibrary="true"> 
+			<graphic zoffset="100" rot="0" pos="0,0" frame="1" clip="grass1"/> 
+		</physobj>
+		
+		<physobj name="grass2" hasphysics="false" inlibrary="true"> 
+			<graphic zoffset="103" rot="0" pos="0,0" frame="1" clip="grass2"/> 
+		</physobj>
+		
+		<physobj name="grass3" hasphysics="false" inlibrary="true"> 
+			<graphic zoffset="103" rot="0" pos="0,0" frame="1" clip="grass3"/> 
+		</physobj>
+		
+		<physobj name="banana1" hasphysics="false" inlibrary="true"> 
+			<graphic zoffset="103" rot="0" pos="0,0" frame="1" clip="banana1"/> 
+		</physobj>
+		
+		<physobj name="banana2" hasphysics="false" inlibrary="true"> 
+			<graphic zoffset="103" rot="0" pos="0,0" frame="1" clip="banana2"/> 
+		</physobj>
+		
+		<physobj name="rock1" hasphysics="false" inlibrary="true"> 
+			<graphic zoffset="103" rot="0" pos="0,0" frame="1" clip="rock1"/> 
+		</physobj>
+		
+		<physobj name="rock2" hasphysics="false" inlibrary="true"> 
+			<graphic zoffset="103" rot="0" pos="0,0" frame="1" clip="rock2"/> 
+		</physobj>
+		
+		<physobj name="rock3" hasphysics="false" inlibrary="true"> 
+			<graphic zoffset="103" rot="0" pos="0,0" frame="1" clip="rock3"/> 
+		</physobj>
+		
+		<physobj name="water" hasphysics="false" inlibrary="true"> 
+			<graphic zoffset="105" rot="0" pos="0,0" frame="1" clip="water"/> 
+		</physobj>
+		
+		<physobj name="car1" hasphysics="false" inlibrary="true"> 
+			<graphic zoffset="103" rot="0" pos="0,0" frame="1" clip="car1"/> 
+		</physobj>
+		
+		<physobj name="car2" hasphysics="false" inlibrary="true"> 
+			<graphic zoffset="103" rot="0" pos="0,0" frame="1" clip="car2"/> 
+		</physobj>
+		
+		<physobj name="oaktree1" hasphysics="false" inlibrary="true"> 
+			<graphic zoffset="103" rot="0" pos="0,0" frame="1" clip="oaktree1"/> 
+		</physobj>
+		
+		<physobj name="oaktree2" hasphysics="false" inlibrary="true"> 
+			<graphic zoffset="103" rot="0" pos="0,0" frame="1" clip="oaktree2"/> 
+		</physobj>
+		
+		
+		<physobj name="tree_palm1" hasphysics="false" inlibrary="true"> 
+			<graphic zoffset="103" rot="0" pos="0,0" frame="1" clip="tree_palm1"/> 
+		</physobj>
+		
+		<physobj name="tree_palm2" hasphysics="false" inlibrary="true"> 
+			<graphic zoffset="103" rot="0" pos="0,0" frame="1" clip="tree_palm2"/> 
+		</physobj>
+		
+		<physobj name="tree_palm3" hasphysics="false" inlibrary="true"> 
+			<graphic zoffset="103" rot="0" pos="0,0" frame="1" clip="tree_palm3"/> 
+		</physobj>
+		
+		<physobj name="billboard_animaltamer" hasphysics="false" inlibrary="true" initfunction="InitPlayerBillboard"> 
+			<graphic zoffset="103" rot="0" pos="0,0" frame="1" clip="billboard_player"/> 
+		</physobj>
+		<physobj name="billboard_animaltamer" hasphysics="false" inlibrary="true"> 
+			<graphic zoffset="103" rot="0" pos="0,0" frame="1" clip="billboard_animaltamer"/> 
+		</physobj>
+		<physobj name="billboard_cannonball" hasphysics="false" inlibrary="true"> 
+			<graphic zoffset="103" rot="0" pos="0,0" frame="1" clip="billboard_cannonball"/> 
+		</physobj>
+		<physobj name="billboard_clowns" hasphysics="false" inlibrary="true"> 
+			<graphic zoffset="103" rot="0" pos="0,0" frame="1" clip="billboard_clowns"/> 
+		</physobj>
+		<physobj name="billboard_custardKing" hasphysics="false" inlibrary="true"> 
+			<graphic zoffset="103" rot="0" pos="0,0" frame="1" clip="billboard_custardKing"/> 
+		</physobj>
+		<physobj name="billboard_fireeater" hasphysics="false" inlibrary="true"> 
+			<graphic zoffset="103" rot="0" pos="0,0" frame="1" clip="billboard_fireeater"/> 
+		</physobj>
+		<physobj name="billboard_nuke" hasphysics="false" inlibrary="true"> 
+			<graphic zoffset="103" rot="0" pos="0,0" frame="1" clip="billboard_nuke"/> 
+		</physobj>
+		
+		<physobj name="fireRing" hasphysics="false" inlibrary="true"> 
+			<graphic zoffset="-101" rot="0" pos="0,0" frame="1" clip="fireRing"/> 
+		</physobj>
+		
+		<physobj name="tent" hasphysics="false" inlibrary="true"> 
+			<graphic zoffset="103" rot="0" pos="0,0" frame="1" clip="tent"/> 
+		</physobj>
+		
+		<physobj name="circus_sign" hasphysics="false" inlibrary="true"> 
+			<graphic zoffset="103" rot="0" pos="0,0" frame="1" clip="circus_sign"/> 
+		</physobj>
+		
+		<physobj name="cannonRung" hasphysics="false" inlibrary="true"> 
+			<graphic zoffset="103" rot="0" pos="0,0" frame="1" clip="cannonRung"/> 
+		</physobj>
+		
+		<physobj name="decal1" inlibrary="true" libclass="decals" hasphysics="true" initfunction="InitDecal"> 
+			<graphic zoffset="-1000" rot="0" pos="0,0" frame="1" clip="decal1"/> 
+		</physobj>
+		<physobj name="decal2" inlibrary="true" libclass="decals" hasphysics="true" initfunction="InitDecal"> 
+			<graphic zoffset="-1000" rot="0" pos="0,0" frame="1" clip="decal2"/> 
+		</physobj>
+		<physobj name="decal3" inlibrary="true" libclass="decals" hasphysics="true" initfunction="InitDecal"> 
+			<graphic zoffset="-1000" rot="0" pos="0,0" frame="1" clip="decal3"/> 
+		</physobj>
+		<physobj name="decal4" inlibrary="true" libclass="decals" hasphysics="true" initfunction="InitDecal"> 
+			<graphic zoffset="-1000" rot="0" pos="0,0" frame="1" clip="decal4"/> 
+		</physobj>
+		<physobj name="decal5" inlibrary="true" libclass="decals" hasphysics="true" initfunction="InitDecal"> 
+			<graphic zoffset="-1000" rot="0" pos="0,0" frame="1" clip="decal5"/> 
+		</physobj>
+		<physobj name="decal6" inlibrary="true" libclass="decals" hasphysics="true" initfunction="InitDecal"> 
+			<graphic zoffset="-1000" rot="0" pos="0,0" frame="1" clip="decal6"/> 
+		</physobj>
+		<physobj name="decal7" inlibrary="true" libclass="decals" hasphysics="true" initfunction="InitDecal"> 
+			<graphic zoffset="-1000" rot="0" pos="0,0" frame="1" clip="decal7"/> 
+		</physobj>
+		<physobj name="decal8" inlibrary="true" libclass="decals" hasphysics="true" initfunction="InitDecal"> 
+			<graphic zoffset="-1000" rot="0" pos="0,0" frame="1" clip="decal8"/> 
+		</physobj>
+		<physobj name="decal9" inlibrary="true" libclass="decals" hasphysics="true" initfunction="InitDecal"> 
+			<graphic zoffset="-1000" rot="0" pos="0,0" frame="1" clip="decal9"/> 
+		</physobj>
+		<physobj name="decal10" inlibrary="true" libclass="decals" hasphysics="true" initfunction="InitDecal"> 
+			<graphic zoffset="-1000" rot="0" pos="0,0" frame="1" clip="decal10"/> 
+		</physobj>
+		
+			
+		
+		<physobj name="helptext_text" inlibrary="true" libclass="links" hasphysics="true" initfunction="GameObj_InitHelpText" editorrender="RenderHelpText">
+			<parameter name="switch_name" />
+			<parameter name="helptext_text" />
+			<parameter name="helptext_initialdelay" />
+			<graphic clip = "Text_Marker" frame = "1" pos = "0,0" rot="0" zoffset="3000" />					
+		</physobj>
+
+		<physobj name="helptext_text_foreground" inlibrary="true" libclass="links" hasphysics="true" initfunction="GameObj_InitHelpText" editorrender="RenderHelpText">
+			<parameter name="switch_name" />
+			<parameter name="helptext_text" />
+			<parameter name="helptext_initialdelay" />
+			<graphic clip = "Text_Marker" frame = "1" pos = "0,0" rot="0" zoffset="-5000" />					
+		</physobj>
+		
+		<material name="hinge" density="0.26" friction="1" restitution="0.1" />
+		<material name="average" density="0.3" friction="1" restitution="0.1" />
+		<material name="light" density="0.1" friction="0.1" restitution="0.1" />
+		<material name="bouncy" density="0.5" friction="0.5" restitution="0.95" />
+		<material name="smooth" density="0.5" friction="0.0" restitution="0.0" />
+		<material name="dense" density="1" friction="0.5" restitution="0.0" />
+		<material name="sticky" density="1" friction="1" restitution="0.2" />
+		<material name="nuke" density="0.5" friction="1" restitution="0.3" />
+		<material name="remover" density="1" friction="1" restitution="0.0" />
+		<material name="solidmetal" density="1" friction="0.2" restitution="0.2" />
+		<material name="bowling_ball" density="1.5" friction="0.2" restitution="0.2" />
+		<material name="wood" density="0.5" friction="0.4" restitution="0.2" />
+		<material name="missile" density="1" friction="0.5" restitution="0.5" />
+		<material name="missile_heavy" density="2" friction="0.5" restitution="0.5" />
+		<material name="missile_railgun" density="1" friction="0" restitution="1" />
+		<material name="nonexistant" density="0.00001" friction="1" restitution="0.1" />
+		<material name="car" density="1" friction="0.5" restitution="0" />
+		<material name="clown_wheel" density="0.3" friction="1" restitution="0" />
+
+		
+		<objparam name="general_timer" type="number" default="1"></objparam>
+		<objparam name="general_timer_startoffset" type="number" default="0"></objparam>
+		
+		<objparam name="mathpath_speed" type="number" default="0"></objparam>
+		<objparam name="mathpath_radius" type="number" default="0"></objparam>
+		<objparam name="mathpath_startpos" type="number" default="0"></objparam>
+		<objparam name="mathpath_scalex" type="number" default="1"></objparam>
+		<objparam name="mathpath_scaley" type="number" default="1"></objparam>
+		<objparam name="mathpath_num" type="number" default="1"></objparam>
+		<objparam name="mathpath_wavespeed" type="number" default="0"></objparam>
+		<objparam name="mathpath_waveradius" type="number" default="0"></objparam>
+		<objparam name="mathpath_numpertype" type="number" default="0"></objparam>
+
+		<objparam name="rotator_vel" type="number" default="0"></objparam>
+		<objparam name="rotator_pause" type="number" default="0"></objparam>
+		<objparam name="rotator_anglechange" type="number" default="0"></objparam>
+		
+		
+		<objparam name="cannon_minang" type="number" default="0"></objparam>
+		<objparam name="cannon_maxang" type="number" default="0"></objparam>
+		<objparam name="cannon_mode" type="number" default="0"></objparam>
+		<objparam name="cannon_speed" type="number" default="0"></objparam>
+		<objparam name="cannon_switch" type="text" default=""></objparam>
+		
+		<objparam name="pickup_count" type="number" default="3"></objparam>
+		<objparam name="force" type="number" default="100"></objparam>
+		
+		<objparam name="obj_switch" type="text" default="">			
+		</objparam>
+		<objparam name="obj_on" type="list" default="true" values="false,true">			
+		</objparam>
+		<objparam name="path_line" type="linelink" default="">			
+		</objparam>
+		<objparam name="path_speed" type="number" default="30">			
+		</objparam>
+		<objparam name="path_loop" type="list" default="false" values="false,true">			
+		</objparam>
+		<objparam name="path_switch" type="objlink" default="">			
+		</objparam>
+		<objparam name="path_spline" type="list" default="true" values="false,true">			
+		</objparam>
+		<objparam name="path_endreset" type="list" default="false" values="false,true">			
+		</objparam>
+		<objparam name="path_startpos" type="number" default="0">			
+		</objparam>
+		<objparam name="path_2way" type="list" default="false" values="false,true">			
+		</objparam>
+		<objparam name="path_rotatetopath" type="list" default="true" values="false,true">			
+		</objparam>
+		<objparam name="path_startmoving" type="list" default="true" values="false,true">			
+		</objparam>
+		<objparam name="linkobj_line" type="linelink" default="">			
+		</objparam>
+		<objparam name="linkobj_linka" type="objlink" default="">			
+		</objparam>
+		<objparam name="linkobj_linkb" type="objlink" default="">			
+		</objparam>
+		<objparam name="linkobj_minang" type="number" default="0"></objparam>
+		<objparam name="linkobj_maxang" type="number" default="0"></objparam>
+		<objparam name="linkobj_x0" type="number" default="0"></objparam>
+		<objparam name="linkobj_y0" type="number" default="0"></objparam>
+		<objparam name="linkobj_x1" type="number" default="0"></objparam>
+		<objparam name="linkobj_y1" type="number" default="0"></objparam>
+		
+		<objparam name="rev_enablelimit" type="list" default="false" values="false,true"></objparam>
+		<objparam name="rev_lowerangle" type="number" default="0"></objparam>
+		<objparam name="rev_upperangle" type="number" default="0"></objparam>
+		<objparam name="rev_enablemotor" type="list" default="false" values="false,true"></objparam>
+		<objparam name="rev_motorspeed" type="number" default="0"></objparam>
+		<objparam name="rev_maxmotortorque" type="number" default="0"></objparam>
+
+		<objparam name="prismatic_axisangle" type="number" default="0"></objparam>
+		<objparam name="prismatic_enablelimit" type="list" default="true" values="false,true"></objparam>
+		<objparam name="prismatic_lowertranslation" type="number" default="0"></objparam>
+		<objparam name="prismatic_uppertranslation" type="number" default="0"></objparam>
+		<objparam name="prismatic_enablemotor" type="list" default="false" values="false,true"></objparam>
+		<objparam name="prismatic_motorspeed" type="number" default="0"></objparam>
+		<objparam name="prismatic_maxmotorforce" type="number" default="0"></objparam>
+
+		<objparam name="joint_initfunction" type="list" default="InitGameObjJoint_Null" values="InitGameObjJoint_Null,InitGameObjJoint_Trapeze,InitGameObjJoint_Trapeze1,InitGameObjJoint_LoweringDistance,InitGameObjJoint_RaisingDistance"> </objparam>
+		
+		
+		<objparam name="line_type" type="list" default="normal" values="normal,transparent"></objparam>
+		<objparam name="line_thickness" type="number" default="1"></objparam>
+		<objparam name="line_fixed" type="list" default="true" values="false,true"></objparam>
+		<objparam name="line_physmaterial" type="list" default="average" values="average,bouncy,smooth,dense"></objparam>
+		<objparam name="line_function" type="list" default="InitGameObjLine_Grassy" values="InitGameObjLine_Grassy,InitGameObjLine_Smooth,InitGameObjLine_Death,InitGameObjLine_Bouncy,InitGameObjLine_Icy,InitGameObjLine_ScrollArea,InitGameObjLine_Background,InitGameObjLine_Switch,InitGameObjLine_NonCollision,InitGameObjLine_KnifeEdge,InitGameObjLine_TriggerHitMissile,InitGameObjLine_ForShow"></objparam>
+		<objparam name="line_background_frame" type="int" default="1" ></objparam>
+		
+		<objparam name="editor_layer" type="list" default="1" values="1,2,3,4"></objparam>
+		
+		
+		<objparam name="switch_name" type="text" default=""></objparam>
+		<objparam name="switch_type" type="list" default="once" values="once,timed,2way"></objparam>
+		<objparam name="switch_time" type="number" default="1"></objparam>
+		<objparam name="helptext_text" type="text" default="help text"></objparam>
+		<objparam name="helptext_initialdelay" type="number" default="0"></objparam>
+		<objparam name="portal_exit" type="text" default=""></objparam>
+		
+		
+		<objparam name="disk_velocity" type="number" default="20"></objparam>
+		<objparam name="disk_type" type="list" default="constant" values="constant"></objparam>
+		
+		<objparam name="spawner_initialdelay" type="number" default="0" ></objparam>
+		<objparam name="spawner_frequency" type="number" default="3" ></objparam>
+		<objparam name="spawner_spawnobject" type="text" default="zombie1" ></objparam>
+		<objparam name="spawner_totalamount" type="number" default="10" ></objparam>
+
+		<objparam name="player_ammo" type="number" default="0" ></objparam>
+		
+		
+		
+		
+</data>

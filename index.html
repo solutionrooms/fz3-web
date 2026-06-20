@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FZ3 — render</title>
+  <style>
+    html, body { margin: 0; height: 100%; background: #11151a; }
+    /* Fixed 700×500 Flash stage, centred (letterbox handled later). */
+    #stage { position: absolute; left: 50%; top: 50%; width: 700px; height: 500px;
+             transform: translate(-50%, -50%); }
+    #stage canvas { display: block; }
+  </style>
+</head>
+<body>
+  <div id="stage"></div>
+  <!-- OpenFL ships a UMD bundle meant to load as a global script (its internal webpack
+       runtime breaks if an ESM bundler re-optimises it). Load it here; the render layer
+       reads window.openfl through src/render/openfl.ts. Types come from `import type`
+       (erased at build), so this stays decoupled from the bundler. -->
+  <script src="/vendor/openfl.js"></script>
+  <script type="module" src="/src/render/main.ts"></script>
+</body>
+</html>

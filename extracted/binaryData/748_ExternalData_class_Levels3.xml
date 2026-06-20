@@ -1,0 +1,100 @@
+<data>
+<level id="1" name="Hooks Law" category="0" desc="" bg="2" >
+	<basketballs time_gold="5" time_silver="9" />
+	<objgroup name="normal">
+		<obj id="" type="hook_fixed" x="74" y="57" rot="-60" scale="1" params="" />
+		<obj id="" type="hook_fixed" x="79" y="162" rot="-60" scale="1" params="" />
+		<obj id="" type="hook_fixed" x="82" y="276" rot="-60" scale="1" params="" />
+		<obj id="" type="hook_fixed" x="81" y="249" rot="-60" scale="1" params="" />
+		<obj id="" type="hook_fixed" x="81" y="223" rot="-60" scale="1" params="" />
+		<obj id="" type="hook_fixed" x="80" y="199" rot="-60" scale="1" params="" />
+		<obj id="" type="hook_fixed" x="81" y="180" rot="-60" scale="1" params="" />
+		<obj id="" type="hook_fixed" x="78" y="139" rot="-60" scale="1" params="" />
+		<obj id="" type="hook_fixed" x="78" y="113" rot="-60" scale="1" params="" />
+		<obj id="" type="hook_fixed" x="76" y="91" rot="-60" scale="1" params="" />
+		<obj id="" type="hook_fixed" x="77" y="73" rot="-60" scale="1" params="" />
+		<obj id="sw02" type="switched_platform_2" x="150" y="76" rot="-90" scale="1" params="" />
+		<obj id="" type="glassPost2Fixed" x="559" y="-10" rot="0" scale="1" params="" />
+		<obj id="" type="heavy_ball" x="462" y="170" rot="0" scale="1" params="" />
+		<obj id="" type="glassPost2Fixed" x="527" y="177" rot="14" scale="1" params="" />
+		<obj id="uid_241760" type="woodenPin" x="178" y="74" rot="0" scale="1" params="" />
+		<obj id="uid_551295" type="woodenPin" x="241" y="88" rot="0" scale="1" params="" />
+		<obj id="uid_367454" type="woodenPin" x="266" y="90" rot="0" scale="1" params="" />
+		<obj id="uid_538086" type="woodenPin" x="334" y="102" rot="0" scale="1" params="" />
+		<obj id="uid_455318" type="woodenPin" x="360" y="103" rot="0" scale="1" params="" />
+		<obj id="uid_631027" type="woodenPin" x="421" y="117" rot="0" scale="1" params="" />
+		<obj id="" type="cannon_fixed" x="240" y="379" rot="-58" scale="1" params="" />
+		<obj id="" type="cannon_fixed" x="288" y="362" rot="-51" scale="1" params="" />
+		<obj id="" type="cannon_fixed" x="340" y="347" rot="-52" scale="1" params="" />
+		<obj id="" type="cannon_base" x="242" y="382" rot="0" scale="1" params="" />
+		<obj id="" type="cannon_base" x="293" y="366" rot="0" scale="1" params="" />
+		<obj id="" type="cannon_base" x="346" y="351" rot="0" scale="1" params="" />
+		<obj id="" type="metalPost2Fixed" x="665" y="138" rot="100" scale="1" params="" />
+		<obj id="" type="metalPost2Fixed" x="539" y="116" rot="100" scale="1" params="" />
+		<obj id="" type="metalPost2Fixed" x="414" y="94" rot="100" scale="1" params="" />
+		<obj id="" type="metalPost2Fixed" x="288" y="72" rot="100" scale="1" params="" />
+		<obj id="" type="metalPost1Fixed" x="667" y="146" rot="180" scale="1" params="" />
+		<obj id="" type="metalPost1Fixed" x="638" y="91" rot="270" scale="1" params="" />
+		<obj id="" type="metalPost1Fixed" x="664" y="149" rot="-70" scale="1" params="" />
+	</objgroup>
+	<objgroup name="platform">
+		<obj id="" type="zombooka_player_missile" x="479" y="392" rot="0" scale="1" params="player_ammo=0" />
+		<obj id="uid_434401" type="path_object" x="157" y="58" rot="0" scale="1" params="path_line=path02,path_speed=1,path_loop=false,path_switch=sw02,path_spline=false,path_endreset=false,path_startpos=0,path_2way=false,path_rotatetopath=false,path_startmoving=false" />
+		<obj id="" type="zombooka_player_railgun" x="653" y="83" rot="0" scale="1" params="player_ammo=10" />
+		<obj id="" type="initial_player_marker" x="461" y="377" rot="0" scale="1" params="" />
+		<obj id="" type="hinge" x="662" y="144" rot="0" scale="1" params="" />
+		<obj id="" type="hinge" x="286" y="76" rot="0" scale="1" params="" />
+		<obj id="" type="hinge" x="413" y="98" rot="0" scale="1" params="" />
+		<obj id="" type="hinge" x="540" y="120" rot="0" scale="1" params="" />
+		<obj id="" type="hinge" x="663" y="89" rot="0" scale="1" params="" />
+	</objgroup>
+	<objgroup name="zombie">
+		<obj id="" type="zombie_clown" x="593" y="353" rot="0" scale="1" params="" />
+		<obj id="" type="zombie_clown" x="613" y="355" rot="0" scale="1" params="" />
+		<obj id="" type="zombie_clown" x="633" y="350" rot="0" scale="1" params="" />
+		<obj id="uid_876133" type="zombie_clown" x="209" y="106" rot="180" scale="1" params="" />
+		<obj id="uid_352796" type="zombie_clown" x="299" y="120" rot="180" scale="1" params="" />
+		<obj id="uid_289356" type="zombie_clown" x="386" y="136" rot="180" scale="1" params="" />
+	</objgroup>
+	<objgroup name="all">
+		<obj id="" type="cutting_disk_large" x="606" y="102" rot="0" scale="1" params="disk_velocity=-20,disk_type=constant" />
+	</objgroup>
+	<joints>
+		<joint type="rev" id="" objid0="uid_434401" objid1="sw02" x="157" y="72" params="rev_enablelimit=false,rev_lowerangle=0,rev_upperangle=0,rev_enablemotor=false,rev_motorspeed=0,rev_maxmotortorque=0,joint_initfunction=InitGameObjJoint_Null" />
+		<joint type="rev" id="" objid0="uid_434401" objid1="sw02" x="159" y="42" params="rev_enablelimit=false,rev_lowerangle=0,rev_upperangle=0,rev_enablemotor=false,rev_motorspeed=0,rev_maxmotortorque=0,joint_initfunction=InitGameObjJoint_Null" />
+		<joint type="dist" id="" objid0="uid_241760" objid1="uid_876133" x0="175" y0="73" x1="206" y1="119" params="joint_initfunction=InitGameObjJoint_Null" />
+		<joint type="dist" id="" objid0="uid_551295" objid1="uid_876133" x0="241" y0="84" x1="207" y1="121" params="joint_initfunction=InitGameObjJoint_Null" />
+		<joint type="dist" id="" objid0="uid_367454" objid1="uid_352796" x0="266" y0="87" x1="298" y1="129" params="joint_initfunction=InitGameObjJoint_Null" />
+		<joint type="dist" id="" objid0="uid_538086" objid1="uid_352796" x0="335" y0="99" x1="298" y1="130" params="joint_initfunction=InitGameObjJoint_Null" />
+		<joint type="dist" id="" objid0="uid_455318" objid1="uid_289356" x0="363" y0="102" x1="385" y1="144" params="joint_initfunction=InitGameObjJoint_Null" />
+		<joint type="dist" id="" objid0="uid_631027" objid1="uid_289356" x0="424" y0="116" x1="384" y1="148" params="joint_initfunction=InitGameObjJoint_Null" />
+	</joints>
+<line type="0" id="" params="line_physmaterial=average,line_fixed=true,line_function=InitGameObjLine_Grassy,line_background_frame=1,editor_layer=1" >
+<points a="-30,424, 64,396, 107,388, 147,389, 216,404, 266,402, 271,387, 317,387, 320,370, 370,369" />
+<points a="370,357, 383,354, 460,394, 486,394, 501,391, 509,346, 518,289, 496,284, 475,256, 456,211" />
+<points a="506,217, 511,232, 540,240, 577,250, 561,264, 555,295, 554,332, 569,356, 653,357, 666,344" />
+<points a="690,285, 719,246, 727,356, 716,523, -16,523" />
+</line>
+<line type="1" id="path02" params="line_physmaterial=average,line_fixed=true,line_function=InitGameObjLine_Grassy,line_background_frame=1,editor_layer=1" >
+<points a="157,58, 157,238" />
+</line>
+<line type="0" id="" params="line_physmaterial=average,line_fixed=true,line_function=InitGameObjLine_ForShow,line_background_frame=1,editor_layer=1" >
+<points a="359,356, 356,154, 356,154, 356,154" />
+</line>
+<line type="0" id="" params="line_physmaterial=average,line_fixed=true,line_function=InitGameObjLine_Grassy,line_background_frame=1,editor_layer=1" >
+<points a="-20,-65, -13,-113, 60,-127, 59,41, 64,91, 66,176, 66,269, 58,307, 40,325, -8,339" />
+</line>
+<map minx="0" maxx="0" miny="0" maxy="0" cellw="16" cellh="16" >
+<mapdata a=""/>
+</map>
+</level>
+
+
+
+
+
+
+
+
+
+</data>

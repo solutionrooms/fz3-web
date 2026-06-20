@@ -1,0 +1,5552 @@
+[
+  {
+    "name": "dance1",
+    "inlibrary": "true",
+    "libclass": "platform",
+    "hasphysics": "true",
+    "initfunction": "InitDance1",
+    "graphics": [
+      {
+        "clip": "baz_Dance",
+        "frame": "1",
+        "pos": "0,0",
+        "rot": "0",
+        "zoffset": "50"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "dance2",
+    "inlibrary": "true",
+    "libclass": "platform",
+    "hasphysics": "true",
+    "initfunction": "InitDance",
+    "graphics": [
+      {
+        "clip": "mrNuke_Dance",
+        "frame": "1",
+        "pos": "0,0",
+        "rot": "0",
+        "zoffset": "50"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "dance3",
+    "inlibrary": "true",
+    "libclass": "platform",
+    "hasphysics": "true",
+    "initfunction": "InitDance",
+    "graphics": [
+      {
+        "clip": "major_Dance",
+        "frame": "1",
+        "pos": "0,0",
+        "rot": "0",
+        "zoffset": "50"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "dance4",
+    "inlibrary": "true",
+    "libclass": "platform",
+    "hasphysics": "true",
+    "initfunction": "InitDance",
+    "graphics": [
+      {
+        "clip": "lionTamer_Dance",
+        "frame": "1",
+        "pos": "0,0",
+        "rot": "0",
+        "zoffset": "50"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "dance5",
+    "inlibrary": "true",
+    "libclass": "platform",
+    "hasphysics": "true",
+    "initfunction": "InitDance",
+    "graphics": [
+      {
+        "clip": "humanCannonBall_Dance",
+        "frame": "1",
+        "pos": "0,0",
+        "rot": "0",
+        "zoffset": "50"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "dance6",
+    "inlibrary": "true",
+    "libclass": "platform",
+    "hasphysics": "true",
+    "initfunction": "InitDance",
+    "graphics": [
+      {
+        "clip": "custardpie_Dance",
+        "frame": "1",
+        "pos": "0,0",
+        "rot": "0",
+        "zoffset": "50"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "dance7",
+    "inlibrary": "true",
+    "libclass": "platform",
+    "hasphysics": "true",
+    "initfunction": "InitDance",
+    "graphics": [
+      {
+        "clip": "flameEater_Dance",
+        "frame": "1",
+        "pos": "0,0",
+        "rot": "0",
+        "zoffset": "50"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "hook_fixed",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitStickyPad",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "true",
+        "sensor": "true",
+        "graphic": [
+          {
+            "clip": "hook",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "circle",
+            "pos": "0,0",
+            "name": "",
+            "col": "1,15",
+            "radius": "8",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "hook_loose",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitStickyPad",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "true",
+        "graphic": [
+          {
+            "clip": "hook",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "circle",
+            "pos": "0,0",
+            "name": "",
+            "col": "1,15",
+            "radius": "8",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "initial_player_marker",
+    "inlibrary": "true",
+    "libclass": "platform",
+    "hasphysics": "false",
+    "initfunction": "InitInitialPlayerMarker",
+    "graphics": [
+      {
+        "clip": "InitialPlayerMarker",
+        "frame": "1",
+        "pos": "0,0",
+        "rot": "0",
+        "zoffset": "50"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "hinge",
+    "inlibrary": "true",
+    "libclass": "platform",
+    "hasphysics": "false",
+    "initfunction": "",
+    "graphics": [
+      {
+        "clip": "hinge",
+        "frame": "1",
+        "pos": "0,0",
+        "rot": "0",
+        "zoffset": "-100"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "tiedup1",
+    "inlibrary": "true",
+    "libclass": "platform",
+    "hasphysics": "true",
+    "initfunction": "InitTiedUp1",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "lionTamerTied",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "50"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "4,15",
+            "vertices": "-10,-60,10,-60, 10,0,-10,0",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "tiedup2",
+    "inlibrary": "true",
+    "libclass": "platform",
+    "hasphysics": "true",
+    "initfunction": "InitTiedUp2",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "humanCannonBallTied",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "50"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "4,15",
+            "vertices": "-10,-60,10,-60, 10,0,-10,0",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "tiedup3",
+    "inlibrary": "true",
+    "libclass": "platform",
+    "hasphysics": "true",
+    "initfunction": "InitTiedUp3",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "flameEaterTied",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "50"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "4,15",
+            "vertices": "-10,-60,10,-60, 10,0,-10,0",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "tiedup4",
+    "inlibrary": "true",
+    "libclass": "platform",
+    "hasphysics": "true",
+    "initfunction": "InitTiedUp4",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "majorTied",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "50"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "4,15",
+            "vertices": "-10,-60,10,-60, 10,0,-10,0",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "tiedup5",
+    "inlibrary": "true",
+    "libclass": "platform",
+    "hasphysics": "true",
+    "initfunction": "InitTiedUp5",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "mrNukeTied",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "50"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "4,15",
+            "vertices": "-10,-60,10,-60, 10,0,-10,0",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "tiedup6",
+    "inlibrary": "true",
+    "libclass": "platform",
+    "hasphysics": "true",
+    "initfunction": "InitTiedUp6",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "custardpieTied",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "50"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "4,15",
+            "vertices": "-10,-60,10,-60, 10,0,-10,0",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "clown_car_1",
+    "inlibrary": "true",
+    "libclass": "platform",
+    "hasphysics": "true",
+    "initfunction": "InitClownCar",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "car1",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "2,15",
+            "vertices": "-62,-3, -33,-32, 27,-31, 64,-2, 68,20, -63,19",
+            "material": "car"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "zombooka_player_missile",
+    "inlibrary": "true",
+    "libclass": "platform",
+    "hasphysics": "true",
+    "initfunction": "InitPlayer_BarryZooka",
+    "graphics": [],
+    "parameters": [
+      {
+        "name": "player_ammo",
+        "default": "0"
+      }
+    ],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "true",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "bazBottom",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "10"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "2,15",
+            "vertices": "-5,-30,5,-30,5,0,-5,0",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "zombooka_player_missile_movable",
+    "inlibrary": "true",
+    "libclass": "platform",
+    "hasphysics": "true",
+    "initfunction": "InitPlayer_BarryZooka",
+    "graphics": [],
+    "parameters": [
+      {
+        "name": "player_ammo",
+        "default": "0"
+      }
+    ],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "bazBottom",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "10"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "2,15",
+            "vertices": "-5,-30,5,-30,5,0,-5,0",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "zombooka_player_custard",
+    "inlibrary": "true",
+    "libclass": "platform",
+    "hasphysics": "true",
+    "initfunction": "InitPlayer_CustardPie",
+    "graphics": [],
+    "parameters": [
+      {
+        "name": "player_ammo",
+        "default": "0"
+      }
+    ],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "true",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "custardpieBottom",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "10"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "2,15",
+            "vertices": "-5,-30,5,-30,5,0,-5,0",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "zombooka_player_cannonball",
+    "inlibrary": "true",
+    "libclass": "platform",
+    "hasphysics": "true",
+    "initfunction": "InitPlayer_HumanCannonball",
+    "graphics": [],
+    "parameters": [
+      {
+        "name": "player_ammo",
+        "default": "0"
+      }
+    ],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "true",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "humanCannonBallBottom",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "10"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "2,15",
+            "vertices": "-5,-30,5,-30,5,0,-5,0",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "zombooka_player_cannonball_movable",
+    "inlibrary": "true",
+    "libclass": "platform",
+    "hasphysics": "true",
+    "initfunction": "InitPlayer_HumanCannonball",
+    "graphics": [],
+    "parameters": [
+      {
+        "name": "player_ammo",
+        "default": "0"
+      }
+    ],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "humanCannonBallBottom",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "10"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "2,15",
+            "vertices": "-5,-30,5,-30,5,0,-5,0",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "zombooka_player_nuke",
+    "inlibrary": "true",
+    "libclass": "platform",
+    "hasphysics": "true",
+    "initfunction": "InitPlayer_MrNuke",
+    "graphics": [],
+    "parameters": [
+      {
+        "name": "player_ammo",
+        "default": "0"
+      }
+    ],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "true",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "mrNukeBottom",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "10"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "2,15",
+            "vertices": "-5,-30,5,-30,5,0,-5,0",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "zombooka_player_flame",
+    "inlibrary": "true",
+    "libclass": "platform",
+    "hasphysics": "true",
+    "initfunction": "InitPlayer_FlameEater",
+    "graphics": [],
+    "parameters": [
+      {
+        "name": "player_ammo",
+        "default": "0"
+      }
+    ],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "true",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "flameEaterBottom",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "10"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "2,15",
+            "vertices": "-5,-30,5,-30,5,0,-5,0",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "zombooka_player_airstrike",
+    "inlibrary": "true",
+    "libclass": "platform",
+    "hasphysics": "true",
+    "initfunction": "InitPlayer_ElephantStrike",
+    "graphics": [],
+    "parameters": [
+      {
+        "name": "player_ammo",
+        "default": "0"
+      }
+    ],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "true",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "lionTamerBottom",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "10"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "2,15",
+            "vertices": "-5,-30,5,-30,5,0,-5,0",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "zombooka_player_railgun",
+    "inlibrary": "true",
+    "libclass": "platform",
+    "hasphysics": "true",
+    "initfunction": "InitPlayer_Major",
+    "graphics": [],
+    "parameters": [
+      {
+        "name": "player_ammo",
+        "default": "0"
+      }
+    ],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "true",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "majorBottom",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "10"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "2,15",
+            "vertices": "-5,-30,5,-30,5,0,-5,0",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "missile_normal",
+    "inlibrary": "false",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitMissileNormal",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "Missile",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "circle",
+            "pos": "0,0",
+            "name": "",
+            "col": "4,13",
+            "radius": "4",
+            "material": "missile"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "missile_flame",
+    "inlibrary": "false",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitMissileFlame",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "Missile",
+            "frame": "2",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "circle",
+            "pos": "0,0",
+            "name": "",
+            "col": "4,13",
+            "radius": "4",
+            "material": "missile"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "missile_airstrike",
+    "inlibrary": "false",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitMissileAirStrike",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "Missile",
+            "frame": "3",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "circle",
+            "pos": "0,0",
+            "name": "",
+            "col": "4,13",
+            "radius": "4",
+            "material": "missile"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "missile_cannonball",
+    "inlibrary": "false",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitMissileCannonball",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "Missile",
+            "frame": "4",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "circle",
+            "pos": "0,0",
+            "name": "",
+            "col": "4,13",
+            "radius": "8",
+            "material": "missile_heavy"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "missile_railgun",
+    "inlibrary": "false",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitMissileRailGun",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "Missile",
+            "frame": "5",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "circle",
+            "pos": "0,0",
+            "name": "",
+            "col": "4,13",
+            "radius": "4",
+            "material": "missile_railgun"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "missile_sticky",
+    "inlibrary": "false",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitMissileSticky",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "Missile",
+            "frame": "6",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "circle",
+            "pos": "0,0",
+            "name": "",
+            "col": "4,13",
+            "radius": "4",
+            "material": "missile"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "missile_explosive",
+    "inlibrary": "false",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitMissileExplosive",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "Missile",
+            "frame": "7",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "circle",
+            "pos": "0,0",
+            "name": "",
+            "col": "4,13",
+            "radius": "4",
+            "material": "nuke"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "missile_airstrike_object",
+    "inlibrary": "false",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitMissileAirStrikeObject",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "elephant",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "circle",
+            "pos": "0,0",
+            "name": "",
+            "col": "4,9",
+            "radius": "30",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "cannon_base",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "false",
+    "initfunction": "",
+    "graphics": [
+      {
+        "clip": "cannon_base",
+        "frame": "1",
+        "pos": "0,0",
+        "rot": "0",
+        "zoffset": "-101"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "cannon_fixed",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitCannon",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "true",
+        "sensor": "true",
+        "graphic": [
+          {
+            "clip": "cannon_top",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "-100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "circle",
+            "pos": "0,0",
+            "name": "",
+            "col": "1,15",
+            "radius": "40",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "cannon_fixed_big",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitCannon",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "true",
+        "sensor": "true",
+        "graphic": [
+          {
+            "clip": "cannon_top_big",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "-100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "circle",
+            "pos": "0,-26",
+            "name": "",
+            "col": "1,15",
+            "radius": "35",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "cannon_loose",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitCannon",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "true",
+        "graphic": [
+          {
+            "clip": "cannon_top",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "-100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "circle",
+            "pos": "0,0",
+            "name": "",
+            "col": "1,15",
+            "radius": "15",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "heavy_ball",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitHeavyBall",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "Ball",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "circle",
+            "pos": "0,0",
+            "name": "",
+            "col": "4,15",
+            "radius": "24",
+            "material": "dense"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "wheel_of_death",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "true",
+        "graphic": [
+          {
+            "clip": "wheelofDeath",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "circle",
+            "pos": "0,0",
+            "name": "",
+            "col": "4,13",
+            "radius": "93",
+            "material": "light"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "wheel_of_death_bg",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "false",
+    "initfunction": "",
+    "graphics": [
+      {
+        "clip": "wheelofdeathbackground",
+        "frame": "1",
+        "pos": "0,0",
+        "rot": "0",
+        "zoffset": "200"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "anvil",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitAnvil",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "Anvil",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "4,15",
+            "vertices": "0,-2, 60,-4, 50,25,25,25, 19,13",
+            "material": "dense"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "chainsaw",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitChainsaw",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "chainsaw",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "4,15",
+            "vertices": "-8,-19, 8,-19, 5,34, -5,34",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "saw",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitSaw",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "saw",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "4,15",
+            "vertices": "-35,-11, 33,-4, 33,7, -35,7",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "saw_xflip",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitSaw",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "saw_xflip",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "4,15",
+            "vertices": "-33,-4, 35,-11, 35,7, -32,7",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "fortune_machine",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitPhysObj_Breakable_FortuneMachine",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "true",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "fortuneMachine",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "200"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "4,13",
+            "vertices": "-25,-90, 25,-90, 25,0, -25,0",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "cork",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitCork",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "cork_ingame",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "50"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "4,5",
+            "vertices": "-30,-8, 30,-8, 20,10, -26,6",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "trampoline",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitTrampoline",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "trampoline",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "4,13",
+            "vertices": "-44,-6, 44,-6, 44,6, -44,6",
+            "material": "bouncy"
+          },
+          {
+            "type": "poly",
+            "name": "",
+            "col": "4,13",
+            "vertices": "-44,6, 44,6, 44,23, -44,23",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "spawner",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "false",
+    "initfunction": "InitSpawner",
+    "graphics": [
+      {
+        "clip": "Spawner",
+        "frame": "1",
+        "pos": "0,0",
+        "rot": "0",
+        "zoffset": "100"
+      }
+    ],
+    "parameters": [
+      {
+        "name": "spawner_initialdelay",
+        "default": "0"
+      },
+      {
+        "name": "spawner_frequency",
+        "default": "3"
+      },
+      {
+        "name": "spawner_spawnobject",
+        "default": "zombie1"
+      },
+      {
+        "name": "spawner_totalamount",
+        "default": "10"
+      }
+    ],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "spawner_lastlevel",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "false",
+    "initfunction": "InitSpawnerLastLevel",
+    "graphics": [
+      {
+        "clip": "Spawner",
+        "frame": "1",
+        "pos": "0,0",
+        "rot": "0",
+        "zoffset": "100"
+      }
+    ],
+    "parameters": [
+      {
+        "name": "spawner_initialdelay",
+        "default": "0"
+      },
+      {
+        "name": "spawner_frequency",
+        "default": "3"
+      },
+      {
+        "name": "spawner_spawnobject",
+        "default": "zombie_faller"
+      },
+      {
+        "name": "spawner_totalamount",
+        "default": "10"
+      }
+    ],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "zombie_stop_walk_marker",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitZombieStopWalkMarker",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "true",
+        "sensor": "true",
+        "graphic": [
+          {
+            "clip": "ZombieStopWalkMarker",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "1000"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "8,15",
+            "vertices": "0,0, 30,0, 30,30, 0,30",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "zombie_turn_around_marker",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitZombieTurnAroundMarker",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "true",
+        "sensor": "true",
+        "graphic": [
+          {
+            "clip": "ZombieTurnAroundMarker",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "1000"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "8,15",
+            "vertices": "0,0, 30,0, 30,30, 0,30",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "zombie_turn_around_sign",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitZombieTurnSign_Left",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "true",
+        "sensor": "true",
+        "graphic": [
+          {
+            "clip": "sign_turn_left",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "1000"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "8,15",
+            "vertices": "-27,-48, 22,-48, 22,0, -27,0",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "zombie_turn_around_sign1",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitZombieTurnSign_Right",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "true",
+        "sensor": "true",
+        "graphic": [
+          {
+            "clip": "sign_turn_right",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "1000"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "8,15",
+            "vertices": "-27,-48, 22,-48, 22,0, -27,0",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "human1",
+    "inlibrary": "true",
+    "libclass": "zombie",
+    "hasphysics": "true",
+    "initfunction": "InitHuman",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "Civilian",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "50"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "body",
+            "col": "8,15",
+            "vertices": "-4,-41, 8,-41, 6,2, -3,2",
+            "material": "average"
+          },
+          {
+            "type": "poly",
+            "name": "head",
+            "col": "8,15",
+            "vertices": "-8,-60, 10,-60, 8,-41, -4,-41",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "human_walk_left",
+    "inlibrary": "true",
+    "libclass": "zombie",
+    "hasphysics": "true",
+    "initfunction": "InitHuman_WalkLeft",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "Civilian",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "50"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "body",
+            "col": "8,15",
+            "vertices": "-5,-41, 9,-39, 9,-7, -4,-7",
+            "material": "average"
+          },
+          {
+            "type": "poly",
+            "name": "body",
+            "col": "8,0",
+            "vertices": "-4,-7,  9,-7, 9,0, -4,0",
+            "material": "nonexistant"
+          },
+          {
+            "type": "poly",
+            "name": "head",
+            "col": "8,15",
+            "vertices": "-8,-55, 6,-55, 6,-42, -4,-40",
+            "material": "average"
+          },
+          {
+            "type": "circle",
+            "name": "wheel",
+            "pos": "0,-5",
+            "col": "8,15",
+            "radius": "6",
+            "material": "smooth"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "human_walk_right",
+    "inlibrary": "true",
+    "libclass": "zombie",
+    "hasphysics": "true",
+    "initfunction": "InitHuman_WalkRight",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "Civilian",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "50"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "body",
+            "col": "8,15",
+            "vertices": "-5,-41, 9,-39, 9,-7, -4,-7",
+            "material": "average"
+          },
+          {
+            "type": "poly",
+            "name": "body",
+            "col": "8,0",
+            "vertices": "-4,-7,  9,-7, 9,0, -4,0",
+            "material": "nonexistant"
+          },
+          {
+            "type": "poly",
+            "name": "head",
+            "col": "8,15",
+            "vertices": "-8,-55, 6,-55, 6,-42, -4,-40",
+            "material": "average"
+          },
+          {
+            "type": "circle",
+            "name": "wheel",
+            "pos": "0,-5",
+            "col": "8,15",
+            "radius": "6",
+            "material": "smooth"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "zombie_faller",
+    "inlibrary": "true",
+    "libclass": "zombie",
+    "hasphysics": "true",
+    "initfunction": "InitZombieFaller",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "Zombie",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "40"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "body",
+            "col": "0,0",
+            "vertices": "-4,-41, 8,-41, 6,2, -3,2",
+            "material": "average"
+          },
+          {
+            "type": "poly",
+            "name": "head",
+            "col": "0,0",
+            "vertices": "-8,-60, 10,-60, 8,-41, -4,-41",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "zombie1",
+    "inlibrary": "true",
+    "libclass": "zombie",
+    "hasphysics": "true",
+    "initfunction": "InitZombie_Generic",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "Zombie",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "40"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "body",
+            "col": "8,15",
+            "vertices": "-4,-41, 8,-41, 6,2, -3,2",
+            "material": "average"
+          },
+          {
+            "type": "poly",
+            "name": "head",
+            "col": "8,15",
+            "vertices": "-8,-60, 10,-60, 8,-41, -4,-41",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "zombie_clown",
+    "inlibrary": "true",
+    "libclass": "zombie",
+    "hasphysics": "true",
+    "initfunction": "InitZombie_Clown",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "Zombie",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "40"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "body",
+            "col": "8,15",
+            "vertices": "-4,-41, 8,-41, 6,2, -3,2",
+            "material": "average"
+          },
+          {
+            "type": "poly",
+            "name": "head",
+            "col": "8,15",
+            "vertices": "-8,-60, 10,-60, 8,-41, -4,-41",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "zombie_ringmaster",
+    "inlibrary": "true",
+    "libclass": "zombie",
+    "hasphysics": "true",
+    "initfunction": "InitZombie_RingMaster",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "Zombie",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "40"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "body",
+            "col": "8,15",
+            "vertices": "-4,-41, 8,-41, 6,2, -3,2",
+            "material": "average"
+          },
+          {
+            "type": "poly",
+            "name": "head",
+            "col": "8,15",
+            "vertices": "-8,-60, 10,-60, 8,-41, -4,-41",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "zombie_strongman",
+    "inlibrary": "true",
+    "libclass": "zombie",
+    "hasphysics": "true",
+    "initfunction": "InitZombie_StrongMan",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "Zombie",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "40"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "body",
+            "col": "8,15",
+            "vertices": "-4,-41, 8,-41, 6,2, -3,2",
+            "material": "average"
+          },
+          {
+            "type": "poly",
+            "name": "head",
+            "col": "8,15",
+            "vertices": "-8,-60, 10,-60, 8,-41, -4,-41",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "zombie_beardedlady",
+    "inlibrary": "true",
+    "libclass": "zombie",
+    "hasphysics": "true",
+    "initfunction": "InitZombie_BeardedLady",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "Zombie",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "40"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "body",
+            "col": "8,15",
+            "vertices": "-4,-41, 8,-41, 6,2, -3,2",
+            "material": "average"
+          },
+          {
+            "type": "poly",
+            "name": "head",
+            "col": "8,15",
+            "vertices": "-8,-60, 10,-60, 8,-41, -4,-41",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "zombie_electrocuted",
+    "inlibrary": "true",
+    "libclass": "zombie",
+    "hasphysics": "true",
+    "initfunction": "InitZombie_Electrocuted",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "Zombie",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "40"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "body",
+            "col": "8,15",
+            "vertices": "-4,-41, 8,-41, 6,2, -3,2",
+            "material": "average"
+          },
+          {
+            "type": "poly",
+            "name": "head",
+            "col": "8,15",
+            "vertices": "-8,-60, 10,-60, 8,-41, -4,-41",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "zombie_walk_left",
+    "inlibrary": "true",
+    "libclass": "zombie",
+    "hasphysics": "true",
+    "initfunction": "InitZombieWalkLeft",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "Zombie",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "40"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "body",
+            "col": "8,15",
+            "vertices": "-5,-41, 9,-39, 9,-7, -4,-7",
+            "material": "average"
+          },
+          {
+            "type": "poly",
+            "name": "body",
+            "col": "8,0",
+            "vertices": "-4,-7,  9,-7, 9,0, -4,0",
+            "material": "nonexistant"
+          },
+          {
+            "type": "poly",
+            "name": "head",
+            "col": "8,15",
+            "vertices": "-8,-55, 6,-55, 6,-42, -4,-40",
+            "material": "average"
+          },
+          {
+            "type": "circle",
+            "name": "wheel",
+            "pos": "0,-5",
+            "col": "8,15",
+            "radius": "6",
+            "material": "smooth"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "zombie_walk_right",
+    "inlibrary": "true",
+    "libclass": "zombie",
+    "hasphysics": "true",
+    "initfunction": "InitZombieWalkRight",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "Zombie",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "40"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "body",
+            "col": "8,15",
+            "vertices": "-5,-41, 9,-39, 9,-7, -4,-7",
+            "material": "average"
+          },
+          {
+            "type": "poly",
+            "name": "body",
+            "col": "8,0",
+            "vertices": "-4,-7,  9,-7, 9,0, -4,0",
+            "material": "nonexistant"
+          },
+          {
+            "type": "poly",
+            "name": "head",
+            "col": "8,15",
+            "vertices": "-8,-55, 6,-55, 6,-42, -4,-40",
+            "material": "average"
+          },
+          {
+            "type": "circle",
+            "name": "wheel",
+            "pos": "0,-5",
+            "col": "8,15",
+            "radius": "6",
+            "material": "smooth"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "zombie_climb_out_left",
+    "inlibrary": "true",
+    "libclass": "zombie",
+    "hasphysics": "true",
+    "initfunction": "InitZombieClimbOutWalkLeft",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "Zombie",
+            "frame": "170",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "40"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "body",
+            "col": "8,15",
+            "vertices": "-5,-41, 9,-39, 9,-7, -4,-7",
+            "material": "average"
+          },
+          {
+            "type": "poly",
+            "name": "body",
+            "col": "8,0",
+            "vertices": "-4,-7,  9,-7, 9,0, -4,0",
+            "material": "nonexistant"
+          },
+          {
+            "type": "poly",
+            "name": "head",
+            "col": "8,15",
+            "vertices": "-8,-55, 6,-55, 6,-42, -4,-40",
+            "material": "average"
+          },
+          {
+            "type": "circle",
+            "name": "wheel",
+            "pos": "0,-5",
+            "col": "8,15",
+            "radius": "6",
+            "material": "smooth"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "zombie_climb_out_right",
+    "inlibrary": "true",
+    "libclass": "zombie",
+    "hasphysics": "true",
+    "initfunction": "InitZombieClimbOutWalkRight",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "Zombie",
+            "frame": "170",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "40"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "body",
+            "col": "8,15",
+            "vertices": "-5,-41, 9,-39, 9,-7, -4,-7",
+            "material": "average"
+          },
+          {
+            "type": "poly",
+            "name": "body",
+            "col": "8,0",
+            "vertices": "-4,-7,  9,-7, 9,0, -4,0",
+            "material": "nonexistant"
+          },
+          {
+            "type": "poly",
+            "name": "head",
+            "col": "8,15",
+            "vertices": "-8,-55, 6,-55, 6,-42, -4,-40",
+            "material": "average"
+          },
+          {
+            "type": "circle",
+            "name": "wheel",
+            "pos": "0,-5",
+            "col": "8,15",
+            "radius": "6",
+            "material": "smooth"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "zombie_climb_out_unicycle_left",
+    "inlibrary": "true",
+    "libclass": "zombie",
+    "hasphysics": "true",
+    "initfunction": "InitZombieClimbOutUnicycleLeft",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "Zombie",
+            "frame": "170",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "40"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "body",
+            "col": "8,0",
+            "vertices": "-4,-41, 8,-41, 6,2, -3,2",
+            "material": "nonexistant"
+          },
+          {
+            "type": "poly",
+            "name": "head",
+            "col": "8,0",
+            "vertices": "-8,-60, 10,-60, 8,-41, -4,-41",
+            "material": "nonexistant"
+          },
+          {
+            "type": "poly",
+            "name": "body",
+            "col": "8,15",
+            "vertices": "-4,-51, 8,-51, 6,-8, -3,-5",
+            "material": "average"
+          },
+          {
+            "type": "poly",
+            "name": "head",
+            "col": "8,15",
+            "vertices": "-8,-70, 10,-70, 8,-51, -4,-51",
+            "material": "average"
+          },
+          {
+            "type": "circle",
+            "name": "wheel",
+            "pos": "0,-5",
+            "col": "8,15",
+            "radius": "6",
+            "material": "smooth"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "zombie_climb_out_unicycle_right",
+    "inlibrary": "true",
+    "libclass": "zombie",
+    "hasphysics": "true",
+    "initfunction": "InitZombieClimbOutUnicycleRight",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "Zombie",
+            "frame": "170",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "40"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "body",
+            "col": "8,0",
+            "vertices": "-4,-41, 8,-41, 6,2, -3,2",
+            "material": "nonexistant"
+          },
+          {
+            "type": "poly",
+            "name": "head",
+            "col": "8,0",
+            "vertices": "-8,-60, 10,-60, 8,-41, -4,-41",
+            "material": "nonexistant"
+          },
+          {
+            "type": "poly",
+            "name": "body",
+            "col": "8,15",
+            "vertices": "-4,-51, 8,-51, 6,-8, -3,-5",
+            "material": "average"
+          },
+          {
+            "type": "poly",
+            "name": "head",
+            "col": "8,15",
+            "vertices": "-8,-70, 10,-70, 8,-51, -4,-51",
+            "material": "average"
+          },
+          {
+            "type": "circle",
+            "name": "wheel",
+            "pos": "0,-5",
+            "col": "8,15",
+            "radius": "6",
+            "material": "smooth"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "zombie_unicycle_left",
+    "inlibrary": "true",
+    "libclass": "zombie",
+    "hasphysics": "true",
+    "initfunction": "InitZombieUnicycleLeft",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "Zombie",
+            "frame": "125",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "40"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "body",
+            "col": "8,0",
+            "vertices": "-4,-41, 8,-41, 6,2, -3,2",
+            "material": "nonexistant"
+          },
+          {
+            "type": "poly",
+            "name": "head",
+            "col": "8,0",
+            "vertices": "-8,-60, 10,-60, 8,-41, -4,-41",
+            "material": "nonexistant"
+          },
+          {
+            "type": "poly",
+            "name": "body",
+            "col": "8,15",
+            "vertices": "-4,-51, 8,-51, 6,-8, -3,-5",
+            "material": "average"
+          },
+          {
+            "type": "poly",
+            "name": "head",
+            "col": "8,15",
+            "vertices": "-8,-70, 10,-70, 8,-51, -4,-51",
+            "material": "average"
+          },
+          {
+            "type": "circle",
+            "name": "wheel",
+            "pos": "0,-5",
+            "col": "8,15",
+            "radius": "6",
+            "material": "smooth"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "zombie_unicycle_right",
+    "inlibrary": "true",
+    "libclass": "zombie",
+    "hasphysics": "true",
+    "initfunction": "InitZombieUnicycleRight",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "Zombie",
+            "frame": "125",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "40"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "body",
+            "col": "8,0",
+            "vertices": "-4,-41, 8,-41, 6,2, -3,2",
+            "material": "nonexistant"
+          },
+          {
+            "type": "poly",
+            "name": "head",
+            "col": "8,0",
+            "vertices": "-8,-60, 10,-60, 8,-41, -4,-41",
+            "material": "nonexistant"
+          },
+          {
+            "type": "poly",
+            "name": "body",
+            "col": "8,15",
+            "vertices": "-4,-51, 8,-51, 6,-8, -3,-5",
+            "material": "average"
+          },
+          {
+            "type": "poly",
+            "name": "head",
+            "col": "8,15",
+            "vertices": "-8,-70, 10,-70, 8,-51, -4,-51",
+            "material": "average"
+          },
+          {
+            "type": "circle",
+            "name": "wheel",
+            "pos": "0,-5",
+            "col": "8,15",
+            "radius": "6",
+            "material": "smooth"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "switch_once",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitSwitch_Once",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "true",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "switch_Once",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "1000"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "1,15",
+            "vertices": "0,0, 25,0, 25,20, 0,20",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "switch_2way",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitSwitch_2Way",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "true",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "switch_twoWay",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "1000"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "1,15",
+            "vertices": "0,0, 25,0, 25,20, 0,20",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "switch_StopGo",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitSwitch_2Way",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "true",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "switch_StopGo",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "1000"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "1,15",
+            "vertices": "0,0, 25,0, 25,20, 0,20",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "switch_timer",
+    "inlibrary": "false",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitSwitch_Timer",
+    "graphics": [],
+    "parameters": [
+      {
+        "name": "switch_time",
+        "default": "1.5"
+      }
+    ],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "true",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "switch_Timer",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "1000"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "1,15",
+            "vertices": "0,0, 25,0, 25,20, 0,20",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "switch_limpet",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitSwitch_Limpet",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "true",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "Switch_Limpet",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "1,15",
+            "vertices": "0,0, 25,0, 25,20, 0,20",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "switched_platform_2way_0",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitSwitch_2Way",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "switched_platform_2way_0",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "1,15",
+            "vertices": "0,0, 54,0, 54,15, 0,15",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "switched_platform_0",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitSwitch_Once",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "switched_platform_0",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "1,15",
+            "vertices": "0,0, 54,0, 54,15, 0,15",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "switched_platform_1",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitSwitch_Once",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "switched_platform_1",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "1,15",
+            "vertices": "0,0, 93,0, 93,15, 0,15",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "switched_platform_2",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitSwitch_Once",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "switched_platform_2",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "1,15",
+            "vertices": "0,0, 168,0,168,15, 0,15",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "zombie_walk_left_stilts",
+    "inlibrary": "true",
+    "libclass": "zombie",
+    "hasphysics": "true",
+    "initfunction": "InitZombieWalkLeftStilts",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "ZombieStilts",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "40"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "body",
+            "col": "8,15",
+            "vertices": "-6,-62, 6,-62, 6,2, -6,2",
+            "material": "average"
+          },
+          {
+            "type": "poly",
+            "name": "head",
+            "col": "8,15",
+            "vertices": "-8,-83, 10,-83, 8,-62, -4,-62",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "zombie_walk_right_stilts",
+    "inlibrary": "true",
+    "libclass": "zombie",
+    "hasphysics": "true",
+    "initfunction": "InitZombieWalkRightStilts",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "ZombieStilts",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "40"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "body",
+            "col": "8,15",
+            "vertices": "-6,-62, 6,-62, 6,2, -6,2",
+            "material": "average"
+          },
+          {
+            "type": "poly",
+            "name": "head",
+            "col": "8,15",
+            "vertices": "-8,-83, 10,-83, 8,-62, -4,-62",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "zombie_stilts",
+    "inlibrary": "true",
+    "libclass": "zombie",
+    "hasphysics": "true",
+    "initfunction": "InitZombie_Clown_Stilts",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "ZombieStilts",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "40"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "body",
+            "col": "8,15",
+            "vertices": "-6,-62, 6,-62, 6,2, -6,2",
+            "material": "average"
+          },
+          {
+            "type": "poly",
+            "name": "head",
+            "col": "8,15",
+            "vertices": "-8,-83, 10,-83, 8,-62, -4,-62",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "wheel_50",
+    "inlibrary": "true",
+    "libclass": "all",
+    "hasphysics": "true",
+    "initfunction": "",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [
+      {
+        "greatkill": "false",
+        "hitdamage": "0",
+        "superhitdamage": "0"
+      }
+    ],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "Wheel_50",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "circle",
+            "pos": "0,0",
+            "name": "",
+            "col": "1,15",
+            "radius": "25",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "wheel_35",
+    "inlibrary": "true",
+    "libclass": "all",
+    "hasphysics": "true",
+    "initfunction": "",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [
+      {
+        "greatkill": "false",
+        "hitdamage": "0",
+        "superhitdamage": "0"
+      }
+    ],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "Wheel_35",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "circle",
+            "pos": "0,0",
+            "name": "",
+            "col": "1,15",
+            "radius": "15",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "wheel_clown",
+    "inlibrary": "true",
+    "libclass": "all",
+    "hasphysics": "true",
+    "initfunction": "InitDeadlyWheel",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [
+      {
+        "greatkill": "false",
+        "hitdamage": "0",
+        "superhitdamage": "0"
+      }
+    ],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "clownwheel",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "circle",
+            "pos": "0,0",
+            "name": "",
+            "col": "1,15",
+            "radius": "20",
+            "material": "clown_wheel"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "wire",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "wire",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "head",
+            "col": "8,15",
+            "vertices": "0,0, 5,0, 5,40,0,40",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "wire_end",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitWireEnd",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "wire_end",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "head",
+            "col": "8,15",
+            "vertices": "0,0, 5,0, 5,40,0,40",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "explosiveBarrel",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitExplosiveBarrel",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "ExplosiveBarrel",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "1,15",
+            "vertices": "-11,-13, 11,-13, 11,13, -11,13",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "flame1",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitFlame",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "true",
+        "sensor": "true",
+        "graphic": [
+          {
+            "clip": "Flame1",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "-100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "1,15",
+            "vertices": "-9,-40,9,-40, 9,0,-9,0",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "trapeze_wire_120",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "TrapezeWire120",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "1,15",
+            "vertices": "-3,0,3,0, 3,120,-3,120",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "cutting_disk_large",
+    "inlibrary": "true",
+    "libclass": "all",
+    "hasphysics": "true",
+    "initfunction": "InitCuttingDisk",
+    "graphics": [],
+    "parameters": [
+      {
+        "name": "disk_velocity",
+        "default": "20"
+      },
+      {
+        "name": "disk_type",
+        "default": "constant"
+      }
+    ],
+    "zombooka": [
+      {
+        "greatkill": "true",
+        "hitdamage": "0.05",
+        "superhitdamage": "0"
+      }
+    ],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "cutting_disk",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "circle",
+            "pos": "0,0",
+            "name": "",
+            "col": "1,15",
+            "radius": "24",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "cutting_disk_medium",
+    "inlibrary": "true",
+    "libclass": "all",
+    "hasphysics": "true",
+    "initfunction": "InitCuttingDisk",
+    "graphics": [],
+    "parameters": [
+      {
+        "name": "disk_velocity",
+        "default": "20"
+      },
+      {
+        "name": "disk_type",
+        "default": "constant"
+      }
+    ],
+    "zombooka": [
+      {
+        "greatkill": "true",
+        "hitdamage": "0.05",
+        "superhitdamage": "0"
+      }
+    ],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "cutting_disk2",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "circle",
+            "pos": "0,0",
+            "name": "",
+            "col": "1,15",
+            "radius": "20",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "cutting_disk_small",
+    "inlibrary": "true",
+    "libclass": "all",
+    "hasphysics": "true",
+    "initfunction": "InitCuttingDisk",
+    "graphics": [],
+    "parameters": [
+      {
+        "name": "disk_velocity",
+        "default": "20"
+      },
+      {
+        "name": "disk_type",
+        "default": "constant"
+      }
+    ],
+    "zombooka": [
+      {
+        "greatkill": "true",
+        "hitdamage": "0.05",
+        "superhitdamage": "0"
+      }
+    ],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "cutting_disk3",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "circle",
+            "pos": "0,0",
+            "name": "",
+            "col": "1,15",
+            "radius": "16",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "path_object",
+    "inlibrary": "true",
+    "libclass": "platform",
+    "hasphysics": "true",
+    "initfunction": "InitPhysObj_Path_Virtual",
+    "graphics": [],
+    "parameters": [
+      {
+        "name": "path_line",
+        "default": ""
+      },
+      {
+        "name": "path_speed",
+        "default": "30"
+      },
+      {
+        "name": "path_loop",
+        "default": "true"
+      },
+      {
+        "name": "path_switch",
+        "default": ""
+      },
+      {
+        "name": "path_spline",
+        "default": "false"
+      },
+      {
+        "name": "path_endreset",
+        "default": "false"
+      },
+      {
+        "name": "path_startpos",
+        "default": "0"
+      },
+      {
+        "name": "path_2way",
+        "default": "false"
+      },
+      {
+        "name": "path_rotatetopath",
+        "default": "false"
+      },
+      {
+        "name": "path_startmoving",
+        "default": "false"
+      }
+    ],
+    "zombooka": [
+      {
+        "greatkill": "false",
+        "hitdamage": "0",
+        "superhitdamage": "0"
+      }
+    ],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "true",
+        "sensor": "true",
+        "graphic": [
+          {
+            "clip": "obj_platform_holder_1x4",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "1000"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "1,15",
+            "vertices": "-34,-6, 34,-6, 34,6, -34,6",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "magnet",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitMagnet",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "true",
+        "graphic": [
+          {
+            "clip": "magnet",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "1000"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "circle",
+            "pos": "0,0",
+            "name": "",
+            "col": "1,15",
+            "radius": "50",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "chain",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "rope",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "90"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "1,15",
+            "vertices": "0,0, 6,0, 6,30, 0,30",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "rope",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitPhysObj_Breakable_Rope",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "rope",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "90"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "1,15",
+            "vertices": "0,0, 6,0, 6,30, 0,30",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "piano",
+    "inlibrary": "true",
+    "libclass": "all",
+    "hasphysics": "true",
+    "initfunction": "InitPhysObj_Breakable_Piano",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "piano",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "1,15",
+            "vertices": "-38,-38, 38,-38, 38,19, -38,19",
+            "material": "wood"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "woodenCrate0",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitPhysObj_Breakable_woodenCrate0",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "woodenCrate0",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "1,15",
+            "vertices": "0,0, 26,0, 26,22, 0,22",
+            "material": "wood"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "woodenCrate1",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitPhysObj_Breakable_woodenCrate1",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "woodenCrate1",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "1,15",
+            "vertices": "0,0, 46,0, 46,38, 0,38",
+            "material": "wood"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "woodenPin",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitPhysObj_Breakable_woodenPin",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "true",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "woodenPin",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "circle",
+            "pos": "0,0",
+            "name": "",
+            "col": "1,15",
+            "radius": "11",
+            "material": "wood"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "metalPost0",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "metalPost0",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "1,15",
+            "vertices": "0,0, 8,0, 8,39, 0,39",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "metalPost1",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "metalPost1",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "1,15",
+            "vertices": "0,0, 8,0, 8,63, 0,63",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "metalPost2",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "metalPost2",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "1,15",
+            "vertices": "0,0, 8,0, 8,127, 0,127",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "metalPost3",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "metalPost3",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "1,15",
+            "vertices": "0,0, 8,0, 8,208, 0,208",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "metalPost0Fixed",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "true",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "metalPost0_fixed",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "1,15",
+            "vertices": "0,0, 8,0, 8,39, 0,39",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "metalPost1Fixed",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "true",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "metalPost1_fixed",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "1,15",
+            "vertices": "0,0, 8,0, 8,63, 0,63",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "metalPost2Fixed",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "true",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "metalPost2_fixed",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "1,15",
+            "vertices": "0,0, 8,0, 8,127, 0,127",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "glassPost0",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitPhysObj_Breakable_glassPost0",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "glassPost0",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "1,15",
+            "vertices": "0,0, 8,0, 8,39, 0,39",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "glassPost1",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitPhysObj_Breakable_glassPost1",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "glassPost1",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "1,15",
+            "vertices": "0,0, 8,0, 8,63, 0,63",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "glassPost2",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitPhysObj_Breakable_glassPost2",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "glassPost2",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "1,15",
+            "vertices": "0,0, 8,0, 8,127, 0,127",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "glassPost0Fixed",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitPhysObj_Breakable_glassPost0",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "true",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "glassPost0_fixed",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "1,15",
+            "vertices": "0,0, 8,0, 8,39, 0,39",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "glassPost1Fixed",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitPhysObj_Breakable_glassPost1",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "true",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "glassPost1_fixed",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "1,15",
+            "vertices": "0,0, 8,0, 8,63, 0,63",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "glassPost2Fixed",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitPhysObj_Breakable_glassPost2",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "true",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "glassPost2_fixed",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "1,15",
+            "vertices": "0,0, 8,0, 8,127, 0,127",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "woodenPost0Fixed",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitPhysObj_Breakable_woodenPost0",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "true",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "woodenPost0_fixed",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "1,15",
+            "vertices": "0,0, 8,0, 8,39, 0,39",
+            "material": "wood"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "woodenPost1Fixed",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitPhysObj_Breakable_woodenPost1",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "true",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "woodenPost1_fixed",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "1,15",
+            "vertices": "0,0, 8,0, 8,63, 0,63",
+            "material": "wood"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "woodenPost2Fixed",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitPhysObj_Breakable_woodenPost2",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "true",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "woodenPost2_fixed",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "1,15",
+            "vertices": "0,0, 8,0, 8,127, 0,127",
+            "material": "wood"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "woodenPost0",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitPhysObj_Breakable_woodenPost0",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "woodenPost0",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "1,15",
+            "vertices": "0,0, 8,0, 8,39, 0,39",
+            "material": "wood"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "woodenPost1",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitPhysObj_Breakable_woodenPost1",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "woodenPost1",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "1,15",
+            "vertices": "0,0, 8,0, 8,63, 0,63",
+            "material": "wood"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "woodenPost2",
+    "inlibrary": "true",
+    "libclass": "normal",
+    "hasphysics": "true",
+    "initfunction": "InitPhysObj_Breakable_woodenPost2",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "false",
+        "sensor": "false",
+        "graphic": [
+          {
+            "clip": "woodenPost2",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "100"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "1,15",
+            "vertices": "0,0, 8,0, 8,127, 0,127",
+            "material": "wood"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "wind",
+    "inlibrary": "true",
+    "libclass": "scenery",
+    "hasphysics": "true",
+    "initfunction": "InitWind",
+    "graphics": [],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": [
+      {
+        "name": "fix",
+        "pos": "0,0",
+        "fixed": "true",
+        "sensor": "true",
+        "graphic": [
+          {
+            "clip": "windblock",
+            "frame": "1",
+            "pos": "0,0",
+            "rot": "0",
+            "zoffset": "2000"
+          }
+        ],
+        "shapes": [
+          {
+            "type": "poly",
+            "name": "",
+            "col": "1,15",
+            "vertices": "-20,-20, 20,-20, 20,20, -20,20",
+            "material": "average"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "bush",
+    "hasphysics": "false",
+    "inlibrary": "true",
+    "graphics": [
+      {
+        "zoffset": "103",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "bush"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "bush2",
+    "hasphysics": "false",
+    "inlibrary": "true",
+    "graphics": [
+      {
+        "zoffset": "103",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "bush2"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "bush3",
+    "hasphysics": "false",
+    "inlibrary": "true",
+    "graphics": [
+      {
+        "zoffset": "103",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "bush3"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "grass1",
+    "hasphysics": "false",
+    "inlibrary": "true",
+    "graphics": [
+      {
+        "zoffset": "100",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "grass1"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "grass2",
+    "hasphysics": "false",
+    "inlibrary": "true",
+    "graphics": [
+      {
+        "zoffset": "103",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "grass2"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "grass3",
+    "hasphysics": "false",
+    "inlibrary": "true",
+    "graphics": [
+      {
+        "zoffset": "103",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "grass3"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "banana1",
+    "hasphysics": "false",
+    "inlibrary": "true",
+    "graphics": [
+      {
+        "zoffset": "103",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "banana1"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "banana2",
+    "hasphysics": "false",
+    "inlibrary": "true",
+    "graphics": [
+      {
+        "zoffset": "103",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "banana2"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "rock1",
+    "hasphysics": "false",
+    "inlibrary": "true",
+    "graphics": [
+      {
+        "zoffset": "103",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "rock1"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "rock2",
+    "hasphysics": "false",
+    "inlibrary": "true",
+    "graphics": [
+      {
+        "zoffset": "103",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "rock2"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "rock3",
+    "hasphysics": "false",
+    "inlibrary": "true",
+    "graphics": [
+      {
+        "zoffset": "103",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "rock3"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "water",
+    "hasphysics": "false",
+    "inlibrary": "true",
+    "graphics": [
+      {
+        "zoffset": "105",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "water"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "car1",
+    "hasphysics": "false",
+    "inlibrary": "true",
+    "graphics": [
+      {
+        "zoffset": "103",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "car1"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "car2",
+    "hasphysics": "false",
+    "inlibrary": "true",
+    "graphics": [
+      {
+        "zoffset": "103",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "car2"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "oaktree1",
+    "hasphysics": "false",
+    "inlibrary": "true",
+    "graphics": [
+      {
+        "zoffset": "103",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "oaktree1"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "oaktree2",
+    "hasphysics": "false",
+    "inlibrary": "true",
+    "graphics": [
+      {
+        "zoffset": "103",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "oaktree2"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "tree_palm1",
+    "hasphysics": "false",
+    "inlibrary": "true",
+    "graphics": [
+      {
+        "zoffset": "103",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "tree_palm1"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "tree_palm2",
+    "hasphysics": "false",
+    "inlibrary": "true",
+    "graphics": [
+      {
+        "zoffset": "103",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "tree_palm2"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "tree_palm3",
+    "hasphysics": "false",
+    "inlibrary": "true",
+    "graphics": [
+      {
+        "zoffset": "103",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "tree_palm3"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "billboard_animaltamer",
+    "hasphysics": "false",
+    "inlibrary": "true",
+    "initfunction": "InitPlayerBillboard",
+    "graphics": [
+      {
+        "zoffset": "103",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "billboard_player"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "billboard_animaltamer",
+    "hasphysics": "false",
+    "inlibrary": "true",
+    "graphics": [
+      {
+        "zoffset": "103",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "billboard_animaltamer"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "billboard_cannonball",
+    "hasphysics": "false",
+    "inlibrary": "true",
+    "graphics": [
+      {
+        "zoffset": "103",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "billboard_cannonball"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "billboard_clowns",
+    "hasphysics": "false",
+    "inlibrary": "true",
+    "graphics": [
+      {
+        "zoffset": "103",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "billboard_clowns"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "billboard_custardKing",
+    "hasphysics": "false",
+    "inlibrary": "true",
+    "graphics": [
+      {
+        "zoffset": "103",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "billboard_custardKing"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "billboard_fireeater",
+    "hasphysics": "false",
+    "inlibrary": "true",
+    "graphics": [
+      {
+        "zoffset": "103",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "billboard_fireeater"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "billboard_nuke",
+    "hasphysics": "false",
+    "inlibrary": "true",
+    "graphics": [
+      {
+        "zoffset": "103",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "billboard_nuke"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "fireRing",
+    "hasphysics": "false",
+    "inlibrary": "true",
+    "graphics": [
+      {
+        "zoffset": "-101",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "fireRing"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "tent",
+    "hasphysics": "false",
+    "inlibrary": "true",
+    "graphics": [
+      {
+        "zoffset": "103",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "tent"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "circus_sign",
+    "hasphysics": "false",
+    "inlibrary": "true",
+    "graphics": [
+      {
+        "zoffset": "103",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "circus_sign"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "cannonRung",
+    "hasphysics": "false",
+    "inlibrary": "true",
+    "graphics": [
+      {
+        "zoffset": "103",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "cannonRung"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "decal1",
+    "inlibrary": "true",
+    "libclass": "decals",
+    "hasphysics": "true",
+    "initfunction": "InitDecal",
+    "graphics": [
+      {
+        "zoffset": "-1000",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "decal1"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "decal2",
+    "inlibrary": "true",
+    "libclass": "decals",
+    "hasphysics": "true",
+    "initfunction": "InitDecal",
+    "graphics": [
+      {
+        "zoffset": "-1000",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "decal2"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "decal3",
+    "inlibrary": "true",
+    "libclass": "decals",
+    "hasphysics": "true",
+    "initfunction": "InitDecal",
+    "graphics": [
+      {
+        "zoffset": "-1000",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "decal3"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "decal4",
+    "inlibrary": "true",
+    "libclass": "decals",
+    "hasphysics": "true",
+    "initfunction": "InitDecal",
+    "graphics": [
+      {
+        "zoffset": "-1000",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "decal4"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "decal5",
+    "inlibrary": "true",
+    "libclass": "decals",
+    "hasphysics": "true",
+    "initfunction": "InitDecal",
+    "graphics": [
+      {
+        "zoffset": "-1000",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "decal5"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "decal6",
+    "inlibrary": "true",
+    "libclass": "decals",
+    "hasphysics": "true",
+    "initfunction": "InitDecal",
+    "graphics": [
+      {
+        "zoffset": "-1000",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "decal6"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "decal7",
+    "inlibrary": "true",
+    "libclass": "decals",
+    "hasphysics": "true",
+    "initfunction": "InitDecal",
+    "graphics": [
+      {
+        "zoffset": "-1000",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "decal7"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "decal8",
+    "inlibrary": "true",
+    "libclass": "decals",
+    "hasphysics": "true",
+    "initfunction": "InitDecal",
+    "graphics": [
+      {
+        "zoffset": "-1000",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "decal8"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "decal9",
+    "inlibrary": "true",
+    "libclass": "decals",
+    "hasphysics": "true",
+    "initfunction": "InitDecal",
+    "graphics": [
+      {
+        "zoffset": "-1000",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "decal9"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "decal10",
+    "inlibrary": "true",
+    "libclass": "decals",
+    "hasphysics": "true",
+    "initfunction": "InitDecal",
+    "graphics": [
+      {
+        "zoffset": "-1000",
+        "rot": "0",
+        "pos": "0,0",
+        "frame": "1",
+        "clip": "decal10"
+      }
+    ],
+    "parameters": [],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "helptext_text",
+    "inlibrary": "true",
+    "libclass": "links",
+    "hasphysics": "true",
+    "initfunction": "GameObj_InitHelpText",
+    "editorrender": "RenderHelpText",
+    "graphics": [
+      {
+        "clip": "Text_Marker",
+        "frame": "1",
+        "pos": "0,0",
+        "rot": "0",
+        "zoffset": "3000"
+      }
+    ],
+    "parameters": [
+      {
+        "name": "switch_name"
+      },
+      {
+        "name": "helptext_text"
+      },
+      {
+        "name": "helptext_initialdelay"
+      }
+    ],
+    "zombooka": [],
+    "bodies": []
+  },
+  {
+    "name": "helptext_text_foreground",
+    "inlibrary": "true",
+    "libclass": "links",
+    "hasphysics": "true",
+    "initfunction": "GameObj_InitHelpText",
+    "editorrender": "RenderHelpText",
+    "graphics": [
+      {
+        "clip": "Text_Marker",
+        "frame": "1",
+        "pos": "0,0",
+        "rot": "0",
+        "zoffset": "-5000"
+      }
+    ],
+    "parameters": [
+      {
+        "name": "switch_name"
+      },
+      {
+        "name": "helptext_text"
+      },
+      {
+        "name": "helptext_initialdelay"
+      }
+    ],
+    "zombooka": [],
+    "bodies": []
+  }
+]

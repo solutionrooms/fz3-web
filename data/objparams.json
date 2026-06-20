@@ -1,0 +1,401 @@
+[
+  {
+    "name": "general_timer",
+    "type": "number",
+    "default": "1"
+  },
+  {
+    "name": "general_timer_startoffset",
+    "type": "number",
+    "default": "0"
+  },
+  {
+    "name": "mathpath_speed",
+    "type": "number",
+    "default": "0"
+  },
+  {
+    "name": "mathpath_radius",
+    "type": "number",
+    "default": "0"
+  },
+  {
+    "name": "mathpath_startpos",
+    "type": "number",
+    "default": "0"
+  },
+  {
+    "name": "mathpath_scalex",
+    "type": "number",
+    "default": "1"
+  },
+  {
+    "name": "mathpath_scaley",
+    "type": "number",
+    "default": "1"
+  },
+  {
+    "name": "mathpath_num",
+    "type": "number",
+    "default": "1"
+  },
+  {
+    "name": "mathpath_wavespeed",
+    "type": "number",
+    "default": "0"
+  },
+  {
+    "name": "mathpath_waveradius",
+    "type": "number",
+    "default": "0"
+  },
+  {
+    "name": "mathpath_numpertype",
+    "type": "number",
+    "default": "0"
+  },
+  {
+    "name": "rotator_vel",
+    "type": "number",
+    "default": "0"
+  },
+  {
+    "name": "rotator_pause",
+    "type": "number",
+    "default": "0"
+  },
+  {
+    "name": "rotator_anglechange",
+    "type": "number",
+    "default": "0"
+  },
+  {
+    "name": "cannon_minang",
+    "type": "number",
+    "default": "0"
+  },
+  {
+    "name": "cannon_maxang",
+    "type": "number",
+    "default": "0"
+  },
+  {
+    "name": "cannon_mode",
+    "type": "number",
+    "default": "0"
+  },
+  {
+    "name": "cannon_speed",
+    "type": "number",
+    "default": "0"
+  },
+  {
+    "name": "cannon_switch",
+    "type": "text",
+    "default": ""
+  },
+  {
+    "name": "pickup_count",
+    "type": "number",
+    "default": "3"
+  },
+  {
+    "name": "force",
+    "type": "number",
+    "default": "100"
+  },
+  {
+    "name": "obj_switch",
+    "type": "text",
+    "default": ""
+  },
+  {
+    "name": "obj_on",
+    "type": "list",
+    "default": "true",
+    "values": "false,true"
+  },
+  {
+    "name": "path_line",
+    "type": "linelink",
+    "default": ""
+  },
+  {
+    "name": "path_speed",
+    "type": "number",
+    "default": "30"
+  },
+  {
+    "name": "path_loop",
+    "type": "list",
+    "default": "false",
+    "values": "false,true"
+  },
+  {
+    "name": "path_switch",
+    "type": "objlink",
+    "default": ""
+  },
+  {
+    "name": "path_spline",
+    "type": "list",
+    "default": "true",
+    "values": "false,true"
+  },
+  {
+    "name": "path_endreset",
+    "type": "list",
+    "default": "false",
+    "values": "false,true"
+  },
+  {
+    "name": "path_startpos",
+    "type": "number",
+    "default": "0"
+  },
+  {
+    "name": "path_2way",
+    "type": "list",
+    "default": "false",
+    "values": "false,true"
+  },
+  {
+    "name": "path_rotatetopath",
+    "type": "list",
+    "default": "true",
+    "values": "false,true"
+  },
+  {
+    "name": "path_startmoving",
+    "type": "list",
+    "default": "true",
+    "values": "false,true"
+  },
+  {
+    "name": "linkobj_line",
+    "type": "linelink",
+    "default": ""
+  },
+  {
+    "name": "linkobj_linka",
+    "type": "objlink",
+    "default": ""
+  },
+  {
+    "name": "linkobj_linkb",
+    "type": "objlink",
+    "default": ""
+  },
+  {
+    "name": "linkobj_minang",
+    "type": "number",
+    "default": "0"
+  },
+  {
+    "name": "linkobj_maxang",
+    "type": "number",
+    "default": "0"
+  },
+  {
+    "name": "linkobj_x0",
+    "type": "number",
+    "default": "0"
+  },
+  {
+    "name": "linkobj_y0",
+    "type": "number",
+    "default": "0"
+  },
+  {
+    "name": "linkobj_x1",
+    "type": "number",
+    "default": "0"
+  },
+  {
+    "name": "linkobj_y1",
+    "type": "number",
+    "default": "0"
+  },
+  {
+    "name": "rev_enablelimit",
+    "type": "list",
+    "default": "false",
+    "values": "false,true"
+  },
+  {
+    "name": "rev_lowerangle",
+    "type": "number",
+    "default": "0"
+  },
+  {
+    "name": "rev_upperangle",
+    "type": "number",
+    "default": "0"
+  },
+  {
+    "name": "rev_enablemotor",
+    "type": "list",
+    "default": "false",
+    "values": "false,true"
+  },
+  {
+    "name": "rev_motorspeed",
+    "type": "number",
+    "default": "0"
+  },
+  {
+    "name": "rev_maxmotortorque",
+    "type": "number",
+    "default": "0"
+  },
+  {
+    "name": "prismatic_axisangle",
+    "type": "number",
+    "default": "0"
+  },
+  {
+    "name": "prismatic_enablelimit",
+    "type": "list",
+    "default": "true",
+    "values": "false,true"
+  },
+  {
+    "name": "prismatic_lowertranslation",
+    "type": "number",
+    "default": "0"
+  },
+  {
+    "name": "prismatic_uppertranslation",
+    "type": "number",
+    "default": "0"
+  },
+  {
+    "name": "prismatic_enablemotor",
+    "type": "list",
+    "default": "false",
+    "values": "false,true"
+  },
+  {
+    "name": "prismatic_motorspeed",
+    "type": "number",
+    "default": "0"
+  },
+  {
+    "name": "prismatic_maxmotorforce",
+    "type": "number",
+    "default": "0"
+  },
+  {
+    "name": "joint_initfunction",
+    "type": "list",
+    "default": "InitGameObjJoint_Null",
+    "values": "InitGameObjJoint_Null,InitGameObjJoint_Trapeze,InitGameObjJoint_Trapeze1,InitGameObjJoint_LoweringDistance,InitGameObjJoint_RaisingDistance"
+  },
+  {
+    "name": "line_type",
+    "type": "list",
+    "default": "normal",
+    "values": "normal,transparent"
+  },
+  {
+    "name": "line_thickness",
+    "type": "number",
+    "default": "1"
+  },
+  {
+    "name": "line_fixed",
+    "type": "list",
+    "default": "true",
+    "values": "false,true"
+  },
+  {
+    "name": "line_physmaterial",
+    "type": "list",
+    "default": "average",
+    "values": "average,bouncy,smooth,dense"
+  },
+  {
+    "name": "line_function",
+    "type": "list",
+    "default": "InitGameObjLine_Grassy",
+    "values": "InitGameObjLine_Grassy,InitGameObjLine_Smooth,InitGameObjLine_Death,InitGameObjLine_Bouncy,InitGameObjLine_Icy,InitGameObjLine_ScrollArea,InitGameObjLine_Background,InitGameObjLine_Switch,InitGameObjLine_NonCollision,InitGameObjLine_KnifeEdge,InitGameObjLine_TriggerHitMissile,InitGameObjLine_ForShow"
+  },
+  {
+    "name": "line_background_frame",
+    "type": "int",
+    "default": "1"
+  },
+  {
+    "name": "editor_layer",
+    "type": "list",
+    "default": "1",
+    "values": "1,2,3,4"
+  },
+  {
+    "name": "switch_name",
+    "type": "text",
+    "default": ""
+  },
+  {
+    "name": "switch_type",
+    "type": "list",
+    "default": "once",
+    "values": "once,timed,2way"
+  },
+  {
+    "name": "switch_time",
+    "type": "number",
+    "default": "1"
+  },
+  {
+    "name": "helptext_text",
+    "type": "text",
+    "default": "help text"
+  },
+  {
+    "name": "helptext_initialdelay",
+    "type": "number",
+    "default": "0"
+  },
+  {
+    "name": "portal_exit",
+    "type": "text",
+    "default": ""
+  },
+  {
+    "name": "disk_velocity",
+    "type": "number",
+    "default": "20"
+  },
+  {
+    "name": "disk_type",
+    "type": "list",
+    "default": "constant",
+    "values": "constant"
+  },
+  {
+    "name": "spawner_initialdelay",
+    "type": "number",
+    "default": "0"
+  },
+  {
+    "name": "spawner_frequency",
+    "type": "number",
+    "default": "3"
+  },
+  {
+    "name": "spawner_spawnobject",
+    "type": "text",
+    "default": "zombie1"
+  },
+  {
+    "name": "spawner_totalamount",
+    "type": "number",
+    "default": "10"
+  },
+  {
+    "name": "player_ammo",
+    "type": "number",
+    "default": "0"
+  }
+]

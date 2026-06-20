@@ -1,0 +1,92 @@
+{
+  "hinge": {
+    "density": "0.26",
+    "friction": "1",
+    "restitution": "0.1"
+  },
+  "average": {
+    "density": "0.3",
+    "friction": "1",
+    "restitution": "0.1"
+  },
+  "light": {
+    "density": "0.1",
+    "friction": "0.1",
+    "restitution": "0.1"
+  },
+  "bouncy": {
+    "density": "0.5",
+    "friction": "0.5",
+    "restitution": "0.95"
+  },
+  "smooth": {
+    "density": "0.5",
+    "friction": "0.0",
+    "restitution": "0.0"
+  },
+  "dense": {
+    "density": "1",
+    "friction": "0.5",
+    "restitution": "0.0"
+  },
+  "sticky": {
+    "density": "1",
+    "friction": "1",
+    "restitution": "0.2"
+  },
+  "nuke": {
+    "density": "0.5",
+    "friction": "1",
+    "restitution": "0.3"
+  },
+  "remover": {
+    "density": "1",
+    "friction": "1",
+    "restitution": "0.0"
+  },
+  "solidmetal": {
+    "density": "1",
+    "friction": "0.2",
+    "restitution": "0.2"
+  },
+  "bowling_ball": {
+    "density": "1.5",
+    "friction": "0.2",
+    "restitution": "0.2"
+  },
+  "wood": {
+    "density": "0.5",
+    "friction": "0.4",
+    "restitution": "0.2"
+  },
+  "missile": {
+    "density": "1",
+    "friction": "0.5",
+    "restitution": "0.5"
+  },
+  "missile_heavy": {
+    "density": "2",
+    "friction": "0.5",
+    "restitution": "0.5"
+  },
+  "missile_railgun": {
+    "density": "1",
+    "friction": "0",
+    "restitution": "1"
+  },
+  "nonexistant": {
+    "density": "0.00001",
+    "friction": "1",
+    "restitution": "0.1"
+  },
+  "car": {
+    "density": "1",
+    "friction": "0.5",
+    "restitution": "0"
+  },
+  "clown_wheel": {
+    "density": "0.3",
+    "friction": "1",
+    "restitution": "0"
+  }
+}

@@ -1,0 +1,25 @@
+<data>
+
+<level id="1" name="Dancing" category="0" desc="" bg="5" >
+	<basketballs time_gold="5" time_silver="9" />
+	<objgroup name="platform">
+		<obj id="" type="dance1" x="50" y="348" rot="0" scale="1" params="" />
+		<obj id="" type="dance2" x="143" y="348" rot="0" scale="1" params="" />
+		<obj id="" type="dance3" x="233" y="348" rot="0" scale="1" params="" />
+		<obj id="" type="dance4" x="342" y="349" rot="0" scale="1" params="" />
+		<obj id="" type="dance5" x="448" y="346" rot="0" scale="1" params="" />
+		<obj id="" type="dance6" x="539" y="348" rot="0" scale="1" params="" />
+		<obj id="" type="dance7" x="639" y="348" rot="0" scale="1" params="" />
+	</objgroup>
+	<joints>
+	</joints>
+<line type="0" id="" params="line_physmaterial=average,line_fixed=true,line_function=InitGameObjLine_Grassy,line_background_frame=1,editor_layer=1" >
+<points a="-19,351, 737,351, 735,534, -23,531" />
+</line>
+<map minx="0" maxx="0" miny="0" maxy="0" cellw="16" cellh="16" >
+<mapdata a=""/>
+</map>
+</level>
+
+
+</data>
