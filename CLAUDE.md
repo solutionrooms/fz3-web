@@ -329,7 +329,7 @@ contracts/game-data.ts                 types for data/*.json (raw-string discipl
 data/                                  extracted level/library JSON (constants/materials/objparams/physobjs/levels)
 tools/extract_data.py                  build-time XML→JSON transcriber (faithful, raw strings)
 src/box2d/**                           engine dev: bit-exact Box2DFlash 2.0.2 port (Common/Collision/Dynamics)
-src/game/**                            game dev: framework port — util/, model/, data/ (loaders), physics/ (creation-plan + build-world → live b2World), game-objects.ts (authoritative RenderFrame producer + body→view sync), level-runtime.ts (per-frame orchestration: faithful UpdateGameplay tick order + LevelRuntime). Intro 1 builds + emits RenderFrame; runtime ticks (free-fall proven). Awaiting engine m4 to step real levels. Next: GameObj behaviors (GameObjects.Update) + Collision/ContactListener + input + Camera.
+src/game/**                            game dev: framework port — util/ (decoders+params+math), model/, data/ (loaders), physics/ (creation-plan + build-world → live b2World), game-objects.ts (RenderFrame producer + sync + GameObj.update), behaviors/ (registry + dispatch + params; InitDecal, GameObj_InitHelpText), camera.ts (follow camera), level-runtime.ts (faithful UpdateGameplay tick). Intro 1: 17 render objects; solves+rests on engine; reaches m7 CCD/TOI. Next: physics behaviors (missile/zombie), Collision/ContactListener, input.
 src/render/**                          render dev: OpenFL display layer (forthcoming)
 test/**                                vitest suites (test/goldens/ engine; test/game/ decoders) + helpers/hex16.ts
 spike/                                 render dev's OpenFL spike (proof + candidates.json catalog)

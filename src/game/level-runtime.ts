@@ -5,10 +5,11 @@
 import { buildWorld, type BuiltWorld } from "./physics/build-world";
 import { buildCreationPlan } from "./physics/creation-plan";
 import { buildGameObjects, syncFromWorld, linkBodies, updateGameObjects, toRenderFrame, type GameObj } from "./game-objects";
+import { Camera } from "./camera";
 import type { Level } from "./model/level";
 import type { PhysObjs } from "./model/phys-obj-def";
 import type { PhysObjMaterial } from "./model/phys-obj-material";
-import type { RenderFrame, Camera } from "../../contracts/render-state";
+import type { RenderFrame } from "../../contracts/render-state";
 
 export const PHYS_STEP = 1 / 60; // PhysicsBase.physStep
 export const PHYS_ITERS = 5; // PhysicsBase.physNumIterations
@@ -38,8 +39,8 @@ export function stepPhysics(world: BuiltWorld, gameObjs: GameObj[], inTransition
 export class LevelRuntime {
   readonly world: BuiltWorld;
   readonly gameObjs: GameObj[];
-  /** Camera.as (follow-target + shake) is ported once a gameplay follow-target exists; origin until then. */
-  camera: Camera = { x: 0, y: 0, scale: 1 };
+  /** Game-side follow camera (Camera.as). Stays at reset (origin) until a gameplay follow-target drives it. */
+  readonly camera = new Camera();
 
   constructor(level: Level, lib: PhysObjs, materials: PhysObjMaterial[]) {
     this.world = buildWorld(buildCreationPlan(level, lib, materials));
@@ -54,6 +55,6 @@ export class LevelRuntime {
   }
 
   renderFrame(): RenderFrame {
-    return toRenderFrame(this.gameObjs, this.camera);
+    return toRenderFrame(this.gameObjs, { x: this.camera.x, y: this.camera.y, scale: this.camera.scale });
   }
 }

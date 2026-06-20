@@ -186,39 +186,6 @@
       "xflip": false,
       "zpos": -999.84,
       "alpha": 1
-    },
-    {
-      "dobj": "Text_Marker",
-      "frame": 0,
-      "xpos": 240,
-      "ypos": 52,
-      "dir": 0,
-      "scale": 1,
-      "xflip": false,
-      "zpos": -4999.83,
-      "alpha": 1
-    },
-    {
-      "dobj": "Text_Marker",
-      "frame": 0,
-      "xpos": 240,
-      "ypos": 82,
-      "dir": 0,
-      "scale": 1,
-      "xflip": false,
-      "zpos": -4999.82,
-      "alpha": 1
-    },
-    {
-      "dobj": "Text_Marker",
-      "frame": 0,
-      "xpos": 240,
-      "ypos": 102,
-      "dir": 0,
-      "scale": 1,
-      "xflip": false,
-      "zpos": -4999.81,
-      "alpha": 1
     }
   ],
   "camera": {

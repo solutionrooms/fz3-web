@@ -52,4 +52,27 @@ describe("behavior dispatch", () => {
     expect(decals.length).toBe(2); // decal2 + decal3 (both InitDecal)
     expect(Object.keys(behaviorRegistry)).toContain("InitDecal");
   });
+
+  it("GameObj_InitHelpText: reads params, hidden until the initial delay elapses", () => {
+    const go = new GameObj();
+    go.initParams = "helptext_initialdelay=2,switch_name=,helptext_text=Welcome to the Carnival!";
+    applyInitFunction(go, "GameObj_InitHelpText");
+    expect(go.name).toBe("text");
+    expect(go.textMessage).toBe("Welcome to the Carnival!"); // param plumbed through
+    expect(go.dobjClip).toBe("helpText"); // editor graphic (Text_Marker) overridden at runtime
+    expect(go.visible).toBe(false);
+    expect(go.timer).toBe(2 * 30); // initialdelay × fps
+    for (let i = 0; i < 60; i++) {
+      expect(go.visible).toBe(false); // hidden during the delay
+      go.update();
+    }
+    expect(go.visible).toBe(true); // appears after the delay
+  });
+
+  it("Intro 1's 3 help-text objects are created but hidden (editor placeholders no longer render)", () => {
+    const gos = buildGameObjects(intro1, lib);
+    const help = gos.filter((g) => g.name === "text");
+    expect(help.length).toBe(3);
+    expect(help.every((g) => !g.visible)).toBe(true); // were the 3 visible Text_Markers; now correctly hidden
+  });
 });

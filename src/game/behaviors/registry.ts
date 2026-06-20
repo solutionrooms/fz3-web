@@ -1,5 +1,6 @@
 import type { GameObj } from "../game-objects";
 import { initDecal } from "./decal";
+import { initHelpText } from "./helptext";
 
 // The behavior registry: AS3 initfunction name → TS init (mirrors `go[physobj.initFunctionName]()`).
 // Objects whose initfunction isn't registered yet render statically (their body still exists; behavior
@@ -8,7 +9,8 @@ export type BehaviorInit = (go: GameObj) => void;
 
 export const behaviorRegistry: Record<string, BehaviorInit> = {
   InitDecal: initDecal,
-  // InitPlayer_BarryZooka, InitZombie_Generic, GameObj_InitHelpText, … — TODO
+  GameObj_InitHelpText: initHelpText,
+  // InitPlayer_BarryZooka, InitZombie_Generic, … — TODO
 };
 
 /** Apply an object's init function if it's ported; no-op otherwise. */

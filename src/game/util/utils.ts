@@ -17,3 +17,33 @@ export function booleanFromString(s: string | null | undefined): boolean {
   const u = (s ?? "").toUpperCase();
   return u === "1" || u === "TRUE";
 }
+
+/** Utils.GetLength (Utils.as) — NOTE: misnamed; returns length-SQUARED (x²+y²), not the magnitude. */
+export function getLength(x: number, y: number): number {
+  return x * x + y * y;
+}
+
+/** Utils.LimitNumber — clamp v to [min, max]. */
+export function limitNumber(min: number, max: number, v: number): number {
+  if (v < min) v = min;
+  if (v > max) v = max;
+  return v;
+}
+
+/** Utils.ScaleTo — linear map of v from [inMin, inMax] onto [outMin, outMax] (op order preserved). */
+export function scaleTo(outMin: number, outMax: number, inMin: number, inMax: number, v: number): number {
+  const d = inMax - inMin;
+  const r = outMax - outMin;
+  const t = (1 / d) * (v - inMin);
+  return r * t + outMin;
+}
+
+/** Utils.RandBetweenInt — non-deterministic; used only for cosmetic camera shake. */
+export function randBetweenInt(a: number, b: number): number {
+  return (Math.random() * (b - a + 1) + a) | 0;
+}
+
+/** Utils.RandBetweenFloat — non-deterministic; cosmetic camera shake only. */
+export function randBetweenFloat(a: number, b: number): number {
+  return Math.random() * (b - a) + a;
+}

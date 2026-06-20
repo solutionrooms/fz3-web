@@ -35,6 +35,24 @@ export function getParamString(p: ParsedParams, name: string, def = ""): string 
   return i !== -1 ? (p.values[i] ?? "") : def;
 }
 
+/** Utils.GetParamNumber (Utils.as:546). */
+export function getParamNumber(p: ParsedParams, name: string, def = 0): number {
+  const i = p.names.indexOf(name);
+  return i !== -1 ? Number(p.values[i]) : def;
+}
+
+/** Utils.GetParamInt (Utils.as:556). */
+export function getParamInt(p: ParsedParams, name: string, def = 0): number {
+  const i = p.names.indexOf(name);
+  return i !== -1 ? Number(p.values[i]) | 0 : def;
+}
+
+/** Utils.GetParamBool (Utils.as:566) — exact "true". */
+export function getParamBool(p: ParsedParams, name: string, def = false): boolean {
+  const i = p.names.indexOf(name);
+  return i !== -1 ? p.values[i] === "true" : def;
+}
+
 export interface ObjParameter {
   name: string;
   value: string;
@@ -52,6 +70,16 @@ export class ObjParameters {
 
   clearAll(): void {
     this.list = [];
+  }
+
+  /** ObjParameters.ToString — "name=value,name=value,…" (used to set GameObj.initParams). */
+  toString(): string {
+    let s = "";
+    for (let i = 0; i < this.list.length; i++) {
+      s += this.list[i].name + "=" + this.list[i].value;
+      if (i !== this.list.length - 1) s += ",";
+    }
+    return s;
   }
 
   add(name: string, value: string): void {
