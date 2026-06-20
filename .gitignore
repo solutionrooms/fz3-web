@@ -38,3 +38,5 @@ dist-web/
 *.log
 .vscode/
 .idea/
+/data/creation-plans/
+# data/render-frames/ IS committed — src/render/main.ts imports intro1.json at build time (Pages).

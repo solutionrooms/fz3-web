@@ -329,13 +329,25 @@ contracts/game-data.ts                 types for data/*.json (raw-string discipl
 data/                                  extracted level/library JSON (constants/materials/objparams/physobjs/levels)
 tools/extract_data.py                  build-time XML→JSON transcriber (faithful, raw strings)
 src/box2d/**                           engine dev: bit-exact Box2DFlash 2.0.2 port (Common/Collision/Dynamics)
-src/game/**                            game dev: framework port — util/ (AS3 decoders+utils, Triangulate), model/ (Level/instance/joint/line + PhysObj library), data/ (level-loader, physobj-loader). AddPhysObjAt + InitLines/InitJoints → creation-order dump next.
+src/game/**                            game dev: framework port — util/, model/, data/ (loaders), physics/ (creation-plan + build-world → live b2World), game-objects.ts (authoritative RenderFrame producer + body→view sync), level-runtime.ts (per-frame orchestration: faithful UpdateGameplay tick order + LevelRuntime). Intro 1 builds + emits RenderFrame; runtime ticks (free-fall proven). Awaiting engine m4 to step real levels. Next: GameObj behaviors (GameObjects.Update) + Collision/ContactListener + input + Camera.
 src/render/**                          render dev: OpenFL display layer (forthcoming)
 test/**                                vitest suites (test/goldens/ engine; test/game/ decoders) + helpers/hex16.ts
 spike/                                 render dev's OpenFL spike (proof + candidates.json catalog)
 package.json / tsconfig.json / vitest.config.ts   shared project (ESM, strict, no-shuffle determinism)
 CLAUDE.md                              this file
 ```
+
+## Repo & deploy
+- **GitHub:** `github.com/solutionrooms/fz3-web` (public). `.gitignore` excludes `node_modules`,
+  `dist-web`, `public/assets` (generated), `tools/ffdec`, `tools/oracle/build`, the regenerable
+  `extracted/` media, and `spike/{node_modules,public}`. Committed = source + `.as`/XML reference + SWF +
+  `data/` + vendored OpenFL + config/docs/tests/goldens.
+- **GitHub Pages:** auto-deploys on push to `main` via `.github/workflows/deploy-pages.yml`
+  (npm ci → `npm run assets` → `vite build --base=/fz3-web/` → deploy) →
+  **https://solutionrooms.github.io/fz3-web/**. Currently a dev preview (Intro 1 render), not yet playable.
+  Base path is set in CI only; `vite.config.ts` stays `/` for local dev.
+- **Shared working dir:** the three sessions edit one tree. The game/hub session owns commits + pushes to
+  keep state coherent; devs ping in `DEVELOPER_MESSAGES.md` when they want a push.
 
 ## Team / sessions
 - **game** (this session) — framework port, level/material data, fixed-step loop, integration, hub.
