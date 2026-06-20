@@ -19,6 +19,11 @@
 // ---------- data/constants.json ----------
 export type Constants = Record<string, string>;
 
+// ---------- data/anim.json (clip → timeline frame count + frame labels) ----------
+export interface AnimLabel { name: string; frame: number } // frame is 0-based
+export interface AnimClip { frames: number; labels: AnimLabel[] }
+export type Anim = Record<string, AnimClip>; // keyed by SWF linkage/clip name
+
 // ---------- data/materials.json ----------
 export interface Material { density: string; friction: string; restitution: string }
 export type Materials = Record<string, Material>;

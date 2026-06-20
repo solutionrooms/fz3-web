@@ -141,8 +141,65 @@ def extract_levels():
     write("levels.json", levels)
     print(f"  level counts by source: {dict(counts)}  total={len(levels)}")
 
+# ---------- anim: clip → {frames, labels} from the SWF DefineSprite/FrameLabel/SymbolClass tags ----------
+def extract_anim():
+    import struct
+    swf = os.path.join(ROOT, "flaming-zombooka-3.uncompressed.swf")
+    if not os.path.exists(swf):
+        print("  (skip anim.json — uncompressed SWF not present; run the decompress step)")
+        return
+    data = open(swf, "rb").read()[8:]
+    nbits = data[0] >> 3
+    start = (5 + 4 * nbits + 7) // 8 + 4
+    sprites = {}   # charID -> {frames, labels}
+    symbols = {}   # charID -> className
+
+    def walk(buf, p, end, sprite_cid=None):
+        frame_idx = 0
+        labels = []
+        while p < end:
+            th = struct.unpack("<H", buf[p:p + 2])[0]; code = th >> 6; length = th & 0x3f; p += 2
+            if length == 0x3f:
+                length = struct.unpack("<I", buf[p:p + 4])[0]; p += 4
+            ps = p; payload = buf[p:p + length]
+            if sprite_cid is not None:
+                if code == 1:        # ShowFrame
+                    frame_idx += 1
+                elif code == 43:     # FrameLabel
+                    i = 0
+                    while payload[i] != 0: i += 1
+                    labels.append({"name": payload[:i].decode("latin1"), "frame": frame_idx})
+                elif code == 0:
+                    return p + length, labels
+            else:
+                if code == 39:       # DefineSprite
+                    cid, fcount = struct.unpack("<HH", payload[:4])
+                    _, lbls = walk(buf, ps + 4, ps + length, sprite_cid=cid)
+                    sprites[cid] = {"frames": fcount, "labels": lbls}
+                elif code == 76:     # SymbolClass
+                    cnt = struct.unpack("<H", payload[:2])[0]; i = 2
+                    for _ in range(cnt):
+                        tag = struct.unpack("<H", payload[i:i + 2])[0]; i += 2
+                        j = i
+                        while payload[j] != 0: j += 1
+                        symbols[tag] = payload[i:j].decode("latin1"); i = j + 1
+                elif code == 0:
+                    return p + length, labels
+            p += length
+        return p, labels
+
+    walk(data, start, len(data))
+    clips = OrderedDict()
+    for cid in sorted(sprites):
+        name = symbols.get(cid)
+        if name:
+            clips[name] = sprites[cid]
+    write("anim.json", clips)
+
+
 if __name__ == "__main__":
     print("Extracting FZ3 data → data/*.json")
     extract_data()
     extract_levels()
+    extract_anim()
     print("Done.")

@@ -4,6 +4,9 @@ import puppeteer from "puppeteer";
 
 const URL = process.env.RENDER_URL || "http://localhost:5173/";
 const OUT = process.env.RENDER_OUT || "/tmp/fz3-render.png";
+const VW = Number(process.env.RENDER_VW || 760);
+const VH = Number(process.env.RENDER_VH || 560);
+const FULL = process.env.RENDER_FULL === "1"; // screenshot whole page (to see letterbox bars)
 
 const browser = await puppeteer.launch({
   headless: "new",
@@ -11,7 +14,7 @@ const browser = await puppeteer.launch({
          "--ignore-gpu-blocklist", "--window-size=760,560"],
 });
 const page = await browser.newPage();
-await page.setViewport({ width: 760, height: 560 });
+await page.setViewport({ width: VW, height: VH });
 const logs = [];
 page.on("console", (m) => { const t = m.text(); if (/\[render\]/.test(t)) logs.push(t); });
 page.on("pageerror", (e) => logs.push("PAGEERROR: " + e.message));
@@ -40,8 +43,12 @@ const pix = await page.evaluate(() => {
   return { w: c.width, h: c.height, nonBgPct: +(100 * nonBg / total).toFixed(2) };
 });
 
-const el = await page.$("#stage");
-await (el || page).screenshot({ path: OUT });
+if (FULL) {
+  await page.screenshot({ path: OUT });
+} else {
+  const el = await page.$("#stage");
+  await (el || page).screenshot({ path: OUT });
+}
 
 console.log("==== [render] LOG ====");
 console.log(logs.join("\n"));

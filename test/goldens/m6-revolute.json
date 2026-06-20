@@ -1,0 +1,692 @@
+{
+  "meta": {
+    "swf": "tools/oracle/build/harness-revolute.swf",
+    "fields": [
+      "px",
+      "py",
+      "a",
+      "vx",
+      "vy",
+      "w"
+    ],
+    "tags": {
+      "REV": 61
+    },
+    "oracle": "Ruffle (selfhosted) headless via puppeteer"
+  },
+  "golden": {
+    "REV": [
+      {
+        "step": 0,
+        "fields": [
+          "3ff0000000000000",
+          "0000000000000000",
+          "0000000000000000",
+          "0000000000000000",
+          "0000000000000000",
+          "0000000000000000"
+        ]
+      },
+      {
+        "step": 1,
+        "fields": [
+          "3feffffe64d59b40",
+          "3f5446f78d8f08dd",
+          "3f5446f7e467d2c6",
+          "0000000000000000",
+          "3fb30288df0cac5b",
+          "3fb30288df0cac5b"
+        ]
+      },
+      {
+        "step": 2,
+        "fields": [
+          "3feffff18b85b46b",
+          "3f6e6a6cdc3c25f8",
+          "3f6e6a7170a98755",
+          "bf28177b3f3b46d4",
+          "3fc3028715f99ea5",
+          "3fc302880a3b5116"
+        ]
+      },
+      {
+        "step": 3,
+        "fields": [
+          "3fefffc62e3af357",
+          "3f7e6a590d7360a7",
+          "3f7e6a6b5f1b7382",
+          "bf4b1a5e8236f7d8",
+          "3fcc83b877a6c6de",
+          "3fcc83c55917c2f5"
+        ]
+      },
+      {
+        "step": 4,
+        "fields": [
+          "3fefff5f64d0726a",
+          "3f89587a325164ba",
+          "3f8958a499c0426a",
+          "bf62117d20276ffa",
+          "3fd302552cbc4697",
+          "3fd3027785be5829"
+        ]
+      },
+      {
+        "step": 5,
+        "fields": [
+          "3feffe96a64f0506",
+          "3f9302266cb797da",
+          "3f93026dfa7da828",
+          "bf72d2038123b0b7",
+          "3fd7c27f4b572fc1",
+          "3fd7c2f68d639c6f"
+        ]
+      },
+      {
+        "step": 6,
+        "fields": [
+          "3feffd3bcc22cf42",
+          "3f9a9c1dc5b56708",
+          "3f9a9ce21a3b419e",
+          "bf80efe0246d7e80",
+          "3fdc820afe22d0cd",
+          "3fdc834cf749f66d"
+        ]
+      },
+      {
+        "step": 7,
+        "fields": [
+          "3feffb15180b6ecd",
+          "3fa1bce517167e28",
+          "3fa1bdcdc0e43d6c",
+          "bf8ba90532587534",
+          "3fe0a03fcc510014",
+          "3fe0a1afe098efae"
+        ]
+      },
+      {
+        "step": 8,
+        "fields": [
+          "3feff7df3e04f2af",
+          "3fa6cd501d55ec8a",
+          "3fa6cf3e88c21736",
+          "bf9511ff7331114a",
+          "3fe2fe996de57702",
+          "3fe30185236bb2ad"
+        ]
+      },
+      {
+        "step": 9,
+        "fields": [
+          "3feff34d73a2e7de",
+          "3fac7ee8eb55b4f4",
+          "3fac82ae6155e7e3",
+          "bf9e77ca69b61300",
+          "3fe55ba045b4b5ac",
+          "3fe5610e6bf73949"
+        ]
+      },
+      {
+        "step": 10,
+        "fields": [
+          "3fefed0986903953",
+          "3fb1688ef7db1b47",
+          "3fb16c00157bc7a5",
+          "bfa526598732f252",
+          "3fe7b6c1123b2ae4",
+          "3fe7c02da8863859"
+        ]
+      },
+      {
+        "step": 11,
+        "fields": [
+          "3fefe4b3fc1dbc07",
+          "3fb4e19467039452",
+          "3fb4e78668e3ebd1",
+          "bfac6b5af1b40882",
+          "3fea0f4362214add",
+          "3fea1ebddc604d0a"
+        ]
+      },
+      {
+        "step": 12,
+        "fields": [
+          "3fefd9e43bfcedad",
+          "3fb8aa0189ded956",
+          "3fb8b3d0a3a7d892",
+          "bfb296ab8846e0b9",
+          "3fec6445aa5510bb",
+          "3fec7c92713582d8"
+        ]
+      },
+      {
+        "step": 13,
+        "fields": [
+          "3fefcc28c873618c",
+          "3fbcc12cf9f798b4",
+          "3fbcd0be275cd954",
+          "bfb7c6fdaac45d45",
+          "3feeb4b98b2291ca",
+          "3feed9768c5c3cf1"
+        ]
+      },
+      {
+        "step": 14,
+        "fields": [
+          "3fefbb07867bfce4",
+          "3fc0932046fa6dce",
+          "3fc09f13073f8ba8",
+          "bfbdd6fe3c3f6e83",
+          "3ff07fb029a9ccc5",
+          "3ff09a9634815dfa"
+        ]
+      },
+      {
+        "step": 15,
+        "fields": [
+          "3fefa5fe186b9f12",
+          "3fc2ec192dee772e",
+          "3fc2fdeaf3ad2771",
+          "bfc26b35161014af",
+          "3ff1a163e985190e",
+          "3ff1c7b65c532845"
+        ]
+      },
+      {
+        "step": 16,
+        "fields": [
+          "3fef8c824dc4fd73",
+          "3fc56adeb0d767d4",
+          "3fc584c82d694049",
+          "bfc66a1d7a879c2f",
+          "3ff2bea3c96202c4",
+          "3ff2f3f305aa880a"
+        ]
+      },
+      {
+        "step": 17,
+        "fields": [
+          "3fef6e02aaf0f2d5",
+          "3fc80eacf2f2695c",
+          "3fc83385e02a5b0c",
+          "bfcaef3dc0b30fbd",
+          "3ff3d67f42d3b3e1",
+          "3ff41f1e20b957e9"
+        ]
+      },
+      {
+        "step": 18,
+        "fields": [
+          "3fef49e70b8aa82f",
+          "3fcad69ad27d6dbc",
+          "3fcb09f8503cc75b",
+          "bfd00085ff29a4ab",
+          "3ff4e7e8a8664a6b",
+          "3ff54904047677de"
+        ]
+      },
+      {
+        "step": 19,
+        "fields": [
+          "3fef1f9161d70996",
+          "3fcdc195f27290cb",
+          "3fce07ec1415c10d",
+          "bfd2d2aa2c9efe89",
+          "3ff5f1b4a1c39fba",
+          "3ff6716b33ff37c8"
+        ]
+      },
+      {
+        "step": 20,
+        "fields": [
+          "3feeee5e95d21370",
+          "3fd0672f62dca325",
+          "3fd09692a39c5104",
+          "bfd5f08e10525649",
+          "3ff6f29a0f50f4f2",
+          "3ff798142be733d4"
+        ]
+      },
+      {
+        "step": 21,
+        "fields": [
+          "3feeb5a785f7d4b8",
+          "3fd1fdc25632ade6",
+          "3fd23caf5bd43335",
+          "bfd95c416448d48b",
+          "3ff7e93264ee7269",
+          "3ff8bcb938b36996"
+        ]
+      },
+      {
+        "step": 22,
+        "fields": [
+          "3fee74c22b8fe292",
+          "3fd3a3b11ade2590",
+          "3fd3f62487a61916",
+          "bfdd17508c06c249",
+          "3ff8d3fa8bd4a7bd",
+          "3ff9df0e57cf9c6c"
+        ]
+      },
+      {
+        "step": 23,
+        "fields": [
+          "3fee2b02e3c6124d",
+          "3fd5580ccde78be8",
+          "3fd5c2c4fd6de01d",
+          "bfe09159bd2d2ebd",
+          "3ff9b1545b6a94f6",
+          "3ffafec1245b26eb"
+        ]
+      },
+      {
+        "step": 24,
+        "fields": [
+          "3fedd7bdde40d29f",
+          "3fd719c8c7b701e2",
+          "3fd7a25da80bf795",
+          "bfe2bf5e14b0325d",
+          "3ffa7f88b83f9117",
+          "3ffc1b78d132f4f4"
+        ]
+      },
+      {
+        "step": 25,
+        "fields": [
+          "3fed7a48b12b5905",
+          "3fd8e7b9367e567d",
+          "3fd994b51aa18e31",
+          "bfe515827b82a326",
+          "3ffb3cca66ff5789",
+          "3ffd34d631a0686a"
+        ]
+      },
+      {
+        "step": 26,
+        "fields": [
+          "3fed11fc11cff214",
+          "3fdac091fa0f5409",
+          "3fdb998b25fdd154",
+          "bfe7932fa3a0160a",
+          "3ffbe7399f251da8",
+          "3ffe4a73d20f2716"
+        ]
+      },
+      {
+        "step": 27,
+        "fields": [
+          "3fec9e35afe634c6",
+          "3fdca2e5ce9d0e2a",
+          "3fddb09870e3b5d5",
+          "bfea37616df8af3f",
+          "3ffc7ce86651af76",
+          "3fff5be6221d1634"
+        ]
+      },
+      {
+        "step": 28,
+        "fields": [
+          "3fec1e5a30a429f5",
+          "3fde8d25d424bcb1",
+          "3fdfd98e14645fad",
+          "bfed009f30044100",
+          "3ffcfbdfb96a6b3f",
+          "4000345dd89f7fdf"
+        ]
+      },
+      {
+        "step": 29,
+        "fields": [
+          "3feb91d74574d504",
+          "3fe03ed0c012355d",
+          "3fe10a0a9ece38cb",
+          "bfefecf4d7d1ee2b",
+          "3ffd622584052268",
+          "4000b83ebf8847d8"
+        ]
+      },
+      {
+        "step": 30,
+        "fields": [
+          "3feaf825d8f7e97f",
+          "3fe13943836663df",
+          "3fe22fe76b18c7ff",
+          "bff17cf69c195734",
+          "3ffdadc361229101",
+          "40013957b01b6167"
+        ]
+      },
+      {
+        "step": 31,
+        "fields": [
+          "3fea50cc4ba5b743",
+          "3fe234f223f92d38",
+          "3fe35e299a7c32b9",
+          "bff31246e4d8ce67",
+          "3ffddcce19e50fc0",
+          "4001b7683c40039a"
+        ]
+      },
+      {
+        "step": 32,
+        "fields": [
+          "3fe99b60b8293669",
+          "3fe330d4254f057f",
+          "3fe49498ec18d47a",
+          "bff4b4aa16fe9269",
+          "3ffded6dcfe79ce1",
+          "4002322de55286df"
+        ]
+      },
+      {
+        "step": 33,
+        "fields": [
+          "3fe8d78b36442c90",
+          "3fe42bd2a81ac191",
+          "3fe5d2f895669ea6",
+          "bff6621ae0e0416e",
+          "3ffddde6b94570df",
+          "4002a9646edc7348"
+        ]
+      },
+      {
+        "step": 34,
+        "fields": [
+          "3fe8050811ebc60d",
+          "3fe524c9c2e2c6f5",
+          "3fe719072b0e5ec6",
+          "bff81850c228b249",
+          "3ffdaca24c7eacd4",
+          "40031cc63bfb9ddf"
+        ]
+      },
+      {
+        "step": 35,
+        "fields": [
+          "3fe723a9eb4cfea5",
+          "3fe61a8a2b827ec4",
+          "3fe8667e90a90338",
+          "bff9d4c24a588220",
+          "3ffd5838b27d3d76",
+          "40038c0cb71acc7f"
+        ]
+      },
+      {
+        "step": 36,
+        "fields": [
+          "3fe6335bb39ed289",
+          "3fe70bdb319aab5c",
+          "3fe9bb13f008fea1",
+          "bffb94a8bbff45bd",
+          "3ffcdf7a4d65be66",
+          "4003f6f0c36542d4"
+        ]
+      },
+      {
+        "step": 37,
+        "fields": [
+          "3fe534227a2364f8",
+          "3fe7f77d081307a5",
+          "3feb1677b8a3cea1",
+          "bffd550527455985",
+          "3ffc41791bfe5181",
+          "40045d2b37229743"
+        ]
+      },
+      {
+        "step": 38,
+        "fields": [
+          "3fe4261efc87498f",
+          "3fe8dc2b59b299a6",
+          "3fec7855a79f82a3",
+          "bfff12a705303d55",
+          "3ffb7d91bbb3bf01",
+          "4004be755deab634"
+        ]
+      },
+      {
+        "step": 39,
+        "fields": [
+          "3fe3098eedfb70bd",
+          "3fe9b8a02298c93e",
+          "3fede054d8f1f368",
+          "c000651a29277b84",
+          "3ffa9373c710bcb4",
+          "40051a898164c7b1"
+        ]
+      },
+      {
+        "step": 40,
+        "fields": [
+          "3fe1decde8fcd08c",
+          "3fea8b96c6195c94",
+          "3fef4e17e1e551cc",
+          "c0013c198dbac300",
+          "3ff983294c3c9a1a",
+          "400571237708ad30"
+        ]
+      },
+      {
+        "step": 41,
+        "fields": [
+          "3fe0a65600c33206",
+          "3feb53cf563da163",
+          "3ff0609e7a9c0ab2",
+          "c0020c8a311f27bb",
+          "3ff84d1d172aeb15",
+          "4005c201312417e1"
+        ]
+      },
+      {
+        "step": 42,
+        "fields": [
+          "3fdec17fd1915a38",
+          "3fec1012000c1aef",
+          "3ff11caf0876c7b2",
+          "c002d4a018d48566",
+          "3ff6f21f8dd713db",
+          "40060ce35133eff4"
+        ]
+      },
+      {
+        "step": 43,
+        "fields": [
+          "3fdc1d855584d882",
+          "3fecbf328dce137e",
+          "3ff1db089ae086d8",
+          "c003929156f85eb1",
+          "3ff57369e2640253",
+          "4006518db97b09fd"
+        ]
+      },
+      {
+        "step": 44,
+        "fields": [
+          "3fd96265cb61ed40",
+          "3fed6013eeef811f",
+          "3ff29b7454041f27",
+          "c004449cef1b3806",
+          "3ff3d29f674fb3bc",
+          "40068fc81ba1f7d2"
+        ]
+      },
+      {
+        "step": 45,
+        "fields": [
+          "3fd6920326a919d7",
+          "3fedf1abb3e0915e",
+          "3ff35db99cd59acf",
+          "c004e911f1c66e79",
+          "3ff211ccdd0291f7",
+          "4006c75e821ae1f3"
+        ]
+      },
+      {
+        "step": 46,
+        "fields": [
+          "3fd3ae74a87b8606",
+          "3fee73056ba50284",
+          "3ff4219e4e58ffde",
+          "c0057e56a3f84e91",
+          "3ff033659d99d7b3",
+          "4006f821d20132f1"
+        ]
+      },
+      {
+        "step": 47,
+        "fields": [
+          "3fd0ba028b9688d3",
+          "3feee345d08c4398",
+          "3ff4e6e6dee0fb95",
+          "c00602ef84b0b493",
+          "3fec747d36ebaa3b",
+          "400721e843387763"
+        ]
+      },
+      {
+        "step": 48,
+        "fields": [
+          "3fcb6e41a23e1a79",
+          "3fef41adb1f0f13d",
+          "3ff5ad5692e09c0c",
+          "c006758601123f4a",
+          "3fe8530e707beee9",
+          "4007448dcca8a624"
+        ]
+      },
+      {
+        "step": 49,
+        "fields": [
+          "3fc550d282d56998",
+          "3fef8d9c89db318c",
+          "3ff674afb0dab615",
+          "c006d4eea7c9fb29",
+          "3fe4098018019c73",
+          "40075ff4829ff884"
+        ]
+      },
+      {
+        "step": 50,
+        "fields": [
+          "3fbe4252e747f4f1",
+          "3fefc692aef5404e",
+          "3ff73cb3b7eae4f8",
+          "c007202eae7a67d9",
+          "3fdf3ebf1828434e",
+          "40077404e59ae145"
+        ]
+      },
+      {
+        "step": 51,
+        "fields": [
+          "3fb1c9cf976a6f4c",
+          "3fefec331562916a",
+          "3ff805239857abad",
+          "c00756809fced255",
+          "3fd63959888edf4d",
+          "400780ae1ff84270"
+        ]
+      },
+      {
+        "step": 52,
+        "fields": [
+          "3f950e78679f06b9",
+          "3feffe4493a7a68d",
+          "3ff8cdbfed9382d1",
+          "c00777580e86aa1b",
+          "3fca26f7e313f25c",
+          "400785e63170e48f"
+        ]
+      },
+      {
+        "step": 53,
+        "fields": [
+          "bf9d1279264d120e",
+          "3feffcb2a3d4136c",
+          "3ff99649390bd5ca",
+          "c0078264310117c8",
+          "3faef213522ec733",
+          "400783aa07830d08"
+        ]
+      },
+      {
+        "step": 54,
+        "fields": [
+          "bfb3c342a6abf6a8",
+          "3fefe78d9c6cecb8",
+          "3ffa5e801d215092",
+          "c0077791514b52a6",
+          "bfb5541b3dfc653a",
+          "400779fd8263278c"
+        ]
+      },
+      {
+        "step": 55,
+        "fields": [
+          "bfc01666799484e1",
+          "3fefbf0a600bec5f",
+          "3ffb262597a480ff",
+          "c00757090710249e",
+          "bfccea47c2fbe8f3",
+          "400768eb6665c22e"
+        ]
+      },
+      {
+        "step": 56,
+        "fields": [
+          "bfc63afde88d5439",
+          "3fef83818624c0bd",
+          "3ffbecfb3b34b211",
+          "c00721313a9721b3",
+          "bfd7712943bbb515",
+          "400750853a3a757f"
+        ]
+      },
+      {
+        "step": 57,
+        "fields": [
+          "bfcc49f67f42be98",
+          "3fef356e02c3d657",
+          "3ffcb2c366e4f42b",
+          "c006d6a9f9d1e1e6",
+          "bfe01c5cbb5ae6ef",
+          "400730e312af93a2"
+        ]
+      },
+      {
+        "step": 58,
+        "fields": [
+          "bfd11f0e76021a93",
+          "3feed56b563fa810",
+          "3ffd77417b944716",
+          "c006784a31d12929",
+          "bfe45e1f7d63f6f5",
+          "40070a234d10a5a3"
+        ]
+      },
+      {
+        "step": 59,
+        "fields": [
+          "bfd409445ae41ae6",
+          "3fee643350a1d44c",
+          "3ffe3a3a0e7188b9",
+          "c006071b67775a75",
+          "bfe87690943cebe5",
+          "4006dc6a3983214d"
+        ]
+      },
+      {
+        "step": 60,
+        "fields": [
+          "bfd6e153ead8590d",
+          "3fede29b76e74f7a",
+          "3ffefb731831c927",
+          "c0058454917b5e8f",
+          "bfec5ef95dcbdc95",
+          "4006a7e1b70b1106"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,2239 @@
+{
+  "ad_banner_cycloracers": {
+    "frames": 150,
+    "labels": []
+  },
+  "CPMStarLoaderScreen": {
+    "frames": 1,
+    "labels": []
+  },
+  "otherGamesMC": {
+    "frames": 1,
+    "labels": []
+  },
+  "otherGamesMC_TitleScreen": {
+    "frames": 1,
+    "labels": []
+  },
+  "SitelockedScreen": {
+    "frames": 1,
+    "labels": []
+  },
+  "ui_hud": {
+    "frames": 1,
+    "labels": []
+  },
+  "Transition": {
+    "frames": 34,
+    "labels": []
+  },
+  "ui_fla.buttonAnimation_43": {
+    "frames": 21,
+    "labels": [
+      {
+        "name": "stopped",
+        "frame": 0
+      },
+      {
+        "name": "over",
+        "frame": 1
+      },
+      {
+        "name": "out",
+        "frame": 7
+      },
+      {
+        "name": "clicked",
+        "frame": 14
+      }
+    ]
+  },
+  "PauseScreen": {
+    "frames": 1,
+    "labels": []
+  },
+  "fl.core.ComponentShim": {
+    "frames": 1,
+    "labels": []
+  },
+  "List_skin": {
+    "frames": 1,
+    "labels": []
+  },
+  "CellRenderer_upSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "CellRenderer_disabledSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "CellRenderer_downSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "CellRenderer_overSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "CellRenderer_selectedDisabledSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "CellRenderer_selectedDownSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "CellRenderer_selectedOverSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "CellRenderer_selectedUpSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "fl.controls.listClasses.CellRenderer": {
+    "frames": 2,
+    "labels": []
+  },
+  "focusRectSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "ScrollTrack_skin": {
+    "frames": 1,
+    "labels": []
+  },
+  "ScrollArrowUp_downSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "ScrollArrowDown_downSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "ScrollThumb_downSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "ScrollArrowDown_overSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "ScrollThumb_overSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "ScrollArrowUp_overSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "ScrollArrowUp_upSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "ScrollThumb_upSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "ScrollArrowDown_upSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "ScrollArrowDown_disabledSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "ScrollArrowUp_disabledSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "ScrollBar_thumbIcon": {
+    "frames": 1,
+    "labels": []
+  },
+  "fl.controls.ScrollBar": {
+    "frames": 2,
+    "labels": []
+  },
+  "fl.controls.List": {
+    "frames": 2,
+    "labels": []
+  },
+  "Zombie_bottomLegStilts": {
+    "frames": 13,
+    "labels": []
+  },
+  "ZombieStilts": {
+    "frames": 81,
+    "labels": [
+      {
+        "name": "idle1",
+        "frame": 0
+      },
+      {
+        "name": "idle1_end",
+        "frame": 15
+      },
+      {
+        "name": "idle2",
+        "frame": 16
+      },
+      {
+        "name": "idle2_end",
+        "frame": 34
+      },
+      {
+        "name": "idle3",
+        "frame": 35
+      },
+      {
+        "name": "idle3_end",
+        "frame": 51
+      },
+      {
+        "name": "walk",
+        "frame": 52
+      },
+      {
+        "name": "walk_end",
+        "frame": 80
+      }
+    ]
+  },
+  "Civilian": {
+    "frames": 58,
+    "labels": [
+      {
+        "name": "idle",
+        "frame": 0
+      },
+      {
+        "name": "idle_end",
+        "frame": 12
+      },
+      {
+        "name": "walk",
+        "frame": 20
+      },
+      {
+        "name": "walk_end",
+        "frame": 42
+      }
+    ]
+  },
+  "BikeWheel24": {
+    "frames": 1,
+    "labels": []
+  },
+  "Zombie": {
+    "frames": 185,
+    "labels": [
+      {
+        "name": "idle1",
+        "frame": 0
+      },
+      {
+        "name": "idle1_end",
+        "frame": 9
+      },
+      {
+        "name": "idle2",
+        "frame": 10
+      },
+      {
+        "name": "idle2_end",
+        "frame": 40
+      },
+      {
+        "name": "idle3",
+        "frame": 41
+      },
+      {
+        "name": "idle3_end",
+        "frame": 58
+      },
+      {
+        "name": "idle4",
+        "frame": 59
+      },
+      {
+        "name": "idle4_end",
+        "frame": 83
+      },
+      {
+        "name": "electric",
+        "frame": 84
+      },
+      {
+        "name": "electric_end",
+        "frame": 94
+      },
+      {
+        "name": "walk",
+        "frame": 95
+      },
+      {
+        "name": "walk_end",
+        "frame": 123
+      },
+      {
+        "name": "uni",
+        "frame": 124
+      },
+      {
+        "name": "uni_end",
+        "frame": 153
+      },
+      {
+        "name": "climb",
+        "frame": 154
+      },
+      {
+        "name": "climb_end",
+        "frame": 184
+      }
+    ]
+  },
+  "hud_fla.buttonAnimation_3": {
+    "frames": 21,
+    "labels": [
+      {
+        "name": "stopped",
+        "frame": 0
+      },
+      {
+        "name": "over",
+        "frame": 1
+      },
+      {
+        "name": "out",
+        "frame": 7
+      },
+      {
+        "name": "clicked",
+        "frame": 14
+      }
+    ]
+  },
+  "hud_fla.buttonAnimation_21": {
+    "frames": 21,
+    "labels": [
+      {
+        "name": "stopped",
+        "frame": 0
+      },
+      {
+        "name": "over",
+        "frame": 1
+      },
+      {
+        "name": "out",
+        "frame": 7
+      },
+      {
+        "name": "clicked",
+        "frame": 14
+      }
+    ]
+  },
+  "hud": {
+    "frames": 1,
+    "labels": []
+  },
+  "AreYouSure": {
+    "frames": 1,
+    "labels": []
+  },
+  "GameOverScreen": {
+    "frames": 29,
+    "labels": []
+  },
+  "LevelFailedScreen": {
+    "frames": 29,
+    "labels": []
+  },
+  "levelClip": {
+    "frames": 1,
+    "labels": []
+  },
+  "ui_fla.levelClip2_90": {
+    "frames": 1,
+    "labels": []
+  },
+  "levelSelect": {
+    "frames": 1,
+    "labels": []
+  },
+  "GameWinScreen": {
+    "frames": 1,
+    "labels": []
+  },
+  "PreparingScreen": {
+    "frames": 1,
+    "labels": []
+  },
+  "titleScreen": {
+    "frames": 1,
+    "labels": []
+  },
+  "ComboBox_upSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "ComboBox_disabledSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "ComboBox_overSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "ComboBox_downSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "TextInput_disabledSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "TextInput_upSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "fl.controls.TextInput": {
+    "frames": 2,
+    "labels": []
+  },
+  "fl.controls.ComboBox": {
+    "frames": 2,
+    "labels": []
+  },
+  "fl.controls.Button": {
+    "frames": 1,
+    "labels": []
+  },
+  "Zombie_armTop": {
+    "frames": 20,
+    "labels": []
+  },
+  "baz_body_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "civilian_bottomLeg_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "tent": {
+    "frames": 1,
+    "labels": []
+  },
+  "custardpie_armTop_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "fx_railpuff": {
+    "frames": 10,
+    "labels": []
+  },
+  "explosion_2": {
+    "frames": 14,
+    "labels": []
+  },
+  "shotMarker": {
+    "frames": 2,
+    "labels": []
+  },
+  "explosion_3": {
+    "frames": 17,
+    "labels": []
+  },
+  "Flame1": {
+    "frames": 16,
+    "labels": []
+  },
+  "flameEaterBottom": {
+    "frames": 1,
+    "labels": []
+  },
+  "explosion_custard": {
+    "frames": 8,
+    "labels": []
+  },
+  "flameEater_armBottom_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "glassPost0_fixed": {
+    "frames": 1,
+    "labels": []
+  },
+  "objectZ3_fla.cycloHead_100": {
+    "frames": 1,
+    "labels": []
+  },
+  "billboard_player": {
+    "frames": 1,
+    "labels": []
+  },
+  "lionTamer_head_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "humanCannonBallBottom": {
+    "frames": 1,
+    "labels": []
+  },
+  "majorHead": {
+    "frames": 1,
+    "labels": []
+  },
+  "major_Dance": {
+    "frames": 57,
+    "labels": [
+      {
+        "name": "idle1",
+        "frame": 0
+      },
+      {
+        "name": "idle1_end",
+        "frame": 17
+      },
+      {
+        "name": "idle2",
+        "frame": 18
+      },
+      {
+        "name": "idle2_end",
+        "frame": 35
+      },
+      {
+        "name": "idle3",
+        "frame": 36
+      },
+      {
+        "name": "idle3_end",
+        "frame": 56
+      }
+    ]
+  },
+  "metalPost1_part1": {
+    "frames": 1,
+    "labels": []
+  },
+  "metalPost1_part2": {
+    "frames": 1,
+    "labels": []
+  },
+  "metalPost1_part3": {
+    "frames": 1,
+    "labels": []
+  },
+  "metalPost1_part4": {
+    "frames": 1,
+    "labels": []
+  },
+  "bazBottom": {
+    "frames": 1,
+    "labels": []
+  },
+  "billboard_clowns": {
+    "frames": 1,
+    "labels": []
+  },
+  "fx_custardpuff": {
+    "frames": 10,
+    "labels": []
+  },
+  "ColorPicker_upSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "ColorPicker_disabledSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "ColorPicker_swatchSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "ColorPicker_backgroundSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "ColorPicker_downSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "ColorPicker_textFieldSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "ColorPicker_overSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "ColorPicker_colorWell": {
+    "frames": 1,
+    "labels": []
+  },
+  "ColorPicker_swatchSelectedSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "fl.controls.ColorPicker": {
+    "frames": 2,
+    "labels": []
+  },
+  "bazHead": {
+    "frames": 1,
+    "labels": []
+  },
+  "Wheel_35": {
+    "frames": 1,
+    "labels": []
+  },
+  "fortune_part1": {
+    "frames": 1,
+    "labels": []
+  },
+  "fortune_part2": {
+    "frames": 1,
+    "labels": []
+  },
+  "fortune_part3": {
+    "frames": 1,
+    "labels": []
+  },
+  "fortune_part4": {
+    "frames": 1,
+    "labels": []
+  },
+  "fortune_part5": {
+    "frames": 1,
+    "labels": []
+  },
+  "fortune_part6": {
+    "frames": 1,
+    "labels": []
+  },
+  "hinge": {
+    "frames": 1,
+    "labels": []
+  },
+  "shockWave": {
+    "frames": 17,
+    "labels": []
+  },
+  "woodenPost0_fixed": {
+    "frames": 1,
+    "labels": []
+  },
+  "Lic_All_fla.bubble_logo3_32": {
+    "frames": 10,
+    "labels": []
+  },
+  "MainLogo": {
+    "frames": 1,
+    "labels": []
+  },
+  "CheckBox_downIcon": {
+    "frames": 1,
+    "labels": []
+  },
+  "elephant": {
+    "frames": 1,
+    "labels": []
+  },
+  "billboard_animaltamer": {
+    "frames": 1,
+    "labels": []
+  },
+  "decal2": {
+    "frames": 1,
+    "labels": []
+  },
+  "woodPost0_part3": {
+    "frames": 1,
+    "labels": []
+  },
+  "lionTamer_body_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "cutting_disk2": {
+    "frames": 1,
+    "labels": []
+  },
+  "mincer": {
+    "frames": 20,
+    "labels": []
+  },
+  "decal1": {
+    "frames": 1,
+    "labels": []
+  },
+  "lionTamerBottom": {
+    "frames": 1,
+    "labels": []
+  },
+  "decal4": {
+    "frames": 1,
+    "labels": []
+  },
+  "decal3": {
+    "frames": 1,
+    "labels": []
+  },
+  "Zombie_topLeg": {
+    "frames": 21,
+    "labels": []
+  },
+  "rope": {
+    "frames": 1,
+    "labels": []
+  },
+  "woodPost0_part1": {
+    "frames": 1,
+    "labels": []
+  },
+  "woodPost0_part2": {
+    "frames": 1,
+    "labels": []
+  },
+  "decal9": {
+    "frames": 1,
+    "labels": []
+  },
+  "decal6": {
+    "frames": 1,
+    "labels": []
+  },
+  "decal5": {
+    "frames": 1,
+    "labels": []
+  },
+  "decal8": {
+    "frames": 1,
+    "labels": []
+  },
+  "decal7": {
+    "frames": 1,
+    "labels": []
+  },
+  "mrNukeHead": {
+    "frames": 1,
+    "labels": []
+  },
+  "mrNuke_Dance": {
+    "frames": 57,
+    "labels": [
+      {
+        "name": "idle1",
+        "frame": 0
+      },
+      {
+        "name": "idle1_end",
+        "frame": 17
+      },
+      {
+        "name": "idle2",
+        "frame": 18
+      },
+      {
+        "name": "idle2_end",
+        "frame": 35
+      },
+      {
+        "name": "idle3",
+        "frame": 36
+      },
+      {
+        "name": "idle3_end",
+        "frame": 56
+      }
+    ]
+  },
+  "bazTop": {
+    "frames": 20,
+    "labels": []
+  },
+  "hook": {
+    "frames": 1,
+    "labels": []
+  },
+  "Switch_Limpet": {
+    "frames": 2,
+    "labels": [
+      {
+        "name": "off",
+        "frame": 0
+      },
+      {
+        "name": "on",
+        "frame": 1
+      }
+    ]
+  },
+  "glassPost2_part5": {
+    "frames": 1,
+    "labels": []
+  },
+  "glassPost2_part4": {
+    "frames": 1,
+    "labels": []
+  },
+  "glassPost2_part6": {
+    "frames": 1,
+    "labels": []
+  },
+  "glassPost2_part1": {
+    "frames": 1,
+    "labels": []
+  },
+  "glassPost2_part3": {
+    "frames": 1,
+    "labels": []
+  },
+  "glassPost2_part2": {
+    "frames": 1,
+    "labels": []
+  },
+  "woodenPin_part2": {
+    "frames": 1,
+    "labels": []
+  },
+  "clownwheel": {
+    "frames": 1,
+    "labels": []
+  },
+  "woodenPin_part1": {
+    "frames": 1,
+    "labels": []
+  },
+  "switch_Timer": {
+    "frames": 74,
+    "labels": [
+      {
+        "name": "off",
+        "frame": 0
+      },
+      {
+        "name": "on",
+        "frame": 1
+      }
+    ]
+  },
+  "flameEater_armTop_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "grass2": {
+    "frames": 1,
+    "labels": []
+  },
+  "grass3": {
+    "frames": 1,
+    "labels": []
+  },
+  "Intro_Kongregate": {
+    "frames": 198,
+    "labels": []
+  },
+  "grass1": {
+    "frames": 1,
+    "labels": []
+  },
+  "lionTamer_topLeg_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "Anvil": {
+    "frames": 1,
+    "labels": []
+  },
+  "fortuneMachine": {
+    "frames": 2,
+    "labels": []
+  },
+  "cork_ingame": {
+    "frames": 1,
+    "labels": []
+  },
+  "SeparateUnicycle": {
+    "frames": 1,
+    "labels": []
+  },
+  "custardpieHead": {
+    "frames": 1,
+    "labels": []
+  },
+  "custardpieTied": {
+    "frames": 30,
+    "labels": [
+      {
+        "name": "tiedup",
+        "frame": 0
+      },
+      {
+        "name": "tiedup_end",
+        "frame": 10
+      },
+      {
+        "name": "wave",
+        "frame": 11
+      },
+      {
+        "name": "wave_end",
+        "frame": 29
+      }
+    ]
+  },
+  "cannonRung": {
+    "frames": 1,
+    "labels": []
+  },
+  "flameEaterHead": {
+    "frames": 1,
+    "labels": []
+  },
+  "metalPost0_fixed": {
+    "frames": 1,
+    "labels": []
+  },
+  "humanCannonball_armTop_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "woodenCrate0_part3": {
+    "frames": 1,
+    "labels": []
+  },
+  "woodenCrate0_part4": {
+    "frames": 1,
+    "labels": []
+  },
+  "woodenCrate0_part1": {
+    "frames": 1,
+    "labels": []
+  },
+  "flameEater_bottomLeg_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "woodenCrate0_part2": {
+    "frames": 1,
+    "labels": []
+  },
+  "PlatformBouncyLarge": {
+    "frames": 1,
+    "labels": []
+  },
+  "custardpieTop": {
+    "frames": 20,
+    "labels": []
+  },
+  "custardpie_armBottom_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "fx_smoke3": {
+    "frames": 30,
+    "labels": []
+  },
+  "flameEater_head_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "flameEaterTop": {
+    "frames": 20,
+    "labels": []
+  },
+  "civilian_armTop_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "saw_xflip": {
+    "frames": 1,
+    "labels": []
+  },
+  "major_body_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "metalPost1_fixed": {
+    "frames": 1,
+    "labels": []
+  },
+  "switched_platform_2": {
+    "frames": 3,
+    "labels": []
+  },
+  "wheelofdeathbackground": {
+    "frames": 1,
+    "labels": []
+  },
+  "switched_platform_1": {
+    "frames": 3,
+    "labels": []
+  },
+  "switched_platform_0": {
+    "frames": 3,
+    "labels": []
+  },
+  "Text_Marker": {
+    "frames": 1,
+    "labels": []
+  },
+  "metalPost2_fixed": {
+    "frames": 1,
+    "labels": []
+  },
+  "baz_topLeg_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "custardpie_head_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "sign_turn_left": {
+    "frames": 1,
+    "labels": []
+  },
+  "humanCannonball_topLeg_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "billboard_fireeater": {
+    "frames": 1,
+    "labels": []
+  },
+  "civilian_head_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "switch_Once": {
+    "frames": 2,
+    "labels": [
+      {
+        "name": "off",
+        "frame": 0
+      },
+      {
+        "name": "on",
+        "frame": 1
+      }
+    ]
+  },
+  "cutting_disk3": {
+    "frames": 1,
+    "labels": []
+  },
+  "water": {
+    "frames": 1,
+    "labels": []
+  },
+  "humanCannonballTop": {
+    "frames": 20,
+    "labels": []
+  },
+  "metalPost0_part3": {
+    "frames": 1,
+    "labels": []
+  },
+  "metalPost0_part2": {
+    "frames": 1,
+    "labels": []
+  },
+  "metalPost0_part1": {
+    "frames": 1,
+    "labels": []
+  },
+  "mrNukeTied": {
+    "frames": 30,
+    "labels": [
+      {
+        "name": "tiedup",
+        "frame": 0
+      },
+      {
+        "name": "tiedup_end",
+        "frame": 10
+      },
+      {
+        "name": "wave",
+        "frame": 11
+      },
+      {
+        "name": "wave_end",
+        "frame": 29
+      }
+    ]
+  },
+  "Intro_TurboNuke": {
+    "frames": 94,
+    "labels": []
+  },
+  "scoreText": {
+    "frames": 55,
+    "labels": []
+  },
+  "switch_twoWay": {
+    "frames": 2,
+    "labels": [
+      {
+        "name": "off",
+        "frame": 0
+      },
+      {
+        "name": "on",
+        "frame": 1
+      }
+    ]
+  },
+  "fx_smokepuff": {
+    "frames": 10,
+    "labels": []
+  },
+  "sky": {
+    "frames": 1,
+    "labels": []
+  },
+  "woodPost1_part3": {
+    "frames": 1,
+    "labels": []
+  },
+  "woodPost1_part2": {
+    "frames": 1,
+    "labels": []
+  },
+  "terrainSpikes": {
+    "frames": 4,
+    "labels": []
+  },
+  "woodPost1_part4": {
+    "frames": 1,
+    "labels": []
+  },
+  "woodPost1_part1": {
+    "frames": 1,
+    "labels": []
+  },
+  "piano_part4": {
+    "frames": 1,
+    "labels": []
+  },
+  "piano_part3": {
+    "frames": 1,
+    "labels": []
+  },
+  "bunting": {
+    "frames": 1,
+    "labels": []
+  },
+  "CheckBox_disabledIcon": {
+    "frames": 1,
+    "labels": []
+  },
+  "piano_part2": {
+    "frames": 1,
+    "labels": []
+  },
+  "woodenPost1_fixed": {
+    "frames": 1,
+    "labels": []
+  },
+  "piano_part1": {
+    "frames": 1,
+    "labels": []
+  },
+  "piano_part8": {
+    "frames": 1,
+    "labels": []
+  },
+  "piano_part7": {
+    "frames": 1,
+    "labels": []
+  },
+  "buntingPole": {
+    "frames": 1,
+    "labels": []
+  },
+  "piano_part6": {
+    "frames": 1,
+    "labels": []
+  },
+  "piano_part5": {
+    "frames": 1,
+    "labels": []
+  },
+  "custardpie_topLeg_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "lionTamerTop": {
+    "frames": 20,
+    "labels": []
+  },
+  "baz_armTop_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "trampoline": {
+    "frames": 1,
+    "labels": []
+  },
+  "piano_part9": {
+    "frames": 1,
+    "labels": []
+  },
+  "tree_palm1": {
+    "frames": 1,
+    "labels": []
+  },
+  "tree_palm2": {
+    "frames": 1,
+    "labels": []
+  },
+  "tree_palm3": {
+    "frames": 1,
+    "labels": []
+  },
+  "oaktree1": {
+    "frames": 1,
+    "labels": []
+  },
+  "oaktree2": {
+    "frames": 1,
+    "labels": []
+  },
+  "background01": {
+    "frames": 10,
+    "labels": []
+  },
+  "decal10": {
+    "frames": 1,
+    "labels": []
+  },
+  "parachuteBomb": {
+    "frames": 10,
+    "labels": []
+  },
+  "CheckBox_upIcon": {
+    "frames": 1,
+    "labels": []
+  },
+  "ZombieStopWalkMarker": {
+    "frames": 1,
+    "labels": []
+  },
+  "HeaderRenderer_upSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "HeaderRenderer_disabledSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "HeaderRenderer_downSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "HeaderRenderer_overSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "HeaderRenderer_selectedDisabledSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "HeaderRenderer_selectedDownSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "HeaderRenderer_selectedOverSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "HeaderRenderer_selectedUpSkin": {
+    "frames": 1,
+    "labels": []
+  },
+  "fl.controls.dataGridClasses.HeaderRenderer": {
+    "frames": 2,
+    "labels": []
+  },
+  "HeaderSortArrow_ascIcon": {
+    "frames": 1,
+    "labels": []
+  },
+  "HeaderSortArrow_descIcon": {
+    "frames": 1,
+    "labels": []
+  },
+  "ColumnStretch_cursor": {
+    "frames": 1,
+    "labels": []
+  },
+  "DataGrid_skin": {
+    "frames": 1,
+    "labels": []
+  },
+  "DataGridCellEditor_skin": {
+    "frames": 1,
+    "labels": []
+  },
+  "fl.controls.DataGrid": {
+    "frames": 2,
+    "labels": []
+  },
+  "gibs": {
+    "frames": 5,
+    "labels": []
+  },
+  "missile_icon": {
+    "frames": 7,
+    "labels": []
+  },
+  "ZombieTurnAroundMarker": {
+    "frames": 1,
+    "labels": []
+  },
+  "fx_explosion": {
+    "frames": 13,
+    "labels": []
+  },
+  "mrNuke_armBottom_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "lionTamer_bottomLeg_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "Missile": {
+    "frames": 7,
+    "labels": []
+  },
+  "humanCannonball_head_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "lionTamer_armBottom_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "civilian_topLeg_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "mrNuke_topLeg_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "TrapezeWire120": {
+    "frames": 1,
+    "labels": []
+  },
+  "humanCannonballHead": {
+    "frames": 1,
+    "labels": []
+  },
+  "major_bottomLeg_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "custardpieBottom": {
+    "frames": 1,
+    "labels": []
+  },
+  "baz_head_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "rock3": {
+    "frames": 1,
+    "labels": []
+  },
+  "rock1": {
+    "frames": 1,
+    "labels": []
+  },
+  "rock2": {
+    "frames": 1,
+    "labels": []
+  },
+  "woodenPost2_part6": {
+    "frames": 1,
+    "labels": []
+  },
+  "cannon_base": {
+    "frames": 1,
+    "labels": []
+  },
+  "brain": {
+    "frames": 1,
+    "labels": []
+  },
+  "ShockwaveLogo": {
+    "frames": 1,
+    "labels": []
+  },
+  "ZombieFlame": {
+    "frames": 23,
+    "labels": []
+  },
+  "fx_firepuff": {
+    "frames": 10,
+    "labels": []
+  },
+  "metalPost0": {
+    "frames": 1,
+    "labels": []
+  },
+  "metalPost2": {
+    "frames": 1,
+    "labels": []
+  },
+  "metalPost1": {
+    "frames": 1,
+    "labels": []
+  },
+  "bloodsplat": {
+    "frames": 7,
+    "labels": []
+  },
+  "metalPost3": {
+    "frames": 1,
+    "labels": []
+  },
+  "glassPost1_fixed": {
+    "frames": 1,
+    "labels": []
+  },
+  "sign_turn_right_part2": {
+    "frames": 1,
+    "labels": []
+  },
+  "sign_turn_right_part3": {
+    "frames": 1,
+    "labels": []
+  },
+  "sign_turn_right_part0": {
+    "frames": 1,
+    "labels": []
+  },
+  "cannon_top_big": {
+    "frames": 10,
+    "labels": []
+  },
+  "Lic_All_fla.MB_eyes_MB_4": {
+    "frames": 32,
+    "labels": []
+  },
+  "sign_turn_right_part1": {
+    "frames": 1,
+    "labels": []
+  },
+  "fireRing": {
+    "frames": 1,
+    "labels": []
+  },
+  "PlayerSelectButton": {
+    "frames": 2,
+    "labels": []
+  },
+  "glassPost2": {
+    "frames": 1,
+    "labels": []
+  },
+  "mrNuke_head_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "glassPost0": {
+    "frames": 1,
+    "labels": []
+  },
+  "glassPost1": {
+    "frames": 1,
+    "labels": []
+  },
+  "ExplosiveBarrel": {
+    "frames": 1,
+    "labels": []
+  },
+  "woodenPost2_part5": {
+    "frames": 1,
+    "labels": []
+  },
+  "woodenPost2_part4": {
+    "frames": 1,
+    "labels": []
+  },
+  "woodenPost2_part3": {
+    "frames": 1,
+    "labels": []
+  },
+  "woodenPost2_part2": {
+    "frames": 1,
+    "labels": []
+  },
+  "civilian_body_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "woodenPost2_part1": {
+    "frames": 1,
+    "labels": []
+  },
+  "Lic_All_fla.MB_Explode_5": {
+    "frames": 19,
+    "labels": []
+  },
+  "sign_turn_right": {
+    "frames": 1,
+    "labels": []
+  },
+  "CheckBox_selectedUpIcon": {
+    "frames": 1,
+    "labels": []
+  },
+  "cannon_top_corked": {
+    "frames": 10,
+    "labels": []
+  },
+  "woodenCrate1_part7": {
+    "frames": 1,
+    "labels": []
+  },
+  "Zombie_bottomLeg": {
+    "frames": 20,
+    "labels": []
+  },
+  "sign_turn_left_part3": {
+    "frames": 1,
+    "labels": []
+  },
+  "woodenCrate1_part6": {
+    "frames": 1,
+    "labels": []
+  },
+  "lionTamer_armTop_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "woodenCrate1_part8": {
+    "frames": 1,
+    "labels": []
+  },
+  "circus_sign": {
+    "frames": 1,
+    "labels": []
+  },
+  "woodenCrate1_part3": {
+    "frames": 1,
+    "labels": []
+  },
+  "sign_turn_left_part0": {
+    "frames": 1,
+    "labels": []
+  },
+  "woodenCrate1_part2": {
+    "frames": 1,
+    "labels": []
+  },
+  "flameEater_Dance": {
+    "frames": 57,
+    "labels": [
+      {
+        "name": "idle1",
+        "frame": 0
+      },
+      {
+        "name": "idle1_end",
+        "frame": 17
+      },
+      {
+        "name": "idle2",
+        "frame": 18
+      },
+      {
+        "name": "idle2_end",
+        "frame": 35
+      },
+      {
+        "name": "idle3",
+        "frame": 36
+      },
+      {
+        "name": "idle3_end",
+        "frame": 56
+      }
+    ]
+  },
+  "sign_turn_left_part2": {
+    "frames": 1,
+    "labels": []
+  },
+  "woodenCrate1_part5": {
+    "frames": 1,
+    "labels": []
+  },
+  "woodenCrate1_part4": {
+    "frames": 1,
+    "labels": []
+  },
+  "sign_turn_left_part1": {
+    "frames": 1,
+    "labels": []
+  },
+  "woodenCrate1_part1": {
+    "frames": 1,
+    "labels": []
+  },
+  "majorTop": {
+    "frames": 20,
+    "labels": []
+  },
+  "bush": {
+    "frames": 1,
+    "labels": []
+  },
+  "woodenCrate0": {
+    "frames": 4,
+    "labels": []
+  },
+  "woodenCrate1": {
+    "frames": 2,
+    "labels": []
+  },
+  "lionTamerHead": {
+    "frames": 1,
+    "labels": []
+  },
+  "Ball": {
+    "frames": 1,
+    "labels": []
+  },
+  "glassPost2_fixed": {
+    "frames": 1,
+    "labels": []
+  },
+  "woodenPin": {
+    "frames": 1,
+    "labels": []
+  },
+  "mrNuke_armTop_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "humanCannonball_armBottom_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "custardpie_bottomLeg_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "flameEaterTied": {
+    "frames": 30,
+    "labels": [
+      {
+        "name": "tiedup",
+        "frame": 0
+      },
+      {
+        "name": "tiedup_end",
+        "frame": 10
+      },
+      {
+        "name": "wave",
+        "frame": 11
+      },
+      {
+        "name": "wave_end",
+        "frame": 29
+      }
+    ]
+  },
+  "majorTied": {
+    "frames": 30,
+    "labels": [
+      {
+        "name": "tiedup",
+        "frame": 0
+      },
+      {
+        "name": "tiedup_end",
+        "frame": 10
+      },
+      {
+        "name": "wave",
+        "frame": 11
+      },
+      {
+        "name": "wave_end",
+        "frame": 29
+      }
+    ]
+  },
+  "major_topLeg_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "metalPost2_part3": {
+    "frames": 1,
+    "labels": []
+  },
+  "metalPost2_part4": {
+    "frames": 1,
+    "labels": []
+  },
+  "metalPost2_part5": {
+    "frames": 1,
+    "labels": []
+  },
+  "metalPost2_part6": {
+    "frames": 1,
+    "labels": []
+  },
+  "landmine": {
+    "frames": 2,
+    "labels": []
+  },
+  "metalPost2_part1": {
+    "frames": 1,
+    "labels": []
+  },
+  "humanCannonBallTied": {
+    "frames": 30,
+    "labels": [
+      {
+        "name": "tiedup",
+        "frame": 0
+      },
+      {
+        "name": "tiedup_end",
+        "frame": 10
+      },
+      {
+        "name": "wave",
+        "frame": 11
+      },
+      {
+        "name": "wave_end",
+        "frame": 29
+      }
+    ]
+  },
+  "metalPost2_part2": {
+    "frames": 1,
+    "labels": []
+  },
+  "piano_part12": {
+    "frames": 1,
+    "labels": []
+  },
+  "piano_part11": {
+    "frames": 1,
+    "labels": []
+  },
+  "piano_part10": {
+    "frames": 1,
+    "labels": []
+  },
+  "humanCannonBall_Dance": {
+    "frames": 57,
+    "labels": [
+      {
+        "name": "idle1",
+        "frame": 0
+      },
+      {
+        "name": "idle1_end",
+        "frame": 17
+      },
+      {
+        "name": "idle2",
+        "frame": 18
+      },
+      {
+        "name": "idle2_end",
+        "frame": 35
+      },
+      {
+        "name": "idle3",
+        "frame": 36
+      },
+      {
+        "name": "idle3_end",
+        "frame": 56
+      }
+    ]
+  },
+  "bush2": {
+    "frames": 1,
+    "labels": []
+  },
+  "bush3": {
+    "frames": 1,
+    "labels": []
+  },
+  "lionTamerTied": {
+    "frames": 39,
+    "labels": [
+      {
+        "name": "tiedup",
+        "frame": 0
+      },
+      {
+        "name": "tiedup_end",
+        "frame": 10
+      },
+      {
+        "name": "wave",
+        "frame": 11
+      },
+      {
+        "name": "wave_end",
+        "frame": 29
+      }
+    ]
+  },
+  "woodenPost2": {
+    "frames": 1,
+    "labels": []
+  },
+  "woodenPost1": {
+    "frames": 1,
+    "labels": []
+  },
+  "billboard_nuke": {
+    "frames": 1,
+    "labels": []
+  },
+  "woodenPost0": {
+    "frames": 1,
+    "labels": []
+  },
+  "CheckBox_overIcon": {
+    "frames": 1,
+    "labels": []
+  },
+  "CheckBox_selectedOverIcon": {
+    "frames": 1,
+    "labels": []
+  },
+  "CheckBox_selectedDownIcon": {
+    "frames": 1,
+    "labels": []
+  },
+  "CheckBox_selectedDisabledIcon": {
+    "frames": 1,
+    "labels": []
+  },
+  "fl.controls.CheckBox": {
+    "frames": 2,
+    "labels": []
+  },
+  "mrNuke_body_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "magnet": {
+    "frames": 1,
+    "labels": []
+  },
+  "mushroomCloud": {
+    "frames": 15,
+    "labels": []
+  },
+  "Spawner": {
+    "frames": 2,
+    "labels": []
+  },
+  "Zombie_body": {
+    "frames": 20,
+    "labels": []
+  },
+  "billboard_custardKing": {
+    "frames": 1,
+    "labels": []
+  },
+  "banana2": {
+    "frames": 1,
+    "labels": []
+  },
+  "banana1": {
+    "frames": 1,
+    "labels": []
+  },
+  "Lic_All_fla.MB_mouse_6": {
+    "frames": 36,
+    "labels": []
+  },
+  "piano": {
+    "frames": 1,
+    "labels": []
+  },
+  "grass": {
+    "frames": 21,
+    "labels": []
+  },
+  "Lic_All_fla.MB_mouse_3": {
+    "frames": 7,
+    "labels": []
+  },
+  "baz_bottomLeg_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "majorBottom": {
+    "frames": 1,
+    "labels": []
+  },
+  "bloodPuff": {
+    "frames": 8,
+    "labels": []
+  },
+  "windblock": {
+    "frames": 1,
+    "labels": []
+  },
+  "Sparks": {
+    "frames": 30,
+    "labels": []
+  },
+  "woodenPost2_fixed": {
+    "frames": 1,
+    "labels": []
+  },
+  "saw": {
+    "frames": 1,
+    "labels": []
+  },
+  "chainsaw": {
+    "frames": 3,
+    "labels": []
+  },
+  "car2": {
+    "frames": 1,
+    "labels": []
+  },
+  "car1": {
+    "frames": 1,
+    "labels": []
+  },
+  "cannon_top": {
+    "frames": 10,
+    "labels": []
+  },
+  "mrNukeBottom": {
+    "frames": 1,
+    "labels": []
+  },
+  "bowlingBall": {
+    "frames": 1,
+    "labels": []
+  },
+  "Zombie_armBottom": {
+    "frames": 20,
+    "labels": []
+  },
+  "wire_end": {
+    "frames": 1,
+    "labels": []
+  },
+  "lionTamer_Dance": {
+    "frames": 57,
+    "labels": [
+      {
+        "name": "idle1",
+        "frame": 0
+      },
+      {
+        "name": "idle1_end",
+        "frame": 17
+      },
+      {
+        "name": "idle2",
+        "frame": 18
+      },
+      {
+        "name": "idle2_end",
+        "frame": 35
+      },
+      {
+        "name": "idle3",
+        "frame": 36
+      },
+      {
+        "name": "idle3_end",
+        "frame": 56
+      }
+    ]
+  },
+  "humanCannonball_bottomLeg_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "custardpie_Dance": {
+    "frames": 57,
+    "labels": [
+      {
+        "name": "idle1",
+        "frame": 0
+      },
+      {
+        "name": "idle1_end",
+        "frame": 17
+      },
+      {
+        "name": "idle2",
+        "frame": 18
+      },
+      {
+        "name": "idle2_end",
+        "frame": 35
+      },
+      {
+        "name": "idle3",
+        "frame": 36
+      },
+      {
+        "name": "idle3_end",
+        "frame": 56
+      }
+    ]
+  },
+  "custardpie_body_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "baz_armBottom_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "major_armBottom_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "PlatformBouncy": {
+    "frames": 1,
+    "labels": []
+  },
+  "ZombieMidget": {
+    "frames": 91,
+    "labels": [
+      {
+        "name": "idle1",
+        "frame": 0
+      },
+      {
+        "name": "idle1_end",
+        "frame": 9
+      },
+      {
+        "name": "idle2",
+        "frame": 10
+      },
+      {
+        "name": "idle2_end",
+        "frame": 20
+      },
+      {
+        "name": "idle3",
+        "frame": 21
+      },
+      {
+        "name": "idle3_end",
+        "frame": 31
+      },
+      {
+        "name": "walk",
+        "frame": 32
+      },
+      {
+        "name": "walk_end",
+        "frame": 60
+      },
+      {
+        "name": "uni",
+        "frame": 61
+      },
+      {
+        "name": "uni_end",
+        "frame": 90
+      }
+    ]
+  },
+  "mrNuke_bottomLeg_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "Intro_ArmorGames": {
+    "frames": 217,
+    "labels": []
+  },
+  "obj_platform_holder_1x4": {
+    "frames": 1,
+    "labels": []
+  },
+  "InitialPlayerMarker": {
+    "frames": 1,
+    "labels": []
+  },
+  "switch_StopGo": {
+    "frames": 2,
+    "labels": [
+      {
+        "name": "off",
+        "frame": 0
+      },
+      {
+        "name": "on",
+        "frame": 1
+      }
+    ]
+  },
+  "glassPost1_part3": {
+    "frames": 1,
+    "labels": []
+  },
+  "glassPost1_part4": {
+    "frames": 1,
+    "labels": []
+  },
+  "glassPost1_part1": {
+    "frames": 1,
+    "labels": []
+  },
+  "glassPost1_part2": {
+    "frames": 1,
+    "labels": []
+  },
+  "wire": {
+    "frames": 1,
+    "labels": []
+  },
+  "baz_Dance": {
+    "frames": 57,
+    "labels": [
+      {
+        "name": "idle1",
+        "frame": 0
+      },
+      {
+        "name": "idle1_end",
+        "frame": 17
+      },
+      {
+        "name": "idle2",
+        "frame": 18
+      },
+      {
+        "name": "idle2_end",
+        "frame": 35
+      },
+      {
+        "name": "idle3",
+        "frame": 36
+      },
+      {
+        "name": "idle3_end",
+        "frame": 56
+      }
+    ]
+  },
+  "Wheel_50": {
+    "frames": 1,
+    "labels": []
+  },
+  "flameEater_body_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "woodenPin_part4": {
+    "frames": 1,
+    "labels": []
+  },
+  "woodenPin_part3": {
+    "frames": 1,
+    "labels": []
+  },
+  "glassPost0_part2": {
+    "frames": 1,
+    "labels": []
+  },
+  "glassPost0_part3": {
+    "frames": 1,
+    "labels": []
+  },
+  "glassPost0_part1": {
+    "frames": 1,
+    "labels": []
+  },
+  "switched_platform_2way_0": {
+    "frames": 3,
+    "labels": []
+  },
+  "mrNukeTop": {
+    "frames": 20,
+    "labels": []
+  },
+  "Zombie_head": {
+    "frames": 25,
+    "labels": []
+  },
+  "flameEater_topLeg_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "civilian_armBottom_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "humanCannonball_body_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "major_armTop_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "distance_fills": {
+    "frames": 1,
+    "labels": []
+  },
+  "fill": {
+    "frames": 5,
+    "labels": []
+  },
+  "helpText": {
+    "frames": 13,
+    "labels": []
+  },
+  "wheelofDeath": {
+    "frames": 1,
+    "labels": []
+  },
+  "Intro_MouseBreaker": {
+    "frames": 106,
+    "labels": []
+  },
+  "major_head_dead": {
+    "frames": 1,
+    "labels": []
+  },
+  "billboard_cannonball": {
+    "frames": 1,
+    "labels": []
+  },
+  "cutting_disk": {
+    "frames": 1,
+    "labels": []
+  }
+}

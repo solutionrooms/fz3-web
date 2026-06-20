@@ -54,17 +54,16 @@ describe("LevelRuntime — the per-frame orchestration", () => {
     expect(go.ypos).toBe(world.bodies[0].GetPosition().y * 50); // synced, but body didn't move
   });
 
-  it("LevelRuntime(Intro 1) builds + emits a 20-object RenderFrame; step awaits engine m4", () => {
+  // STRUCTURAL smoke gate — the full per-frame orchestration (pre-update → 2× Step → write-back → logic)
+  // runs Intro 1 for many frames on the feature-complete engine without throwing or going NaN. This is
+  // NOT a faithfulness claim: the trajectories are only PROVEN correct by the Intro-1 [ORIG] golden.
+  it("LevelRuntime(Intro 1) builds 20 objects, emits 17 visible, and runs many frames cleanly", () => {
     const rt = new LevelRuntime(intro1, lib, materials);
     expect(rt.gameObjs.length).toBe(20); // all 20 objects created
     expect(rt.renderFrame().objects.length).toBe(17); // 3 help-text objects hidden until their delay (visible=false)
-    let threw: string | null = null;
-    try {
-      rt.step(); // Intro 1 bodies start in contact; the step now reaches the m7 CCD/TOI boundary
-    } catch (e) {
-      threw = (e as Error).message;
+    expect(() => { for (let f = 0; f < 120; f++) rt.step(); }).not.toThrow();
+    for (const go of rt.gameObjs) {
+      expect(Number.isFinite(go.xpos) && Number.isFinite(go.ypos) && Number.isFinite(go.dir)).toBe(true);
     }
-    // Advances through the solver now; remaining gate is a documented "not yet ported" milestone (m7).
-    if (threw != null) expect(threw).toMatch(/not yet ported/i);
   });
 });

@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>FZ3 — render</title>
   <style>
-    html, body { margin: 0; height: 100%; background: #11151a; }
-    /* Fixed 700×500 Flash stage, centred (letterbox handled later). */
+    html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
+    /* Fixed 700×500 Flash stage, centred; src/render/letterbox.ts sets the uniform
+       scale on resize. transform-origin centre so scale + centre compose correctly. */
     #stage { position: absolute; left: 50%; top: 50%; width: 700px; height: 500px;
-             transform: translate(-50%, -50%); }
+             transform-origin: center center; transform: translate(-50%, -50%); }
     #stage canvas { display: block; }
   </style>
 </head>

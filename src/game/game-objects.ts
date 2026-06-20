@@ -12,6 +12,7 @@ import type { Level } from "./model/level";
 import { type PhysObjs, type PhysObj } from "./model/phys-obj-def";
 import type { BuiltWorld } from "./physics/build-world";
 import { applyInitFunction } from "./behaviors/registry";
+import { getNumFrames, getFrameIndexLabel } from "./anim";
 import type { b2Body } from "../box2d/index";
 import type { RenderFrame, RenderObj, Camera } from "../../contracts/render-state";
 
@@ -50,11 +51,66 @@ export class GameObj {
   switchName = "";
   textMessage = "";
 
+  // animation (GameObj_Base) — frame advances by frameVel each tick over a clip / label range
+  frameVel = 1;
+  minFrame = 0;
+  maxFrame = 0;
+  animBouncing = false;
+
   /** GameObj.Update (GameObj_Base.as:782): wake the body, run the behavior, optional Y-depth sort. */
   update(): void {
     if (this.body != null) this.body.WakeUp(); // AS3: bodies[0].WakeUp() — keeps active physobjs awake
     if (this.updateFn != null) this.updateFn();
     if (this.sortByY) this.zpos = 0 - this.ypos * 0.01;
+  }
+
+  /** CycleAnimation (GameObj_Base.as:723) — loop over the whole clip. */
+  cycleAnimation(): void {
+    const n = getNumFrames(this.dobjClip);
+    this.frame += this.frameVel;
+    if (this.frame >= n) this.frame -= n;
+    if (this.frame < 0) this.frame += n;
+  }
+
+  /** PlayAnimation (GameObj_Base.as:753) — play once over the clip, clamp at the ends; true at an end. */
+  playAnimation(): boolean {
+    const last = getNumFrames(this.dobjClip) - 1;
+    this.frame += this.frameVel;
+    if (this.frame > last) { this.frame = last; return true; }
+    if (this.frame < 0) { this.frame = 0; return true; }
+    return false;
+  }
+
+  /** CycleAnimationEx (GameObj_Base.as:667) — loop a label range [minFrame,maxFrame]; ping-pong if bouncing. */
+  cycleAnimationEx(): boolean {
+    let looped = false;
+    if (!this.animBouncing) {
+      this.frame += this.frameVel;
+      const span = this.maxFrame - this.minFrame;
+      if (this.frame > this.maxFrame) { this.frame -= span; looped = true; }
+      if (this.frame < this.minFrame) { this.frame += span; looped = true; }
+    } else {
+      this.frame += this.frameVel;
+      if (this.frame > this.maxFrame) { this.frameVel *= -1; this.frame = this.maxFrame; looped = true; }
+      if (this.frame < this.minFrame) { this.frameVel *= -1; this.frame = this.minFrame; looped = true; }
+    }
+    return looped;
+  }
+
+  /** PlayAnimationEx (GameObj_Base.as:706) — play once over the label range, clamp; true at an end. */
+  playAnimationEx(): boolean {
+    let done = false;
+    this.frame += this.frameVel;
+    if (this.frame > this.maxFrame) { this.frame = this.maxFrame; done = true; }
+    if (this.frame < this.minFrame) { this.frame = this.minFrame; done = true; }
+    return done;
+  }
+
+  /** Helper: set the [minFrame,maxFrame] label range and rewind to the start (behaviors' SetAnim pattern). */
+  setAnim(startLabel: string, endLabel: string): void {
+    this.minFrame = getFrameIndexLabel(this.dobjClip, startLabel);
+    this.maxFrame = getFrameIndexLabel(this.dobjClip, endLabel);
+    this.frame = this.minFrame;
   }
 }
 
