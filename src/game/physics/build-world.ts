@@ -1,14 +1,17 @@
 // Executes a CreationPlan against the LIVE Box2D engine to populate a real b2World — the game↔engine
-// integration. Faithful to PhysicsBase.InitBox2D + the AddPhysObjAt/InitLines call sequence the plan
-// encodes. Joints (CreateJoint) are m6 in the engine, so jointed levels build their bodies only (joints
-// recorded as skipped) — Intro 1 has none and builds fully on the current engine.
+// integration. Faithful to PhysicsBase.InitBox2D + the AddPhysObjAt/InitLines/InitJoints call sequence the
+// plan encodes. The engine is feature-complete (m6 joints), so jointed levels now build fully: joints are
+// created after all bodies (Game.StartLevelPlay order: instances → lines → joints).
 
 import {
   b2World, b2BodyDef, b2Vec2, b2AABB, b2FilterData, b2MassData, b2ContactListener, b2Body,
 } from "../../box2d/index";
 import { b2PolygonDef } from "../../box2d/Collision/Shapes/b2PolygonDef";
 import { b2CircleDef } from "../../box2d/Collision/Shapes/b2CircleDef";
-import type { CreationPlan, BodyOp, ShapeOp } from "./creation-plan";
+import { b2RevoluteJointDef } from "../../box2d/Dynamics/Joints/b2RevoluteJointDef";
+import { b2DistanceJointDef } from "../../box2d/Dynamics/Joints/b2DistanceJointDef";
+import { b2PrismaticJointDef } from "../../box2d/Dynamics/Joints/b2PrismaticJointDef";
+import type { CreationPlan, BodyOp, ShapeOp, JointOp } from "./creation-plan";
 
 const W2P = 1 / 50;
 const PHYS_GRAVITY = 300 * W2P; // GameVars.gravity(300) * w2p — PhysicsBase.physGravity
@@ -18,7 +21,49 @@ export interface BuiltWorld {
   groundBody: b2Body;
   bodies: b2Body[];
   bodyById: Map<string, b2Body>;
+  joints: number; // created joint count (Game.InitJoints)
   skippedJoints: number;
+}
+
+type Pt = { x: number; y: number };
+
+// Game.InitJoints — one b2*JointDef per level joint, Initialize(b0,b1,anchor[,...]) then params, then
+// CreateJoint. Body resolution matches the original: obj name → instance/line body, else groundBody.
+function createJoint(world: b2World, op: JointOp, resolve: (name: string) => b2Body): void {
+  const d = op.def;
+  const b0 = resolve(op.body0);
+  const b1 = resolve(op.body1);
+  if (op.jointType === "revolute") {
+    const jd = new b2RevoluteJointDef();
+    const a = d.anchor as Pt;
+    jd.Initialize(b0, b1, new b2Vec2(a.x, a.y));
+    jd.enableLimit = d.enableLimit as boolean;
+    jd.lowerAngle = d.lowerAngle as number;
+    jd.upperAngle = d.upperAngle as number;
+    jd.enableMotor = d.enableMotor as boolean;
+    jd.motorSpeed = d.motorSpeed as number;
+    jd.maxMotorTorque = d.maxMotorTorque as number;
+    jd.collideConnected = false;
+    world.CreateJoint(jd);
+  } else if (op.jointType === "distance") {
+    const jd = new b2DistanceJointDef();
+    const a0 = d.anchor0 as Pt, a1 = d.anchor1 as Pt;
+    jd.Initialize(b0, b1, new b2Vec2(a0.x, a0.y), new b2Vec2(a1.x, a1.y));
+    jd.collideConnected = false;
+    world.CreateJoint(jd);
+  } else {
+    const jd = new b2PrismaticJointDef();
+    const a = d.anchor as Pt, ax = d.axis as Pt;
+    jd.Initialize(b0, b1, new b2Vec2(a.x, a.y), new b2Vec2(ax.x, ax.y));
+    jd.enableLimit = d.enableLimit as boolean;
+    jd.lowerTranslation = d.lowerTranslation as number;
+    jd.upperTranslation = d.upperTranslation as number;
+    jd.enableMotor = d.enableMotor as boolean;
+    jd.motorSpeed = d.motorSpeed as number;
+    jd.maxMotorForce = d.maxMotorForce as number;
+    jd.collideConnected = false;
+    world.CreateJoint(jd);
+  }
 }
 
 function filter(s: ShapeOp): b2FilterData {
@@ -89,17 +134,22 @@ export function buildWorld(plan: CreationPlan): BuiltWorld {
 
   const bodies: b2Body[] = [];
   const bodyById = new Map<string, b2Body>();
+  let joints = 0;
   let skippedJoints = 0;
+  // Game.InitJoints body resolution: name → instance/line body, else (incl. "ground"/not-found) groundBody.
+  const resolve = (name: string): b2Body => (name === "ground" ? groundBody : (bodyById.get(name) ?? groundBody));
 
+  // The plan is ordered instances → lines → joints, so all bodies exist before any joint is created.
   for (const op of plan.ops) {
     if (op.kind === "body") {
       const b = createBody(world, op);
       bodies.push(b);
       if (op.id) bodyById.set(op.id, b);
     } else {
-      skippedJoints++; // CreateJoint is m6 in the engine; recorded, not attempted
+      createJoint(world, op, resolve);
+      joints++;
     }
   }
 
-  return { world, groundBody, bodies, bodyById, skippedJoints };
+  return { world, groundBody, bodies, bodyById, joints, skippedJoints };
 }
