@@ -2,6 +2,7 @@ package
 {
    import Box2D.Dynamics.b2Body;
    import Box2D.Dynamics.b2World;
+   import Box2D.Dynamics.Contacts.b2Contact;
    import Box2D.Collision.Shapes.b2Shape;
    import Box2D.Collision.Shapes.b2PolygonShape;
    import Box2D.Common.Math.b2XForm;
@@ -221,6 +222,13 @@ package
             {
                // Game.UpdateGameplay cadence: two 1/60 substeps per render frame, no game logic.
                PhysicsBase.world.Step(PhysicsBase.physStep,PhysicsBase.physNumIterations);
+               // After the FIRST 1/60 step the contact manifolds were computed on frame-0 geometry (which
+               // matches [PORT] to the bit) — i.e. the PRE-DIVERGENCE narrowphase result. Read-only; does
+               // not change the body golden (still 2 steps/frame).
+               if(f == 1)
+               {
+                  this.dumpContacts();
+               }
                PhysicsBase.world.Step(PhysicsBase.physStep,PhysicsBase.physNumIterations);
                this.dumpBodies(f);
                f++;
@@ -287,6 +295,52 @@ package
             b = b.GetNext();
             idx++;
          }
+      }
+
+      // Contact dump after the first 1/60 step (manifolds = frame-0 collide = pre-divergence narrowphase).
+      // Per contact, in m_contactList walk order (the SAME order the solver iterates → tests ordering too):
+      //   [CT] <idx> <mass1> <mass2> <pointCount> <normalX> <normalY> [<lp1x> <lp1y> <lp2x> <lp2y> <sep> ...]
+      // Geometric fields ONLY (normal/localPoints/separation are pre-solve; impulses are post-solve, skipped).
+      // If [ORIG] and [PORT] match here, narrowphase+ordering are faithful ⇒ the bug is the SOLVER; if they
+      // differ ⇒ narrowphase/pairing. Decisive split.
+      private function dumpContacts() : void
+      {
+         var c:b2Contact = PhysicsBase.world.m_contactList;
+         var idx:int = 0;
+         var b1:b2Body = null;
+         var b2b:b2Body = null;
+         var ms:Array = null;
+         var m:Object = null;
+         var pc:int = 0;
+         var pi:int = 0;
+         var p:Object = null;
+         var line:String = null;
+         while(c != null)
+         {
+            b1 = c.GetShape1().GetBody();
+            b2b = c.GetShape2().GetBody();
+            ms = c.GetManifolds();
+            m = (ms != null && ms.length > 0) ? ms[0] : null;
+            pc = m != null ? m.pointCount : 0;
+            line = "[CT] " + idx + " " + this.bits(b1.GetMass()) + " " + this.bits(b2b.GetMass()) + " " + pc;
+            if(m != null && pc > 0)
+            {
+               line += " " + this.bits(m.normal.x) + " " + this.bits(m.normal.y);
+               pi = 0;
+               while(pi < pc)
+               {
+                  p = m.points[pi];
+                  line += " " + this.bits(p.localPoint1.x) + " " + this.bits(p.localPoint1.y)
+                     + " " + this.bits(p.localPoint2.x) + " " + this.bits(p.localPoint2.y)
+                     + " " + this.bits(p.separation);
+                  pi++;
+               }
+            }
+            trace(line);
+            c = c.GetNext();
+            idx++;
+         }
+         trace("[CTN] " + idx); // total contact count
       }
 
       private function countBodies() : int
