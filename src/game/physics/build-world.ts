@@ -124,8 +124,12 @@ function createBody(world: b2World, op: BodyOp): b2Body {
 // Walker init-functions (InitZombieWalk{Left,Right}[Stilts] etc.) call SetUpright(true) + SetMassFromShapes
 // right after creation — the body becomes fixedRotation (invI=0) so the zombie can't tip over. Invisible to
 // a frame-0 creation check; only a stepped golden catches it (first terrain contact spins a free body).
+// All init-functions whose body must be upright (SetUpright(true) + SetMassFromShapes): every walking/riding
+// character — zombie walkers (+stilts), zombie unicyclists, and human walkers. (Verified: the grep also
+// flagged InitMissileAirStrikeObject, but reading it shows it does NOT SetUpright — excluded.)
 const UPRIGHT_INITS = new Set([
   "InitZombieWalkLeft", "InitZombieWalkRight", "InitZombieWalkLeftStilts", "InitZombieWalkRightStilts",
+  "InitZombieUnicycleLeft", "InitZombieUnicycleRight", "InitHuman_WalkLeft", "InitHuman_WalkRight",
 ]);
 
 /** Apply an init-function's STRUCTURAL physics effect at creation (fixture-value effects are folded into the
