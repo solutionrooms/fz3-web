@@ -5,6 +5,7 @@ package
    import Box2D.Dynamics.Contacts.b2Contact;
    import Box2D.Collision.Shapes.b2Shape;
    import Box2D.Collision.Shapes.b2PolygonShape;
+   import Box2D.Collision.Shapes.b2CircleShape;
    import Box2D.Common.Math.b2XForm;
    import Box2D.Common.Math.b2Vec2;
    import flash.display.MovieClip;
@@ -44,6 +45,7 @@ package
    // ───────────────────────────────────────────────────────────────────────────────────────────
    public class Preloader extends MovieClip
    {
+      private static const LEVEL_NAME:String = "Intro 1"; // ← change to capture any level by name (e.g. "Wheel Of Death")
       private static const NUM_FRAMES:int = 150; // ≥ settle + sleep window (b2_timeToSleep=0.5s=30 steps)
 
       private var _ba:ByteArray;
@@ -135,7 +137,7 @@ package
             try { ZombieHolder.InitOnce(); } catch(ze:Error) { trace("[PHASE] 42 zombieholder-skip " + ze.toString()); }
             trace("[PHASE] 4 game-data-ok");
 
-            idx = Levels.GetLevelIndexById("1"); // "Intro 1" = id 1 (first/final campaign set)
+            idx = Levels.GetLevelIndexByName(LEVEL_NAME); // ids aren't unique across sets — select by name
             Levels.currentIndex = idx;
             lvl = Levels.GetCurrent();
             trace("[PHASE] 5 level-selected idx=" + idx + " name=" + (lvl != null ? lvl.name : "<null>"));
@@ -252,6 +254,7 @@ package
          var b:b2Body = PhysicsBase.world.GetBodyList();
          var s:b2Shape = null;
          var ps:b2PolygonShape = null;
+         var cs:b2CircleShape = null;
          var xf:b2XForm = null;
          var v:b2Vec2 = null;
          var fi:int = 0;
@@ -285,6 +288,16 @@ package
                      }
                      trace(line);
                      // material + filter (friction/restitution faithful? + collision bits)
+                     trace("[FP] " + (idx * 100 + fi) + " " + this.bits(s.GetFriction()) + " " + this.bits(s.GetRestitution())
+                        + " " + this.bits(s.GetFilterData().categoryBits) + " " + this.bits(s.GetFilterData().maskBits));
+                  }
+                  else if(s.GetType() == b2Shape.e_circleShape)
+                  {
+                     cs = s as b2CircleShape;
+                     // world centre = xf.position + R · localPosition ; + radius
+                     wx = xf.position.x + (xf.R.col1.x * cs.m_localPosition.x + xf.R.col2.x * cs.m_localPosition.y);
+                     wy = xf.position.y + (xf.R.col1.y * cs.m_localPosition.x + xf.R.col2.y * cs.m_localPosition.y);
+                     trace("[FXC] " + (idx * 100 + fi) + " " + this.bits(wx) + " " + this.bits(wy) + " " + this.bits(cs.m_radius));
                      trace("[FP] " + (idx * 100 + fi) + " " + this.bits(s.GetFriction()) + " " + this.bits(s.GetRestitution())
                         + " " + this.bits(s.GetFilterData().categoryBits) + " " + this.bits(s.GetFilterData().maskBits));
                   }
