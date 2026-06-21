@@ -13,8 +13,8 @@ package
    public class Preloader extends MovieClip
    {
       private static const LEVELS:Array = [
-         "Intro 1", "Intro 2", "Coming Atya", "Wheel Of Death", "Teamwork!",
-         "Trapezey", "County Cork", "Goldfish Bowls", "Bob the Zombie", "Tower Of Piano"
+         "Animal Man", "Animal Man Intro", "Flying Grayskins", "Working Custard", "Pitfalls",
+         "Ring Of Fire", "Whack-A-Zom", "All Angles", "Sore!", "The Boys Are Here", "Dancing"
       ];
       private static const NUM_FRAMES:int = 50; // enough to separate gross init-flag gaps (≤~20) from trig (≥17)
 
