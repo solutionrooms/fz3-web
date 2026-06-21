@@ -80,8 +80,11 @@ describe("Intro 1 — [ORIG] golden vs [PORT] (bit-exact, real level)", () => {
     }
   });
 
-  // RED TRACKER — un-skip when the zombie dynamic-contact divergence is fixed (that IS done).
-  it.skip("steps bit-faithfully for 150 frames (every body, every field)", () => {
+  // FULLY GREEN — Intro 1 simulates BIT-EXACT for all 150 steps. The earlier "zombie ejection" was a missing
+  // init-function physics flag: the scroll-area line (InitGameObjLine_ScrollArea → SetBodyCollisionMask(_,0))
+  // must have maskBits=0 so it doesn't collide. Once creation-plan folds that in, the spurious contacts
+  // vanish (124/16 → 70/0) and the whole level is faithful. The first level proven bit-exact end-to-end.
+  it.runIf(existsSync(GOLDEN_PATH))("steps bit-faithfully for 150 frames (every body, every field)", () => {
     const golden: Golden = JSON.parse(readFileSync(GOLDEN_PATH, "utf8"));
     const w = buildIntro1();
     const pairing = pairByFrame0(golden, w);

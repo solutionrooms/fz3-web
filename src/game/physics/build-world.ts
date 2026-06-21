@@ -121,6 +121,28 @@ function createBody(world: b2World, op: BodyOp): b2Body {
   return b;
 }
 
+// Walker init-functions (InitZombieWalk{Left,Right}[Stilts] etc.) call SetUpright(true) + SetMassFromShapes
+// right after creation — the body becomes fixedRotation (invI=0) so the zombie can't tip over. Invisible to
+// a frame-0 creation check; only a stepped golden catches it (first terrain contact spins a free body).
+const UPRIGHT_INITS = new Set([
+  "InitZombieWalkLeft", "InitZombieWalkRight", "InitZombieWalkLeftStilts", "InitZombieWalkRightStilts",
+]);
+
+/** Apply an init-function's STRUCTURAL physics effect at creation (fixture-value effects are folded into the
+ *  plan's shapes already). Returns false if the body was destroyed (InitGameObjLine_ForShow). */
+function applyStructuralInit(world: b2World, body: b2Body, initFunction: string | undefined): boolean {
+  if (initFunction == null) return true;
+  if (initFunction === "InitGameObjLine_ForShow") {
+    world.DestroyBody(body); // decorative line: created then destroyed (no physics body remains)
+    return false;
+  }
+  if (UPRIGHT_INITS.has(initFunction)) {
+    body.SetUpright(true);
+    body.SetMassFromShapes(); // recompute mass with fixedRotation → invI = 0
+  }
+  return true;
+}
+
 /** PhysicsBase.InitBox2D + execute the plan. Returns the live world + body handles. */
 export function buildWorld(plan: CreationPlan): BuiltWorld {
   // InitBox2D
@@ -143,6 +165,7 @@ export function buildWorld(plan: CreationPlan): BuiltWorld {
   for (const op of plan.ops) {
     if (op.kind === "body") {
       const b = createBody(world, op);
+      if (!applyStructuralInit(world, b, op.initFunction)) continue; // ForShow → destroyed, no handle kept
       bodies.push(b);
       if (op.id) bodyById.set(op.id, b);
     } else {
