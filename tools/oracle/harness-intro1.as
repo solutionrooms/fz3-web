@@ -2,6 +2,10 @@ package
 {
    import Box2D.Dynamics.b2Body;
    import Box2D.Dynamics.b2World;
+   import Box2D.Collision.Shapes.b2Shape;
+   import Box2D.Collision.Shapes.b2PolygonShape;
+   import Box2D.Common.Math.b2XForm;
+   import Box2D.Common.Math.b2Vec2;
    import flash.display.MovieClip;
    import flash.events.Event;
    import flash.utils.ByteArray;
@@ -150,6 +154,7 @@ package
             Game.InitJoints();
             trace("[PHASE] 66 world-built bodies=" + this.countBodies());
 
+            this.dumpFixtures(); // frame-0 fixture geometry + mass/inertia (creation diff vs [PORT])
             this.dumpBodies(0); // initial conditions (frame 0)
             this.run();
          }
@@ -227,6 +232,61 @@ package
             trace("[ERR] run@" + f + " " + e.toString());
          }
          trace("[DONE]");
+      }
+
+      // Frame-0 fixture geometry, body walk order matching dumpBodies (skip ground). Per body:
+      //   [FB] <idx> <mass> <inertia> <posX> <posY>
+      //   [FX] <idx*100+fixIdx> <wx0> <wy0> <wx1> <wy1> ...   (WORLD verts; matches the [PORT] diag)
+      // all hex16 (raw f64). Lets us diff triangulation (seams/diagonals) + mass/inertia vs the port.
+      private function dumpFixtures() : void
+      {
+         var idx:int = 0;
+         var b:b2Body = PhysicsBase.world.GetBodyList();
+         var s:b2Shape = null;
+         var ps:b2PolygonShape = null;
+         var xf:b2XForm = null;
+         var v:b2Vec2 = null;
+         var fi:int = 0;
+         var vi:int = 0;
+         var line:String = null;
+         var wx:Number = 0;
+         var wy:Number = 0;
+         while(b != null)
+         {
+            if(b.GetUserData() != -1)
+            {
+               xf = b.GetXForm();
+               trace("[FB] " + idx + " " + this.bits(b.GetMass()) + " " + this.bits(b.GetInertia())
+                  + " " + this.bits(xf.position.x) + " " + this.bits(xf.position.y));
+               s = b.GetShapeList();
+               fi = 0;
+               while(s != null)
+               {
+                  if(s.GetType() == b2Shape.e_polygonShape)
+                  {
+                     ps = s as b2PolygonShape;
+                     line = "[FX] " + (idx * 100 + fi);
+                     vi = 0;
+                     while(vi < ps.m_vertexCount)
+                     {
+                        v = ps.m_vertices[vi];
+                        wx = xf.position.x + (xf.R.col1.x * v.x + xf.R.col2.x * v.y);
+                        wy = xf.position.y + (xf.R.col1.y * v.x + xf.R.col2.y * v.y);
+                        line += " " + this.bits(wx) + " " + this.bits(wy);
+                        vi++;
+                     }
+                     trace(line);
+                     // material + filter (friction/restitution faithful? + collision bits)
+                     trace("[FP] " + (idx * 100 + fi) + " " + this.bits(s.GetFriction()) + " " + this.bits(s.GetRestitution())
+                        + " " + this.bits(s.GetFilterData().categoryBits) + " " + this.bits(s.GetFilterData().maskBits));
+                  }
+                  s = s.GetNext();
+                  fi++;
+               }
+            }
+            b = b.GetNext();
+            idx++;
+         }
       }
 
       private function countBodies() : int
