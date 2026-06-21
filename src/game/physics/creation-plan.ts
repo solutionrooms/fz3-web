@@ -54,6 +54,10 @@ export interface BodyOp {
   bodyDef: BodyDefFields;
   shapes: ShapeOp[];
   massMode: "fromShapes" | "static"; // static = PutToSleep + SetMass(empty) / line left static
+  // The object initfunction / line line_function. Fixture-value effects (filter mask, material swap) are
+  // already folded into `shapes` at plan time; build-world applies only STRUCTURAL effects (SetUpright →
+  // fixedRotation; InitGameObjLine_ForShow → DestroyBody) from this name. See applyStructuralInit.
+  initFunction?: string;
 }
 export interface JointOp {
   kind: "joint";
@@ -132,6 +136,7 @@ function planInstance(inst: LevelObjInstance, lib: PhysObjs, materials: PhysObjM
       },
       shapes,
       massMode: body.fixed ? "static" : "fromShapes", // fixed: PutToSleep+SetMass(empty); else SetMassFromShapes+SetBullet(false)
+      initFunction: def.initFunctionName ?? undefined, // AddPhysObjAt runs go[initFunctionName]() after creation
     });
   }
   return out;
@@ -144,7 +149,17 @@ function planLines(level: Level, materials: PhysObjMaterial[]): BodyOp[] {
   for (const line of level.lines) {
     if (line.type !== 0) continue; // (type!=0 lines use a different filter — not yet needed)
     const pts = line.points;
-    const mat = material(materials, line.objParameters.getValueString("line_physmaterial"));
+    // InitLines creates the fixture (cat 1 / mask 31, material=line_physmaterial); then InitPhysicsLineObject
+    // runs the line_function, which may swap the material (Smooth/Icy→smooth, Bouncy→bouncy) and/or set
+    // maskBits=0 (ScrollArea/NonCollision via SetBodyCollisionMask(_,0) — cat stays 1). We fold those
+    // end-state fixture values in here; the structural ForShow→DestroyBody is applied in build-world.
+    const lineFn = line.objParameters.getValueString("line_function");
+    const matName =
+      lineFn === "InitGameObjLine_Smooth" || lineFn === "InitGameObjLine_Icy" ? "smooth"
+      : lineFn === "InitGameObjLine_Bouncy" ? "bouncy"
+      : line.objParameters.getValueString("line_physmaterial");
+    const maskBits = lineFn === "InitGameObjLine_ScrollArea" || lineFn === "InitGameObjLine_NonCollision" ? 0 : 31;
+    const mat = material(materials, matName);
     if (pts.length < 3) continue;
     const tris = triangulate(pts);
     if (tris == null) continue;
@@ -168,7 +183,7 @@ function planLines(level: Level, materials: PhysObjMaterial[]): BodyOp[] {
         shape: "polygon",
         vertices: [v(p0), v(p1), v(p2)],
         density: mat.density, friction: mat.friction, restitution: mat.restitution,
-        categoryBits: 1, maskBits: 31, isSensor: false,
+        categoryBits: 1, maskBits, isSensor: false,
       });
     }
     out.push({
@@ -179,6 +194,7 @@ function planLines(level: Level, materials: PhysObjMaterial[]): BodyOp[] {
       },
       shapes,
       massMode: line.objParameters.getValueBoolean("line_fixed") ? "static" : "fromShapes",
+      initFunction: lineFn || undefined, // build-world handles InitGameObjLine_ForShow → DestroyBody
     });
   }
   return out;

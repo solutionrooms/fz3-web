@@ -42,12 +42,18 @@ describe("creation-order plan", () => {
         expect(Number.isInteger(s.maskBits)).toBe(true);
       }
     }
-    // Intro 1 has 3 terrain lines (type 0) → 3 static line bodies, filter cat=1/mask=31
+    // Intro 1 has 3 type-0 lines → 3 static line bodies: 2 Grassy (cat 1 / mask 31) + 1 ScrollArea whose
+    // InitGameObjLine_ScrollArea sets maskBits=0 (SetBodyCollisionMask(_,0)) so it never collides.
     const lines = bodies.filter((b) => b.source === "line");
     expect(lines.length).toBe(3);
+    const lineMasks = lines.map((b) => b.shapes[0].maskBits).sort((a, c) => a - c);
+    expect(lineMasks).toEqual([0, 31, 31]); // one scroll-area line → mask 0
     for (const b of lines) {
       expect(b.massMode).toBe("static"); // line_fixed defaults true
-      for (const s of b.shapes) expect([s.categoryBits, s.maskBits]).toEqual([1, 31]);
+      for (const s of b.shapes) {
+        expect(s.categoryBits).toBe(1); // categoryBits unchanged by SetBodyCollisionMask
+        expect([0, 31]).toContain(s.maskBits);
+      }
     }
     assertAllFinite(plan);
     mkdirSync(root + "data/creation-plans", { recursive: true });

@@ -21,6 +21,9 @@ import type { Level as LevelData, PhysObjDef, Materials, Constants } from "../..
 
 const root = fileURLToPath(new URL("../../", import.meta.url));
 const GOLDEN_PATH = root + "test/goldens/wod.json";
+const PHYS_STEP = 1 / 60, PHYS_ITERS = 5;
+const FIELDS = ["px", "py", "a", "vx", "vy", "w"];
+const dec = (h: string): number => Buffer.from(h, "hex").readDoubleBE(0);
 
 function snap(b: b2Body): string[] {
   const p = b.GetPosition(), v = b.GetLinearVelocity();
@@ -94,6 +97,40 @@ describe("Wheel Of Death — [ORIG] creation golden (joints + circles)", () => {
       expect(snap(w.bodies[j])).toEqual(g[tag][0].fields);
       // fixtures (poly verts + circle centre/radius) bit-exact, in order
       expect(portFixtures(w.bodies[j])).toEqual(origFixtures(g, k));
+    }
+  });
+
+  // STEPPING — exact-prefix + bounded tolerance (rule 5: the trig ceiling). With the walker SetUpright fix
+  // (InitZombieWalkRight → fixedRotation) WoD is BIT-EXACT through step 17; the only residual after that is a
+  // rotating-body sin/cos last-bit drift that stays ≤ 6e-15 across all 150 steps — physically nil. NOT a bug.
+  it.runIf(existsSync(GOLDEN_PATH))("steps bit-exact through step 17, then within 1e-6 (trig ceiling, rule 5)", () => {
+    const golden: Golden & { golden: any } = JSON.parse(readFileSync(GOLDEN_PATH, "utf8"));
+    const g = golden.golden;
+    const w = buildWoD();
+    const tags = Object.keys(g).filter((t) => /^I1B/.test(t));
+    const f0 = w.bodies.map(snap);
+    const used = new Set<number>();
+    const pairing: { tag: string; i: number }[] = [];
+    for (const tag of tags) {
+      const g0 = g[tag][0].fields;
+      let fi = -1;
+      for (let i = 0; i < f0.length; i++) if (!used.has(i) && f0[i][0] === g0[0] && f0[i][1] === g0[1]) { fi = i; break; }
+      used.add(fi); pairing.push({ tag, i: fi });
+    }
+    const nSteps = g[pairing[0].tag].length;
+    for (let step = 1; step < nSteps; step++) {
+      w.world.Step(PHYS_STEP, PHYS_ITERS);
+      w.world.Step(PHYS_STEP, PHYS_ITERS);
+      for (const { tag, i } of pairing) {
+        const og = g[tag][step].fields, mine = snap(w.bodies[i]);
+        for (let f = 0; f < 6; f++) {
+          if (step <= 17) {
+            expect(`${tag} s${step} ${FIELDS[f]} ${mine[f]}`).toBe(`${tag} s${step} ${FIELDS[f]} ${og[f]}`); // bit-exact
+          } else {
+            expect(Math.abs(dec(mine[f]) - dec(og[f])), `${tag} s${step} ${FIELDS[f]}`).toBeLessThan(1e-6); // rule-5 bound
+          }
+        }
+      }
     }
   });
 });
