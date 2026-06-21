@@ -17,9 +17,18 @@ import type { b2Body } from "../../src/box2d/index";
 import type { Level as LevelData, PhysObjDef, Materials, Constants } from "../../contracts/game-data";
 
 const root = fileURLToPath(new URL("../../", import.meta.url));
-const GOLDEN_PATH = root + "test/goldens/sweep.json";
-const LEVELS = ["Intro 1", "Intro 2", "Coming Atya", "Wheel Of Death", "Teamwork!",
-  "Trapezey", "County Cork", "Goldfish Bowls", "Bob the Zombie", "Tower Of Piano"];
+// Each batch = one sweep golden (captured by harness-sweep.as with LEVELS set to that batch). Tags inside a
+// golden are L<i>B<idx> where i indexes that batch's `levels`. Add a batch as the campaign sweep grows.
+const BATCHES: { golden: string; levels: string[] }[] = [
+  { golden: "test/goldens/sweep.json", levels: ["Intro 1", "Intro 2", "Coming Atya", "Wheel Of Death", "Teamwork!",
+    "Trapezey", "County Cork", "Goldfish Bowls", "Bob the Zombie", "Tower Of Piano"] },
+  { golden: "test/goldens/sweep2.json", levels: ["Obstacles", "The Messenger", "BIG Whanger", "Fire Rescue", "Flame Tree",
+    "Bounced", "Signs", "Angry Zombies", "Mr. Nuke Introduction", "Moving Platforms"] },
+  { golden: "test/goldens/sweep3.json", levels: ["Fire Lighter", "Stick it up em", "Ski Lift", "Hooks Law", "Helter Skelter",
+    "Ride Em", "Deflector", "Fire And Bang", "Up'n'Down", "Hall Of Mirrors"] },
+  { golden: "test/goldens/sweep4.json", levels: ["Animal Man", "Animal Man Intro", "Flying Grayskins", "Working Custard", "Pitfalls",
+    "Ring Of Fire", "Whack-A-Zom", "All Angles", "Sore!", "The Boys Are Here", "Dancing"] },
+];
 const FIELDS = ["px", "py", "a", "vx", "vy", "w"];
 const TRIG_BOUND = 1e-9; // » worst trig drift (≤2e-14), « any real init-flag gap (≥0.1)
 const dec = (h: string) => Buffer.from(h, "hex").readDoubleBE(0);
@@ -28,46 +37,49 @@ function snap(b: b2Body): string[] {
   return [f64hex(p.x), f64hex(p.y), f64hex(b.GetAngle()), f64hex(v.x), f64hex(v.y), f64hex(b.GetAngularVelocity())];
 }
 
-describe("Campaign sweep — first 10 levels faithful to the shipped engine (rule-5 bound)", () => {
-  const golden = existsSync(GOLDEN_PATH) ? JSON.parse(readFileSync(GOLDEN_PATH, "utf8")).golden : null;
+describe("Campaign sweep — levels faithful to the shipped engine (rule-5 bound)", () => {
   const levels: LevelData[] = JSON.parse(readFileSync(root + "data/levels.json", "utf8"));
   const constants: Constants = JSON.parse(readFileSync(root + "data/constants.json", "utf8"));
   const lib = buildPhysObjs(JSON.parse(readFileSync(root + "data/physobjs.json", "utf8")) as PhysObjDef[]);
   const materials = buildMaterials(JSON.parse(readFileSync(root + "data/materials.json", "utf8")) as Materials);
 
-  for (let li = 0; li < LEVELS.length; li++) {
-    it.runIf(golden != null)(`${LEVELS[li]} steps faithfully (≤ ${TRIG_BOUND})`, () => {
-      const tags = Object.keys(golden).filter((t) => new RegExp("^L" + li + "B\\d+$").test(t));
-      expect(tags.length).toBeGreaterThan(0);
-      const lvl = buildLevel(levels.find((l) => l.name === LEVELS[li])!, constants);
-      const w = buildWorld(buildCreationPlan(lvl, lib, materials));
-      expect(w.bodies.length).toBe(tags.length); // same body count
+  for (const batch of BATCHES) {
+    const path = root + batch.golden;
+    const golden = existsSync(path) ? JSON.parse(readFileSync(path, "utf8")).golden : null;
+    for (let li = 0; li < batch.levels.length; li++) {
+      it.runIf(golden != null)(`${batch.levels[li]} steps faithfully (≤ ${TRIG_BOUND})`, () => {
+        const tags = Object.keys(golden).filter((t) => new RegExp("^L" + li + "B\\d+$").test(t));
+        expect(tags.length).toBeGreaterThan(0);
+        const lvl = buildLevel(levels.find((l) => l.name === batch.levels[li])!, constants);
+        const w = buildWorld(buildCreationPlan(lvl, lib, materials));
+        expect(w.bodies.length).toBe(tags.length); // same body count
 
-      // pair by frame-0 (px,py) — also a creation-position check
-      const f0 = w.bodies.map(snap);
-      const used = new Set<number>();
-      const pairing: { tag: string; i: number }[] = [];
-      for (const tag of tags) {
-        const g0 = golden[tag][0].fields;
-        let fi = -1;
-        for (let i = 0; i < f0.length; i++) if (!used.has(i) && f0[i][0] === g0[0] && f0[i][1] === g0[1]) { fi = i; break; }
-        expect(fi, `${tag} frame-0 (px,py) unmatched`).toBeGreaterThanOrEqual(0);
-        used.add(fi); pairing.push({ tag, i: fi });
-      }
+        // pair by frame-0 (px,py) — also a creation-position check
+        const f0 = w.bodies.map(snap);
+        const used = new Set<number>();
+        const pairing: { tag: string; i: number }[] = [];
+        for (const tag of tags) {
+          const g0 = golden[tag][0].fields;
+          let fi = -1;
+          for (let i = 0; i < f0.length; i++) if (!used.has(i) && f0[i][0] === g0[0] && f0[i][1] === g0[1]) { fi = i; break; }
+          expect(fi, `${tag} frame-0 (px,py) unmatched`).toBeGreaterThanOrEqual(0);
+          used.add(fi); pairing.push({ tag, i: fi });
+        }
 
-      const n = golden[tags[0]].length;
-      let maxDrift = 0, at = "";
-      for (let s = 1; s < n; s++) {
-        w.world.Step(1 / 60, 5); w.world.Step(1 / 60, 5);
-        for (const { tag, i } of pairing) {
-          const o = golden[tag][s].fields, m = snap(w.bodies[i]);
-          for (let k = 0; k < 6; k++) if (o[k] !== m[k]) {
-            const d = Math.abs(dec(o[k]) - dec(m[k]));
-            if (d > maxDrift) { maxDrift = d; at = `step ${s} ${tag} ${FIELDS[k]}`; }
+        const n = golden[tags[0]].length;
+        let maxDrift = 0, at = "";
+        for (let s = 1; s < n; s++) {
+          w.world.Step(1 / 60, 5); w.world.Step(1 / 60, 5);
+          for (const { tag, i } of pairing) {
+            const o = golden[tag][s].fields, m = snap(w.bodies[i]);
+            for (let k = 0; k < 6; k++) if (o[k] !== m[k]) {
+              const d = Math.abs(dec(o[k]) - dec(m[k]));
+              if (d > maxDrift) { maxDrift = d; at = `step ${s} ${tag} ${FIELDS[k]}`; }
+            }
           }
         }
-      }
-      expect(maxDrift, `max drift ${maxDrift.toExponential(2)} @ ${at}`).toBeLessThan(TRIG_BOUND);
-    });
+        expect(maxDrift, `max drift ${maxDrift.toExponential(2)} @ ${at}`).toBeLessThan(TRIG_BOUND);
+      });
+    }
   }
 });
