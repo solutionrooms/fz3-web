@@ -159,6 +159,8 @@ function planLines(level: Level, materials: PhysObjMaterial[]): BodyOp[] {
       : lineFn === "InitGameObjLine_Bouncy" ? "bouncy"
       : line.objParameters.getValueString("line_physmaterial");
     const maskBits = lineFn === "InitGameObjLine_ScrollArea" || lineFn === "InitGameObjLine_NonCollision" ? 0 : 31;
+    // switch/trigger lines call SetUpLineAsSwitch() → m_isSensor=true on every fixture (detect, don't solve).
+    const lineSensor = lineFn === "InitGameObjLine_Switch" || lineFn === "InitGameObjLine_TriggerHitMissile";
     const mat = material(materials, matName);
     if (pts.length < 3) continue;
     const tris = triangulate(pts);
@@ -183,7 +185,7 @@ function planLines(level: Level, materials: PhysObjMaterial[]): BodyOp[] {
         shape: "polygon",
         vertices: [v(p0), v(p1), v(p2)],
         density: mat.density, friction: mat.friction, restitution: mat.restitution,
-        categoryBits: 1, maskBits, isSensor: false,
+        categoryBits: 1, maskBits, isSensor: lineSensor,
       });
     }
     out.push({
